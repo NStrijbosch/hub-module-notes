@@ -18,3 +18,5 @@
 ## Color Sensor
 
 ## Force Sensor
+
+[a relative link](test_link.md)
