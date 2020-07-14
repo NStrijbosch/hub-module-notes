@@ -1,5 +1,5 @@
 site_name: Marshmallow Generator
 pages:
     - [index.md, Home]
-    - [about.md, Test_link]
-theme: material
+    - [test_link.md, Test_link]
+theme: readthedocs
