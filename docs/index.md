@@ -1,7 +1,20 @@
 
 # Sensors
 
-## Ultrasonic Sensor
+## Commands
+
+### Read values
+```
+hub.port.A.sensor.get()
+```
+
+### Set Mode
+```
+hub.port.A.sensor.mode(mode)
+```
+
+
+### Ultrasonic Sensor
 |Mode|Name |RAW          |PCT        |SI           |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
 |----|-----|-------------|-----------|-------------|------|--------------------|--------|----|-------|--------|
 |0   |DISTL|0.0...2500.0 |0.0...100.0|0.0...250.0  |cm    |\x00\x00\x00\x04\x84|1       |1   |5      |1       |
@@ -15,10 +28,9 @@
 |8   |CALIB|0.0...255.0  |0.0...100.0|0.0...255.0  |pct   |\x00\x00\x04\x84    |7       |0   |3      |0       |
 
 
-## Color Sensor
+### Color Sensor
 
-Test VSC
 
-## Force Sensor
+### Force Sensor
 
 [a relative link](test_link.md)
