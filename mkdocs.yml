@@ -1,4 +1,5 @@
 site_name: Marshmallow Generator
-
-theme:
-  name: material
+pages:
+    - [index.md, Home]
+    - [about.md, Test_link]
+theme: material
