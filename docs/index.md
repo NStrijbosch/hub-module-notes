@@ -3,20 +3,42 @@
 
 ## Commands
 
-### Read values
-```
-hub.port.A.sensor.get()
-```
-
 ### Set Mode
+All of the sensors have a few different operating modes. Details about the modes for each specific sensor can be found below. 
+
+The operation mode of the sensor can be changed using the following command
 ```
-hub.port.A.sensor.mode(mode)
+hub.port.A.device.mode(mode)
 ```
 
+### Read values
+
+
+```
+hub.port.A.device.get(unit)
+```
+These are the values obtained when using the scratch programming environment
+
+In RAW units
+```
+hub.port.A.device.get(hub.port.A.FORMAT_RAW)
+``` 
+
+this can significantly improve the resolution
+
+In Percent
+```
+hub.port.A.device.get(hub.port.A.FORMAT_PCT)
+```
+
+In SI units
+```
+hub.port.A.device.get(hub.port.A.FORMAT_SI)
+```
 
 ### Ultrasonic Sensor
-|Mode|Name |RAW          |PCT        |SI           |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
-|----|-----|-------------|-----------|-------------|------|--------------------|--------|----|-------|--------|
+|Mode|Name |RAW                      |SI           |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
+|----|-------------------|-----------|-------------|------|--------------------|--------|----|-------|--------|
 |0   |DISTL|0.0...2500.0 |0.0...100.0|0.0...250.0  |cm    |\x00\x00\x00\x04\x84|1       |1   |5      |1       |
 |1   |DISTS|0.0...320.0  |0.0...100.0|0.0...32.0   |cm    |\x00\x00\x00\x04\x84|1       |1   |4      |1       |
 |2   |SINGL|0.0...2500.0 |0.0...100.0|0.0...250.0  |cm    |\x00\x00\x00\x04\x84|1       |1   |5      |1       |
@@ -26,6 +48,12 @@ hub.port.A.sensor.mode(mode)
 |6   |PING |0.0...1.0    |0.0...100.0|0.0...1.0    |pct   |\x80\x00\x00\x04\x84|1       |0   |1      |0       |
 |7   |ADRAW|0.0...1024.0 |0.0...100.0|0.0...1024.0 |pct   |\x80\x00\x00\x04\x84|1       |1   |4      |0       |
 |8   |CALIB|0.0...255.0  |0.0...100.0|0.0...255.0  |pct   |\x00\x00\x04\x84    |7       |0   |3      |0       |
+
+
+
+```
+hub.port.A.device.mode(mode, )
+```
 
 
 ### Color Sensor
