@@ -3,7 +3,6 @@
 
 ## Data types
 
-### gesture
 
 ## Gyro/Accelerometer Sensor
 
@@ -31,23 +30,23 @@ hub.motion.orientation()
 hub.motion.gesture(gesture)
 ```
 Parameters:
-* [gesture](gesture) (optional)
+* [gesture](data_types.md#gesture) (optional)
 
 
 Returns:
 
-* [bool](bool) (if [gesture](gesture) provided) or [gesture](gesture)
-    * [bool](bool): true if input [gesture](gesture) is active
-    * [gesture](gesture): the active  [gesture](gesture)
+* [bool](bool) (if parameter [gesture](data_types.md#gesture) provided) or [gesture](data_types.md#gesture)
+    * [bool](bool): true if input [gesture](data_types.md#gesture) is active
+    * [gesture](data_types.md#gesture): the active  [gesture](data_types.md#gesture)
 
 ```
 hub.motion.was_gesture(gesture) 
 ```
 Parameters:
 
-* [gesture](gesture)
+* [gesture](data_types.md#gesture)
 
 
 Returns:
 
-* [bool](bool): true if input [gesture](gesture) is active since last call
+* [bool](bool): true if input [gesture](data_types.md#gesture) is active since last call

@@ -8,5 +8,6 @@ nav:
     - 'image.md'
     - 'motion.md'
     - 'button.md'
+    - 'data_types.md'
     - 'test_link.md'
 theme: readthedocs
