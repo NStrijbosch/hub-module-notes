@@ -30,34 +30,21 @@ hub.motion.orientation()
 ```
 hub.motion.gesture(gesture)
 ```
-|| | 
-|-|-|
-|Parameters:| [gesture](gesture) (optional) | 
-|Returns: |  [bool](bool) or [gesture](gesture) 
-| |  [bool](bool): observed  [gesture](gesture)  (if no  [gesture](gesture)  provided) | true if input [gesture](gesture) is currently observed |
-| |  [gesture](gesture): observed  [gesture](gesture)  (if no  [gesture](gesture)  provided) |
+Parameters:
+* [gesture](gesture) (optional)
+
+
+Returns:
+* [bool](bool) (if [gesture](gesture) provided) or [gesture](gesture)
+  * [bool](bool): true if input [gesture](gesture) is active
+  * [gesture](gesture): the active  [gesture](gesture)
 
 ```
 hub.motion.was_gesture(gesture) 
 ```
+Parameters:
+* [gesture](gesture)
 
 
-|| | 
-|-|-|
-|Parameters:| [gesture](gesture) (optional) | 
-|Returns: |  [bool](bool) or [gesture](gesture) 
-| |  [bool](bool): observed  [gesture](gesture)  (if no  [gesture](gesture)  provided) | true if input [gesture](gesture) is observed since last call|
-| |  [gesture](gesture): observed  [gesture](gesture)  (if no  [gesture](gesture)  provided) |
-
-
-possible gestures:
-leftside
-rightside
-down
-up
-front
-back
-tapped
-doubletapped
-shake
-freefall
+Returns:
+* [bool](bool): true if input [gesture](gesture) is active since last call
