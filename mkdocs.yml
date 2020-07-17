@@ -3,5 +3,8 @@ nav:
     - 'index.md'
     - 'sensors.md'
     - 'motors.md'
+    - 'sound.md'
+    - 'led.md'
+    - 'image.md'
     - 'test_link.md'
 theme: readthedocs
