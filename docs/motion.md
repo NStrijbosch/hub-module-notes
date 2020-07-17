@@ -35,9 +35,10 @@ Parameters:
 
 
 Returns:
+
 * [bool](bool) (if [gesture](gesture) provided) or [gesture](gesture)
-  * [bool](bool): true if input [gesture](gesture) is active
-  * [gesture](gesture): the active  [gesture](gesture)
+    * [bool](bool): true if input [gesture](gesture) is active
+    * [gesture](gesture): the active  [gesture](gesture)
 
 ```
 hub.motion.was_gesture(gesture) 
@@ -48,6 +49,5 @@ Parameters:
 
 
 Returns:
-<ol>
-<li> [bool](bool): true if input [gesture](gesture) is active since last call </li>
-</ol>
+
+* [bool](bool): true if input [gesture](gesture) is active since last call
