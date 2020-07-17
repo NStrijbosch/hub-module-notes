@@ -1,5 +1,7 @@
 site_name: Marshmallow Generator
 nav:
     - 'index.md'
+    - 'sensors.md'
+    - 'motors.md'
     - 'test_link.md'
 theme: readthedocs
