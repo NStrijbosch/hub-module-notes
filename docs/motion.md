@@ -63,6 +63,7 @@ Returns:
 
 * int[3] rotation in degrees around x,y,z axis
 
+
 ## Gesture 
 
 The hub can detect both the orientation or movement using the build in gyroscope and accelerometer
@@ -117,3 +118,11 @@ Parameters:
 Returns:
 
 * [bool](bool): true if input [gesture](data_types.md#gesture) is active since last call
+
+### To do
+```
+hub.motion.preset_yaw()
+```
+```
+hub.motion.preset_yaw()
+```
