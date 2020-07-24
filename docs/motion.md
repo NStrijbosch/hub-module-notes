@@ -107,6 +107,7 @@ Parameters:
 Returns:
 
 * [bool](bool): true if input [gesture](data_types.md#gesture) is active
+  
 ```
 hub.motion.was_gesture(string) 
 ```
@@ -128,6 +129,7 @@ hub.motion.preset_yaw()
 ```
 
 
-asdfasdfalkasfasf
+asdfasdfalkasfasf </br>
 
-    asdfasldflk
+&ensp;asdfasldflk </br>
+&ensp;asdkfasld
