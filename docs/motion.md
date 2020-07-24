@@ -145,3 +145,16 @@ Normal text
 &ensp; Wider than usual space width
 
 &emsp; Double wider than usual space
+
+
+### Returns
+
+&emsp; Name of the color </br>
+&emsp; __type__: asdfasdfa </br>
+&emsp; __values__: asdfasd
+
+### Errors
+
+&emsp; Name of the color </br>
+&emsp; __type__: asdfasdfa </br>
+&emsp; __values__: asdfasd
