@@ -131,5 +131,17 @@ hub.motion.preset_yaw()
 
 asdfasdfalkasfasf </br>
 
-&ensp;asdfasldflk </br>
-&ensp;asdkfasld
+&emsp;asdfasldflk </br>
+&emsp;asdkfasld
+
+rkdown Space Test with HTML Command
+
+Normal text
+
+&thinsp; Narrower than usual space
+
+&nbsp; Usual space width
+
+&ensp; Wider than usual space width
+
+&emsp; Double wider than usual space
