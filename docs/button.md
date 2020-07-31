@@ -20,9 +20,8 @@ Check if button is pressed
 #### Returns
 
 True if the button is pressed, otherwise False </br>
-
-*  __type__: boolean </br>
-*  __values__: True or False
+&emsp; __type__: boolean </br>
+&emsp; __values__: True or False
 
 
 ### was_pressed()
@@ -34,7 +33,7 @@ Check if button was pressed since last call
 
 #### Returns
 
-&emsp; True if the button was pressed since last call, otherwise False </br>
+True if the button was pressed since last call, otherwise False </br>
 &emsp; __type__: boolean </br>
 &emsp; __values__: True or False
 
@@ -44,6 +43,6 @@ hub.button.right.pressed()
 ```
 #### Returns
 
-&emsp; Number of presses since last call </br>
+Number of presses since last call </br>
 &emsp; __type__: integer </br>
 &emsp; __values__: 0,1,...
