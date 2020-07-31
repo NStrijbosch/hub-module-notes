@@ -46,3 +46,21 @@ hub.button.right.pressed()
 Number of presses since last call </br>
 &emsp; __type__: integer </br>
 &emsp; __values__: 0,1,...
+
+
+<style type='text/css'>
+.class {
+   border: 1px dashed #FF0000;
+   color: #ffffff;
+   text-align: center;
+   width: 100px;
+   margin: 0px;
+   padding: 4px;
+   }
+</style>
+
+
+<div class="class">
+Class CSS  
+[gesture](data_types.md#gesture) 
+</div>
