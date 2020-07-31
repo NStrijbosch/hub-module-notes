@@ -15,9 +15,9 @@ hub.led(r,g,b)
 #### Parameters
 
 &emsp; RGB (Red, Green, and Blue) values of color </br>
-* _r_ (int) 
-* _g_ (int) 
-* _b_ (int)
+*  _r_ (int) 
+*  _g_ (int) 
+*  _b_ (int)
 
 
 ### led([_color_](data_types.md#color))
