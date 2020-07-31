@@ -11,3 +11,4 @@ nav:
     - 'data_types.md'
     - 'test_link.md'
 theme: readthedocs
+extra_css: [custom.css]
