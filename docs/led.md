@@ -2,7 +2,6 @@
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 .section ul { list-style: none !important; margin-left: 80px; background: #3399ff ;}
-.section li { display: none !important}
 </style>
 
 # Led
