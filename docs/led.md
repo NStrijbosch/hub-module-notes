@@ -12,10 +12,7 @@ This class controls all functions linked led ring around the center button on th
 ``` 
 hub.led(r,g,b)
 ```
-
-#### Parameters
-
-__Parameters:__ RGB (Red, Green, and Blue) values of color  
+__Parameters:__  
 
 *  _r_ (int) 
 *  _g_ (int) 
