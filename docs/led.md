@@ -1,7 +1,7 @@
 <style type='text/css'>
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
-.section ul { list-style: none !important; margin-left: 80px; background: #3399ff ;}
+.section ul { list-style: none !important; margin-left: 80px; margin-top:-24pt; background: #3399ff ;}
 .section li { list-style: none !important}
 </style>
 
@@ -15,8 +15,7 @@ hub.led(r,g,b)
 
 #### Parameters
 
-&emsp; RGB (Red, Green, and Blue) values of color
-
+__Parameters:__ RGB (Red, Green, and Blue) values of color  
 *  _r_ (int) 
 *  _g_ (int) 
 *  _b_ (int)
