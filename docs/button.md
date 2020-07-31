@@ -20,6 +20,7 @@ Check if button is pressed
 #### Returns
 
 True if the button is pressed, otherwise False </br>
+
 *  __type__: boolean </br>
 *  __values__: True or False
 
