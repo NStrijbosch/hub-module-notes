@@ -1,7 +1,7 @@
 <style type='text/css'>
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
-.section ul { list-style: none !important; margin-left: 80px; margin-top:-2.5em; background: #3399ff ;}
+.section ul { list-style: none !important; margin-left: 80px; margin-top:-3em; background: #3399ff ;}
 .section li { list-style: none !important}
 </style>
 
