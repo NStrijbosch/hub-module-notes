@@ -14,9 +14,9 @@ hub.led(r,g,b)
 ```
 __Parameters:__  
 
-*  _r_ (integer) red value between 0 and 255
-*  _g_ (integer) green value between 0 and 255
-*  _b_ (integer) blue value between 0 and 255
+*  ___r___ (integer) red value between 0 and 255
+*  ___g___ (integer) green value between 0 and 255
+*  ___b___ (integer) blue value between 0 and 255
 
 __Returns:__  
 

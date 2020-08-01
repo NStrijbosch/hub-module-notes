@@ -1,2 +1,5 @@
 a { text-decoration: underline; }
 a:hover { text-decoration: underline; }
+
+.section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
+.section li { list-style: none !important}
