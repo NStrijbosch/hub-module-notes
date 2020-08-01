@@ -1,27 +1,24 @@
 
-# Motion
+<style type='text/css'>
+.section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
+.section li { list-style: none !important}
+</style>
 
 ## Gyro/Accelerometer Sensor Data
 
 ```
 hub.motion.accelerometer()
 ```
-Parameters
-
-* None
-
-Returns:
+__Returns:__
 
 * int[3] acceleration in x,y,z direction
 
 ```
 hub.motion.accelerometer_filter()
 ```
-Parameters
 
-* None
 
-Returns:
+__Returns:__
 
 * int[3] acceleration in x,y,z direction
 
@@ -30,22 +27,14 @@ Returns:
 ```
 hub.motion.gyroscope()
 ```
-Parameters
-
-* None
-
-Returns:
+__Returns:__
 
 * int[3] rotational rate around in x,y,z axis
   
 ```
 hub.motion.gyroscope_filter()
 ```
-Parameters
-
-* None
-
-Returns:
+__Returns:__
 
 * int[3] rotational rate around x,y,z axis
 
@@ -55,11 +44,7 @@ Returns:
 hub.motion.position()
 ```
 
-Parameters:
-
-* None
-
-Returns:
+__Returns:__
 
 * int[3] rotation in degrees around x,y,z axis
 
@@ -68,31 +53,11 @@ Returns:
 
 The hub can detect both the orientation or movement using the build in gyroscope and accelerometer
 
-possible gestures:
-
-```
-hub.motion.BACK
-hub.motion.DOUBLETAPPED
-hub.motion.DOWN
-hub.motion.FREEFALL
-hub.motion.FRONT
-hub.motion.LEFTSIDE
-hub.motion.NONE
-hub.motion.RIGHTSIDE
-hub.motion.SHAKE
-hub.motion.TAPPED
-hub.motion.UP
-```
-
 ```
 hub.motion.orientation()  
 ```
 
-Parameters:
-
-* None
-
-Returns:
+__Returns:__
 
 * string referecing a [gesture](data_types.md#gesture) 
 
@@ -100,25 +65,28 @@ Returns:
 ```
 hub.motion.gesture(string)
 ```
-Parameters:
+__Parameters:__
+
 * string referencing a [gesture](data_types.md#gesture) (optional)
 
 
-Returns:
+__Returns:__
 
 * [bool](bool): true if input [gesture](data_types.md#gesture) is active
   
 ```
 hub.motion.was_gesture(string) 
 ```
-Parameters:
+__Parameters:__
 
 * string referencing a [gesture](data_types.md#gesture)
 
 
-Returns:
+__Returns:__
 
 * [bool](bool): true if input [gesture](data_types.md#gesture) is active since last call
+
+
 
 ### To do
 ```
