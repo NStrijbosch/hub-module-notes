@@ -4,7 +4,7 @@
 .section li { list-style: none !important}
 </style>
 
-This class controls all functions linked led ring around the center button on the hub.
+This class controls all functions linked to the led ring around the center button on the hub.
 
 ### led([___color___](data_types.md#color))
 ```
