@@ -2,7 +2,8 @@
 <style type='text/css'>
 .section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
 .section li { list-style: none !important}
-.toctree-l2 li { background-color: yellow !important;}
+.toctree-l1.current li { background-color: yellow !important;}
+.toctree-l2 li { background-color: red !important;}
 </style>
 
 # Gyro/Accelerometer Sensor Data
