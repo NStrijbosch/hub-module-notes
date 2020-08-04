@@ -40,94 +40,108 @@ hub.port.A.motor.STOP_BRAKE = 1
 hub.port.A.motor.STOP_HOLD = 2
 ```
 
-## Commands 
-
-```
-hub.port.A.motor.mode(mode)
-```
+# Measurements
 
 ```
 hub.port.A.motor.get()
 ```
 
-
-
-```
-hub.port.A.motor.float()
-```
-Float motor axle from current position
-
-Parameters:
-
-* None
-
-Returns:
-
-* None
-  
-```
-hub.port.A.motor.brake()
-```
-Turn on brake of motor at current position
-
-Parameters:
-
-* None
-
-Returns:
-
-* None
-
-```
-hub.port.A.motor.hold()
-```
-
-Hold motor at current position
-
-Parameters:
-
-* None
-
-Returns:
-
-* None
-
-## 
 ```
 hub.port.A.motor.busy()
 ```
 Paramter:
 hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
 
+# Actions
 
-## Movement functions
+## pwm()
 
 ```
-hub.port.A.motor.pwm(pwm)
+hub.port.A.motor.pwm(duty cycle)
 ```
-Parameters
 
-* pwm (int in range -100 - 100)
+Turn on motor with given duty cycle
 
-Returns:
+__Parameters:__
 
-* None
+*  [duty_cycle][(data_types.md/#duty_cycle) the amount of time the signal is in a high (on) state as a percentage of the total time of it takes to complete one cycle. Integer value in range -100 ... 100)
+
+## run_at_speed()
 
 ```
 hub.port.A.motor.run_at_speed(speed,max_power,acceleration,100,stall)
 ```
+Turn on motor with given speed
+
+__Parameters:__
+
+*  speed
+*  maximum power
+*  max acceleration
+*  ?
+*  stall 
+
+## run_for_degrees()
 
 ```
 hub.port.A.motor.run_for_degrees(degrees,speed)
 ```
+Turn on motor with given number of degrees with given speed
+
+__Parameters:__
+
+*  degrees
+*  speed
+
+## run_to_position()
 
 ```
 hub.port.A.motor.run_to_position(position,speed)
 ```
 
+Turn motor to given _absolute?_ position with given speed
+
+__Parameters:__
+
+*  position _absolute?_ position
+
+> Test if this is absolute position. What does this mean for technic motors?
+
+## run_for_time()
+
 ```
-hub.port.A.motor.run_for_time(ms,speed)
+hub.port.A.motor.run_for_time(time,speed)
 ```
+Turn motor on for given time with given speed
+
+__Parameters:__
+
+*  time (ms)
+*  speed
+
+## float()
+```
+hub.port.A.motor.float()
+```
+Coast motor from current position
+
+## brake()
+  
+```
+hub.port.A.motor.brake()
+```
+Brake at current position
+
+> test what this means with respect to hold at current position
+
+## Hold
+
+```
+hub.port.A.motor.hold()
+```
+Hold at motor current position
+
+# Settings
 
 ```
 hub.port.A.motor.pair(motor)
@@ -146,5 +160,6 @@ hub.port.A.motor.preset(hub.port.A.motor.FORMAT_X)
 hub.port.A.motor.default()
 ```
 
-<table>
-    <tr>
+```
+hub.port.A.motor.mode(mode)
+```
