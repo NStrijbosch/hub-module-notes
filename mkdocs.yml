@@ -5,7 +5,7 @@ nav:
     - 'motors.md'
     - 'sound.md'
     - 'led.md'
-    - 'image.md'
+    - 'image_test.md'
     - 'motion.md'
     - 'button.md'
     - 'data_types.md'
