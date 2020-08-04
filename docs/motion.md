@@ -4,6 +4,7 @@
 .section li { list-style: none !important}
 .toctree-l1.current li { background-color: yellow !important;}
 .toctree-l2 li { background-color: red !important;}
+.subnav ul ul {margin-left: 80px;}
 </style>
 
 # Gyro/Accelerometer Sensor Data
