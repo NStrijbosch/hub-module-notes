@@ -8,6 +8,8 @@
 
 The hub can measure acceleration, yaw rate, and rotation directly from the gyroscope and accelerometer using the following commands
 
+## Test
+
 ### accelerometer()
 
 ```
