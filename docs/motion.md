@@ -80,7 +80,7 @@ __Returns:__
 
 * [gesture](data_types.md#gesture) 
 
-## gesture(_[gesture](data_types.md#gesture)_)
+## gesture()
 
 ```
 hub.motion.gesture(gesture)
@@ -93,7 +93,7 @@ __Returns:__
 
 * [bool](data_types.bool): true if input [gesture](data_types.md#gesture) is active
   
-## was_gesture(_[gesture](data_types.md#gesture)_) 
+## was_gesture() 
 
 ```
 hub.motion.was_gesture(gesture) 
