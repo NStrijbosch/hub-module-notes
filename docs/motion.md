@@ -4,7 +4,9 @@
 .section li { list-style: none !important}
 </style>
 
-## Gyro/Accelerometer Sensor Data
+# Gyro/Accelerometer Sensor Data
+
+The hub can measure acceleration, yaw rate, and rotation directly from the gyroscope and accelerometer using the following commands
 
 ### accelerometer()
 
@@ -13,7 +15,7 @@ hub.motion.accelerometer()
 ```
 __Returns:__
 
-* [[acceleration](data_types.md#acceleration) x, [acceleration](data_types.md#acceleration) y, [acceleration](data_types.md#acceleration) z]
+* [[acceleration](data_types.md#acceleration) x, [acceleration](data_types.md#acceleration) y, [acceleration](data_types.md#acceleration) z] acceleration in x,y,z direction
 
 ### accelerometer_filter()
 
@@ -23,7 +25,7 @@ hub.motion.accelerometer_filter()
 
 __Returns:__
 
-* [[acceleration](data_types.md#acceleration) x, [acceleration](data_types.md#acceleration) y, [acceleration](data_types.md#acceleration) z]
+* [[acceleration](data_types.md#acceleration) x, [acceleration](data_types.md#acceleration) y, [acceleration](data_types.md#acceleration) z] acceleration in x,y,z direction
 
 > Note: no difference observed in measurement data with respect to hub.motion.accelerometer()
 
@@ -34,7 +36,7 @@ hub.motion.gyroscope()
 ```
 __Returns:__
 
-* int[3] rotational rate around in x,y,z axis
+* [[yaw rate](data_types.md#yaw) x, [yaw rate](data_types.md#yaw) y, [yaw rate](data_types.md#yaw) z] rotational rate around in x,y,z axis
   
 
 ### gyroscope_filter()
@@ -44,7 +46,7 @@ hub.motion.gyroscope_filter()
 ```
 __Returns:__
 
-* [[yaw rate](data_types.md#yaw) x, [yaw rate](data_types.md#yaw) y, [yaw rate](data_types.md#yaw) z]
+* [[yaw rate](data_types.md#yaw) x, [yaw rate](data_types.md#yaw) y, [yaw rate](data_types.md#yaw) z] rotational rate around in x,y,z axis
 
 > Note: no difference observed in measurement data with respect to hub.motion.gyroscope()
 
@@ -56,10 +58,10 @@ hub.motion.position()
 
 __Returns:__
 
-* [[angle](data_types.md#angle) x, [angle](data_types.md#angle) y, [angle](data_types.md#angle) z]
+* [[angle](data_types.md#angle) x, [angle](data_types.md#angle) y, [angle](data_types.md#angle) z] rotation in degrees around x,y,z axis
 
 
-## Gestures
+# Gestures
 
 The hub can detect both the orientation or movement using the build in gyroscope and accelerometer
 
@@ -76,7 +78,7 @@ __Returns:__
 ### gesture(_[gesture](data_types.md#gesture)_)
 
 ```
-hub.motion.gesture([gesture](data_types.md#gesture))
+hub.motion.gesture(gesture)
 ```
 __Parameters:__
 
