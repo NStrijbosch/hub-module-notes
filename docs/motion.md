@@ -2,6 +2,7 @@
 <style type='text/css'>
 .section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
 .section li { list-style: none !important}
+.toctree-13 { background-color: yellow;}
 </style>
 
 # Gyro/Accelerometer Sensor Data
@@ -92,7 +93,7 @@ __Returns:__
 #### was_gesture(_[gesture](data_types.md#gesture)_) 
 
 ```
-hub.motion.was_gesture(string) 
+hub.motion.was_gesture(gesture) 
 ```
 __Parameters:__
 
