@@ -6,23 +6,28 @@
 
 ## Gyro/Accelerometer Sensor Data
 
+### accelerometer()
+
 ```
 hub.motion.accelerometer()
 ```
 __Returns:__
 
-* int[3] acceleration in x,y,z direction
+* [[acceleration](data_types.md#acceleration) x, [acceleration](data_types.md#acceleration) y, [acceleration](data_types.md#acceleration) z]
+
+### accelerometer_filter()
 
 ```
 hub.motion.accelerometer_filter()
 ```
 
-
 __Returns:__
 
-* int[3] acceleration in x,y,z direction
+* [[acceleration](data_types.md#acceleration) x, [acceleration](data_types.md#acceleration) y, [acceleration](data_types.md#acceleration) z]
 
-> Note: no difference observed with version with hub.motion.accelerometer()
+> Note: no difference observed in measurement data with respect to hub.motion.accelerometer()
+
+### gyroscope()
 
 ```
 hub.motion.gyroscope()
@@ -31,14 +36,19 @@ __Returns:__
 
 * int[3] rotational rate around in x,y,z axis
   
+
+### gyroscope_filter()
+
 ```
 hub.motion.gyroscope_filter()
 ```
 __Returns:__
 
-* int[3] rotational rate around x,y,z axis
+* [[yaw rate](data_types.md#yaw) x, [yaw rate](data_types.md#yaw) y, [yaw rate](data_types.md#yaw) z]
 
-> Note: no difference observed with version with hub.motion.gyroscope()
+> Note: no difference observed in measurement data with respect to hub.motion.gyroscope()
+
+### position()
 
 ```
 hub.motion.position()
@@ -46,12 +56,14 @@ hub.motion.position()
 
 __Returns:__
 
-* int[3] rotation in degrees around x,y,z axis
+* [[angle](data_types.md#angle) x, [angle](data_types.md#angle) y, [angle](data_types.md#angle) z]
 
 
-## Gesture 
+## Gestures
 
 The hub can detect both the orientation or movement using the build in gyroscope and accelerometer
+
+### orientation()  
 
 ```
 hub.motion.orientation()  
@@ -59,32 +71,33 @@ hub.motion.orientation()
 
 __Returns:__
 
-* string referecing a [gesture](data_types.md#gesture) 
+* [gesture](data_types.md#gesture) 
 
+### gesture(_[gesture](data_types.md#gesture)_)
 
 ```
-hub.motion.gesture(string)
+hub.motion.gesture([gesture](data_types.md#gesture))
 ```
 __Parameters:__
 
-* string referencing a [gesture](data_types.md#gesture) (optional)
-
+* [gesture](data_types.md#gesture)
 
 __Returns:__
 
-* [bool](bool): true if input [gesture](data_types.md#gesture) is active
+* [bool](data_types.bool): true if input [gesture](data_types.md#gesture) is active
   
+### was_gesture(_[gesture](data_types.md#gesture)_) 
+
 ```
 hub.motion.was_gesture(string) 
 ```
 __Parameters:__
 
-* string referencing a [gesture](data_types.md#gesture)
-
+* [gesture](data_types.md#gesture)
 
 __Returns:__
 
-* [bool](bool): true if input [gesture](data_types.md#gesture) is active since last call
+* [bool](data_types.bool): true if input [gesture](data_types.md#gesture) was active since last call
 
 
 
@@ -95,34 +108,3 @@ hub.motion.preset_yaw()
 ```
 hub.motion.preset_yaw()
 ```
-
-
-asdfasdfalkasfasf </br>
-
-&emsp;asdfasldflk </br>
-&emsp;asdkfasld
-
-rkdown Space Test with HTML Command
-
-Normal text
-
-&thinsp; Narrower than usual space
-
-&nbsp; Usual space width
-
-&ensp; Wider than usual space width
-
-&emsp; Double wider than usual space
-
-
-### Returns
-
-&emsp; Name of the color </br>
-&emsp; __type__: asdfasdfa </br>
-&emsp; __values__: asdfasd
-
-### Errors
-
-&emsp; Name of the color </br>
-&emsp; __type__: asdfasdfa </br>
-&emsp; __values__: asdfasd
