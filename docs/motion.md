@@ -2,7 +2,7 @@
 <style type='text/css'>
 .section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
 .section li { list-style: none !important}
-.toctree-l2 li { background-color: yellow !important}
+.toctree-l2 ul { margin-left: 80px;}
 </style>
 
 # Gyro/Accelerometer Sensor Data
