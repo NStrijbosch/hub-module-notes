@@ -10,3 +10,9 @@ intensity in range [0,5]
 ```
 hub.display.clear()
 ```
+
+```
+hub.display.rotate(angle)
+```
+
+
