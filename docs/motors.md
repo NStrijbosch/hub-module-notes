@@ -65,6 +65,10 @@ hub.port.A.motor.busy()
 Paramter:
 hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
 
+if BUSY_MOTOR:
+returns TRUE if target not achieved
+returns FALSE if tracking not active
+
 # Actions
 
 ## pwm()
