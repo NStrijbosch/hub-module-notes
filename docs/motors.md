@@ -46,6 +46,19 @@ hub.port.A.motor.STOP_HOLD = 2
 hub.port.A.motor.get()
 ```
 
+For SP motors
+__Returns:__
+
+* [power,speed,pos,absolute pos] 
+
+For other motors
+
+__Returns:__
+*  power if mode = 0
+*  speed if mode = 1
+*  relative position if mode = 2
+*  absolute position if mode = 3 
+
 ```
 hub.port.A.motor.busy()
 ```
@@ -96,10 +109,12 @@ __Parameters:__
 ## run_to_position()
 
 ```
-hub.port.A.motor.run_to_position(position,speed)
+hub.port.A.motor.run_to_position(position,speed,acceleration?,stop action)
 ```
 
 Turn motor to given _absolute?_ position with given speed
+
+stop action: float=0,  brake=1, hold =2
 
 __Parameters:__
 
