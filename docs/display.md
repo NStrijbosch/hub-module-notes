@@ -18,6 +18,8 @@ h2 {font-size: 115%;}
 hub.display.pixel(x,y,intensity)
 ```
 
+Set the ligth intensity of a single pixel.
+
 __Parameters:__
 
 *  [integer](data_types.md#integer) x: in range [0,5]
@@ -25,12 +27,26 @@ __Parameters:__
 *  [integer](data_types.md#integer) intensity:  in range [0,10]
 
 
+## clear()
+
 ```
 hub.display.clear()
 ```
 
+set the light intensity of all pixels to 0. 
+
+## rotate()
+
 ```
 hub.display.rotate(angle)
 ```
+
+Change orientation of of display. 
+
+> Keep in mind this rotation is not reset at the start of each program. 
+
+__Parameters:__
+
+*  [integer](data_types.md#integer) angle: 0, 90, 180, 270
 
 
