@@ -26,6 +26,17 @@ __Parameters:__
 *  [integer](data_types.md#integer) y: in range [0,5]
 *  [integer](data_types.md#integer) intensity:  in range [0,10]
 
+## show()
+
+```
+hub.display.show(image)
+```
+
+Show image on screen
+
+__Parameters:__
+
+*  [image](data_types.md#image) image
 
 ## clear()
 
