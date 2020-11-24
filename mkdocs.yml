@@ -7,6 +7,7 @@ nav:
     - 'led.md'
     - 'image_test.md'
     - 'motion.md'
+    - 'display.md'
     - 'button.md'
     - 'data_types.md'
     - 'test_link.md'
