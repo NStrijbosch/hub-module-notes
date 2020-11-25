@@ -10,22 +10,6 @@ h2 {font-size: 115%;}
 
 
 
-# Display
-
-## pixel()
-
-```
-hub.display.pixel(x,y,intensity)
-```
-
-Set the ligth intensity of a single pixel.
-
-__Parameters:__
-
-*  [integer](data_types.md#integer) x: in range [0,5]
-*  [integer](data_types.md#integer) y: in range [0,5]
-*  [integer](data_types.md#integer) intensity:  in range [0,10]
-
 ## show()
 
 ```
