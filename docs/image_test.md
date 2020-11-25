@@ -30,9 +30,9 @@ __Parameters:__
 
 ## Callback
 
-'''
+```
 image = hub.Image(image_def)
-'''
+```
 
 Define a custom image. 
 
