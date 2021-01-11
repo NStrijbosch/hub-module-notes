@@ -79,9 +79,6 @@ hub.battery.USB_CH_PORT_DCP=3
 |11     |White                |102 |28  |14 |
 
 
-```
-
-
 ## Motion
 
 ### gesture
