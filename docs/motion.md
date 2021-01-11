@@ -95,10 +95,3 @@ __Returns:__
 
 missing from SPIKE firmware since 1.3.3
 
-# To do
-```
-hub.motion.yaw_pitch_roll
-```
-```
-hub.motion.preset_yaw()
-```
