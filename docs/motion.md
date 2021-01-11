@@ -23,7 +23,7 @@ __Returns:__
 * [[yaw rate](data_types.md#yaw) x, [yaw rate](data_types.md#yaw) y, [yaw rate](data_types.md#yaw) z] rotational rate around in x,y,z axis
   
 
-## position()
+## (position())
 
 ```
 hub.motion.position()
@@ -80,7 +80,7 @@ __Returns:__
 
 * [bool](data_types.bool): true if input [gesture](data_types.md#gesture) is active
   
-## was_gesture() 
+## (was_gesture()) 
 
 ```
 hub.motion.was_gesture(gesture) 
