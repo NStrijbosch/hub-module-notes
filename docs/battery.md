@@ -1,5 +1,10 @@
 ## info()
 
+``` python
+hub.battery.info()
+
+```
+
 Returns battery information
 
 __Returns:__
@@ -14,7 +19,12 @@ Example:
 
 ## capacity_left()
 
-Measure the capacity of the battery left
+``` python
+hub.battery.capacity()
+
+```
+
+Measure the capacity of the battery left.
 
 __Returns:__
 
@@ -22,7 +32,12 @@ __Returns:__
 
 ## current()
 
-Measure the current
+``` python
+hub.battery.current()
+
+```
+
+Measure the current from battery to hub.
 
 __Returns:__
 
@@ -30,7 +45,12 @@ __Returns:__
 
 ## voltage()
 
-Measure the voltage of the battery
+``` python
+hub.battery.voltage()
+
+```
+
+Measure the voltage of the battery.
 
 __Returns:__
 
@@ -38,7 +58,12 @@ __Returns:__
   
 ## temperature()
 
-Measure the temperature of battery
+``` python
+hub.battery.temperature()
+
+```
+
+Measure the temperature of battery.
 
 __Returns:__
 
@@ -46,7 +71,12 @@ __Returns:__
   
 ## charger_detect()
 
-check if a charger is detected
+``` python
+hub.battery.charger_detect()
+
+```
+
+Check if a charger is detected.
 
 __Returns:__
 
