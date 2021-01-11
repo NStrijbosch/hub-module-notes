@@ -46,6 +46,9 @@ hub.port.A.motor.STOP_HOLD = 2
 
 ``` python
 hub.port.A.motor.get()
+    def function:
+        while: 
+            i=i+1
 ```
 
 The behaviour of this callback depends on the mode of the motor. 
