@@ -44,7 +44,7 @@ hub.port.A.motor.STOP_HOLD = 2
 
 ## get()
 
-```
+``` python
 hub.port.A.motor.get()
 ```
 
