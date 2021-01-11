@@ -24,7 +24,7 @@ __Returns:__
 
 Example:
 
-```
+``` python
 {'temperature': 23.9, 'charge_voltage': 8357, 'charge_current': 353, 'charge_voltage_filtered': 8352, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
 ```
   

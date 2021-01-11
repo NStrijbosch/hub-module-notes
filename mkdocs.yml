@@ -24,5 +24,6 @@ nav:
     - status: 'status.md'
     - supervision: 'supervision.md'
     - temperature: 'temperature.md'
+    - hub: 'hub.md'
 theme: readthedocs
 extra_css: ['custom.css']
