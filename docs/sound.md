@@ -3,7 +3,11 @@
 ```
 hub.sound.volume(volume)
 ```
-volume: 0-10
+
+
+__Parameters:__
+
+*  volume: 0-10
 
 ```
 hub.sound.beep(freq,time,waveform)
