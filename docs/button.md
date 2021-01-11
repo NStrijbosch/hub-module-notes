@@ -26,6 +26,7 @@ __Returns:__
 ```
 hub.button.left.was_pressed()
 ```
+
 Check if button was pressed since last call
 
 __Returns;__
@@ -33,12 +34,25 @@ __Returns;__
 *  [boolean](data_types.md#bool) True if the button was pressed since last call, otherwise False 
 
 ## pressed()
+
 ```
 hub.button.right.pressed()
 ```
 
 __Returns:__
 
-* [integer](data_types.md#int) Number of presses since last call </br>
+* [integer](data_types.md#int) Number of presses since last call
+
+## on_change()
+
+```
+hub.button.right.on_change(lambda function)
+```
+
+__Parameters:__
+
+*  Lambda function? on todo
+
+
 
 
