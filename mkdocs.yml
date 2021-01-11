@@ -1,11 +1,11 @@
 site_name: Low level module documentation
 nav:
     - Getting started: 'index.md'
-    - hub: 'hub.md'
+    - Hub: 'hub.md'
+    - Led: 'led.md'
     - Sensors: 'sensors.md'
     - Motors: 'motors.md'
     - Sound: 'sound.md'
-    - Led: 'led.md'
     - Image: 'image_test.md'
     - Motion: 'motion.md'
     - Display: 'display.md'

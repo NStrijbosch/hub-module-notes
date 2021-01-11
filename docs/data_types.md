@@ -18,15 +18,17 @@
 
 ## hub
 
-'''
+``` python
 hub.TOP = 0
 hub.FRONT = 1
 hub.RIGHT = 2
 hub.BOTTOM = 3
 hub.BACK = 4
 hub.LEFT = 5
-'''
+```
+
 ## Battery
+
 
 ``` python
 hub.battery.BATTERY_VOLTAGE_TOO_LOW=-5  
@@ -58,6 +60,27 @@ hub.battery.USB_CH_PORT_DCP=3
 ## Image
 
 ## Led
+
+led colors:
+
+|number |name|                |r   |g   |b  |
+|-------|---------------------|----|----|---|
+|0      |off                  |0   |0   |0  |
+|1      |pink                 |255 |7   |20 |
+|2      |violet               |255 |10  |100|    
+|3      |blue                 |0   |0   |80 |
+|4      |light blue           |0   |57  |57 |
+|5      |light green          |0   |112 |28 |
+|6      |green                |0   |80  |0  |
+|7      |yellow               |255 |35  |0  |
+|8      |orange               |255 |15  |0  |
+|9      |red                  |255 |0   |0  |  
+|10     |bright white         |255 |70  |35 |
+|11     |white                |102 |28  |14 |
+
+
+```
+
 
 ## Motion
 
