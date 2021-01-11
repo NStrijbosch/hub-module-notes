@@ -1,4 +1,4 @@
-a { text-decoration: underline; }
+a { text-decoration: underline;  background-color: yellow;}
 a:hover { text-decoration: underline; background-color: yellow;}
 a.toctree-12 { background-color: yellow;}
 .section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
