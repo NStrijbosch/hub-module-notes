@@ -63,7 +63,7 @@ hub.battery.USB_CH_PORT_DCP=3
 
 led colors:
 
-|number |name|                |r   |g   |b  |
+|number |name                 |r   |g   |b  |
 |-------|---------------------|----|----|---|
 |0      |off                  |0   |0   |0  |
 |1      |pink                 |255 |7   |20 |
