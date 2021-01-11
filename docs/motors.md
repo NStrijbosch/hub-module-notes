@@ -194,7 +194,7 @@ set controller gains of PID.
 
 > Does not seems to work
 
-__paramters:__
+__Parameters:__
 
 *  p: proportional gain
 *  i: integral gain
@@ -207,7 +207,7 @@ hub.port.A.motor.preset(position)
 ```
 Preset the relative position
 
-__paramters:__
+__Parameters:__
 
 *  position: the position you want to be zero? -> TODO: formulation
 
@@ -218,10 +218,9 @@ hub.port.A.motor.mode(mode)
 ```
 Set mode of the motor. This only affects result of get() callback
 
-__parameters:__
+__Parameters:__
 
 *  mode: either a single mode (0,1,2,...) or array of modes ([(mode_1,format),(mode_2,format),(3,4)])
-
 
 ## default()
 
