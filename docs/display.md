@@ -69,4 +69,8 @@ __Parameters:__
 
 * bool: True: invert led brightness; False: keep default brightness
 
+## callback()
+
+unknown behaviour
+
 
