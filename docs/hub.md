@@ -26,4 +26,12 @@ __Returns:__
 
 * integer: ms ide before powerdown (default 300000)
 
-## 
+## repl_restart()
+
+## reset()
+
+reboot
+
+## status()
+
+## temperature()
