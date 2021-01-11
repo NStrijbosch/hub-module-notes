@@ -1,4 +1,4 @@
-site_name: Marshmallow Generator
+site_name: Low level module documentation
 nav:
     - 'index.md'
     - 'sensors.md'
