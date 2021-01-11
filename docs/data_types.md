@@ -16,6 +16,17 @@
 
 # Constants
 
+## hub
+
+'''
+hub.TOP = 0
+hub.FRONT = 1
+hub.RIGHT = 2
+hub.BOTTOM = 3
+hub.BACK = 4
+hub.LEFT = 5
+'''
+
 ## Button
 
 ## Display
