@@ -53,11 +53,18 @@ hub.battery.USB_CH_PORT_CDP=2
 hub.battery.USB_CH_PORT_DCP=3                 
 ```
 
-## Button
-
-## Display
-
 ## Image
+
+## Sound
+
+Waveforms
+
+``` 
+hub.sound.SOUND_SIN       
+hub.sound.SOUND_SQUARE
+hub.sound.SOUND_TRIANGLE
+hub.sound.SOUND_SAWTOOTH 
+```
 
 ## Led
 
@@ -83,28 +90,39 @@ hub.battery.USB_CH_PORT_DCP=3
 
 ### gesture
 
-Orientation or movement of the hub measured with build in gyroscope and accelerometer
+movement of the hub measured with build in gyroscope and accelerometer
 
 possible gestures:
 
 ```
-hub.motion.BACK
-hub.motion.DOUBLETAPPED
-hub.motion.DOWN
-hub.motion.FREEFALL
-hub.motion.FRONT
-hub.motion.LEFTSIDE
-hub.motion.NONE
-hub.motion.RIGHTSIDE
-hub.motion.SHAKE
-hub.motion.TAPPED
-hub.motion.UP
+hub.motion.TAPPED=0
+hub.motion.DOUBLETAPPED=1
+hub.motion.SHAKE=2
+hub.motion.FREEFALL=3
 ```
+
+## Port
+
+###
+
+attached port
+
+```
+hub.port.ATTACED = 1
+hub.port.DETACHED = 0
+```
+
+Possible modes for a PU port
+
+```
+hub.port.MODE_DEFAULT = 0
+hub.port.MODE_FULL_DUPLEX = 1
+hub.port.MODE_HALF_DUPLEX = 2
+hub.port.MODE_GPIO = 3
+```
+
 
 ## Motors
 
 ## Sensors
 
-### Color
-
-possible colors:
