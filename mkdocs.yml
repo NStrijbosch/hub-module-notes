@@ -1,14 +1,14 @@
 site_name: Low level module documentation
 nav:
-    - 'index.md'
-    - 'sensors.md'
+    - Getting started: 'index.md'
+    - Sensors: 'sensors.md'
     - Motors: 'motors.md'
-    - 'sound.md'
-    - 'led.md'
-    - 'image_test.md'
-    - 'motion.md'
-    - 'display.md'
-    - 'button.md'
-    - 'data_types.md'
+    - Sound: 'sound.md'
+    - Led: 'led.md'
+    - Image: 'image_test.md'
+    - Motion: 'motion.md'
+    - Display: 'display.md'
+    - Button: 'button.md'
+    - Data types: 'data_types.md'
 theme: readthedocs
 extra_css: ['custom.css']
