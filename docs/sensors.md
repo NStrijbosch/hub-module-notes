@@ -1,9 +1,7 @@
 
-# Sensors
+# General
 
-## Commands
-
-### Set Mode
+## mode()
 All of the sensors have a few different operating modes. Details about the modes for each specific sensor can be found below. 
 
 The operation mode of the sensor can be changed using the following command
@@ -11,7 +9,7 @@ The operation mode of the sensor can be changed using the following command
 hub.port.A.device.mode(mode)
 ```
 
-### Read values
+## get()
 
 
 ```
@@ -36,7 +34,9 @@ In SI units
 hub.port.A.device.get(hub.port.A.FORMAT_SI)
 ```
 
-### Ultrasonic Sensor
+# Specific Sensor Info
+
+## Ultrasonic Sensor
 |Mode|Name |RAW          |PCT        |SI           |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
 |----|-----|-------------|-----------|-------------|------|--------------------|--------|----|-------|--------|
 |0   |DISTL|0.0...2500.0 |0.0...100.0|0.0...250.0  |cm    |\x00\x00\x00\x04\x84|1       |1   |5      |1       |
@@ -54,7 +54,7 @@ hub.port.A.device.mode(mode, )
 ```
 
 
-### Color Sensor
+## Color Sensor
 
 |Mode|Name |RAW |       |PCT|     |SI |     |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
 |----|-----|---|------|---|------|---|------|------|--------------------|--------|----|-------|--------|
@@ -76,6 +76,17 @@ hub.port.A.device.mode(3, b''+chr(1*9)+chr(0*9)+chr(1*9))
 
 
 
-### Force Sensor
+## Force Sensor
 
-[a relative link](test_link.md)
+
+## Boost Color Sensor
+
+
+```
+hub.port.A.device.mode(5) # Necessary before next line
+hub.port.A.device.mode(5, b''+chr(a))
+```
+
+__Parameters:__ 
+
+*  a in [3 (green),4 (blue),6 (red),10 (white)]

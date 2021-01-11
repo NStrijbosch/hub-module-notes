@@ -1,12 +1,7 @@
 
-<style type='text/css'>
-.section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
-.section li { list-style: none !important}
-</style>
-
 This class controls all functions linked to the led ring around the center button on the hub.
 
-### led([___color___](data_types.md#color))
+## led()
 ```
 hub.led(color)
 ```
@@ -16,7 +11,7 @@ __Parameter:__
 
 *  [___color___](data_types.md#color)
 
-### led(___r___,___g___,___b___)
+
 ``` 
 hub.led(r,g,b)
 ```

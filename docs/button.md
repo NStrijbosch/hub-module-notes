@@ -1,5 +1,4 @@
 
-
 This class controls all functions linked to the buttons, i.e., the left, center, right, connect buttons on the hub.
 
 ```

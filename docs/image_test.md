@@ -1,8 +1,3 @@
-
-
-
-# Display
-
 ## pixel()
 
 ```
