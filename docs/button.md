@@ -51,7 +51,7 @@ hub.button.right.on_change(lambda function)
 
 __Parameters:__
 
-*  Lambda function? on todo
+*  Lambda function? on todo, tested with print('hallo') did not work as expected
 
 
 

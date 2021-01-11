@@ -34,4 +34,27 @@ __Parameters:__
 
 *  [integer](data_types.md#integer) angle: 0, 90, 180, 270
 
+## align()
+
+``` python
+hub.display.align()
+```
+Set orientation of display.
+
+__Parameters:__
+
+*  integer: (1: default, 2: 90 degrees clockwise with respect to default, 4: 180 degrees with respect to default, 5: 90 degrees counter clockwise with respect to default)
+
+> Difference rotate() and align(): align is absolute rotation, rotate is relative rotation to current orientation of display.
+
+## invert()
+
+``` python
+hub.display.invert(bool)
+```
+
+__Parameters:__
+
+* bool: True: invert led brightness; False: keep default brightness
+
 
