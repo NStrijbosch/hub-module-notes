@@ -11,4 +11,4 @@ nav:
     - 'button.md'
     - 'data_types.md'
 theme: readthedocs
-extra_css: 'custom.css'
+extra_css: ['custom.css']
