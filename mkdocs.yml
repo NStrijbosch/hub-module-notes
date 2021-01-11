@@ -2,7 +2,7 @@ site_name: Low level module documentation
 nav:
     - 'index.md'
     - 'sensors.md'
-    - 'motors.md'
+    - Motors: 'motors.md'
     - 'sound.md'
     - 'led.md'
     - 'image_test.md'

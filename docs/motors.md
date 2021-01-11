@@ -7,9 +7,9 @@ h2 {font-size: 125%;}
 h2 {font-size: 115%;}
 </style>
 
-# Motors
 
-## Constants
+
+# Constants
 
 ```
 hub.port.A.motor.BUSY_MODE = 0
@@ -40,9 +40,9 @@ hub.port.A.motor.STOP_BRAKE = 1
 hub.port.A.motor.STOP_HOLD = 2
 ```
 
-## Measurements
+# Measurements
 
-### get()
+## get()
 
 ``` python
 hub.port.A.motor.get()
@@ -64,7 +64,7 @@ __Returns:__
 
 *  [power(PCT),speed(SI),pos(SI),absolute pos(RAW)] 
 
-### busy()
+## busy()
 
 ``` python
 hub.port.A.motor.busy()
@@ -78,9 +78,9 @@ __Returns:__
 
 *  TRUE if target not achieved, FALSE if tracking not active
 
-## Actions
+# Actions
 
-### pwm()
+## pwm()
 
 ``` python
 hub.port.A.motor.pwm(duty cycle)
@@ -92,7 +92,7 @@ __Parameters:__
 
 *  [duty_cycle][(data_types.md/#duty_cycle) the amount of time the signal is in a high (on) state as a percentage of the total time of it takes to complete one cycle. Integer value in range -100 ... 100)
 
-### run_at_speed()
+## run_at_speed()
 
 ``` python
 hub.port.A.motor.run_at_speed(speed,max_power,acceleration,100,stall)
@@ -107,7 +107,7 @@ __Parameters:__
 *  ?
 *  stall 
 
-### run_for_degrees()
+## run_for_degrees()
 
 ``` python
 hub.port.A.motor.run_for_degrees(degrees,speed)
@@ -119,7 +119,7 @@ __Parameters:__
 *  degrees
 *  speed
 
-### run_to_position()
+## run_to_position()
 
 ``` python
 hub.port.A.motor.run_to_position(position,speed,acceleration?,stop action)
@@ -139,7 +139,7 @@ __Parameters:__
 *  deceleration
 *  stop action
 
-### run_for_time()
+## run_for_time()
 
 ``` python
 hub.port.A.motor.run_for_time(time,speed)
@@ -151,13 +151,13 @@ __Parameters:__
 *  time (ms)
 *  speed
 
-### float()
+## float()
 ``` python
 hub.port.A.motor.float()
 ```
 Coast motor from current position
 
-### brake()
+## brake()
   
 ``` python
 hub.port.A.motor.brake()
@@ -166,16 +166,16 @@ Brake at current position
 
 > test what this means with respect to hold at current position
 
-### hold()
+## hold()
 
 ``` python
 hub.port.A.motor.hold()
 ```
 Hold at motor current position
 
-## Settings
+# Settings
 
-### pair()
+## pair()
 
 ``` python
 hub.port.A.motor.pair(motor)
@@ -185,7 +185,7 @@ __Parameters:__
 
 *  motor to pair, e.g. hub.port.A.motor
 
-### pid()
+## pid()
 
 ``` python
 hub.port.A.motor.pid(p,i,d)
@@ -200,7 +200,7 @@ __Parameters:__
 *  i: integral gain
 *  d: derivative gain
 
-### preset()
+## preset()
 
 ``` python
 hub.port.A.motor.preset(position)
@@ -211,7 +211,7 @@ __Parameters:__
 
 *  position: the position you want to be zero? -> TODO: formulation
 
-### mode
+## mode
 
 ``` python
 hub.port.A.motor.mode(mode)
@@ -222,9 +222,9 @@ __Parameters:__
 
 *  mode: either a single mode (0,1,2,...) or array of modes ([(mode_1,format),(mode_2,format),(3,4)])
 
-### default()
+## default()
 
-``` python
+```
 hub.port.A.motor.default()
 ```
 
