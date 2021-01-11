@@ -1,21 +1,6 @@
-## pixel()
+# Make Image
 
-```
-hub.display.pixel(x,y,intensity)
-```
-
-Set the ligth intensity of a single pixel.
-
-__Parameters:__
-
-*  [integer](data_types.md#integer) x: in range [0,5]
-*  [integer](data_types.md#integer) y: in range [0,5]
-*  [integer](data_types.md#integer) intensity:  in range [0,10]
-
-
-
-
-## Callback
+## Image()
 
 ```
 image = hub.Image(image_def)
@@ -61,6 +46,64 @@ __Parameters:__
 *  [integer](data_types.md#integer) y: in range [0,5]
 *  [integer](data_types.md#integer) intensity:  in range [0,10]
 
+## shift_up()
+
+```
+myimage.shift_up(int shift)
+``` 
+
+Shift all pixels of myimage up with (shift) pixels
+
+> Only works for custom images
+
+__Parameters:__
+
+*  [integer](data_types.md#integer) shift: in range [0,5]
+
+## shift_down()
+
+```
+myimage.shift_down(int shift)
+``` 
+
+Shift all pixels of myimage down with (shift) pixels
+
+> Only works for custom images
+
+__Parameters:__
+
+*  [integer](data_types.md#integer) shift: in range [0,5]
+
+## shift_left()
+
+```
+myimage.shift_left(int shift)
+``` 
+
+Shift all pixels of myimage left with (shift) pixels
+
+> Only works for custom images
+
+__Parameters:__
+
+*  [integer](data_types.md#integer) shift: in range [0,5]
+
+## shift_up()
+
+```
+myimage.shift_right(int shift)
+``` 
+
+Shift all pixels of myimage right with (shift) pixels
+
+> Only works for custom images
+
+__Parameters:__
+
+*  [integer](data_types.md#integer) shift: in range [0,5]
+
+# Image info
+
 ## width()
 
 ```
@@ -73,7 +116,7 @@ __Returns:__
 
 *  [integer](data_types.md#integer) width.
 
-## width()
+## height()
 
 ```
 image.height()

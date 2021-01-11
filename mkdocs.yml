@@ -4,7 +4,7 @@ nav:
     - Hub: 'hub.md'
     - Led: 'led.md'
     - Sound: 'sound.md'
-    - Image: 'image_test.md'
+    - Image: 'image.md'
     - Display: 'display.md'
     - Button: 'button.md'
     - Motion: 'motion.md'
