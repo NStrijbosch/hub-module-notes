@@ -46,9 +46,6 @@ hub.port.A.motor.STOP_HOLD = 2
 
 ``` python
 hub.port.A.motor.get()
-    def function:
-        while: 
-            i=i+1
 ```
 
 The behaviour of this callback depends on the mode of the motor. 
@@ -69,7 +66,7 @@ __Returns:__
 
 ## busy()
 
-```
+``` python
 hub.port.A.motor.busy()
 ```
 
@@ -85,7 +82,7 @@ __Returns:__
 
 ## pwm()
 
-```
+``` python
 hub.port.A.motor.pwm(duty cycle)
 ```
 
@@ -97,7 +94,7 @@ __Parameters:__
 
 ## run_at_speed()
 
-```
+``` python
 hub.port.A.motor.run_at_speed(speed,max_power,acceleration,100,stall)
 ```
 Turn on motor with given speed
@@ -112,7 +109,7 @@ __Parameters:__
 
 ## run_for_degrees()
 
-```
+``` python
 hub.port.A.motor.run_for_degrees(degrees,speed)
 ```
 Turn on motor with given number of degrees with given speed
@@ -124,7 +121,7 @@ __Parameters:__
 
 ## run_to_position()
 
-```
+``` python
 hub.port.A.motor.run_to_position(position,speed,acceleration?,stop action)
 ```
 
@@ -144,7 +141,7 @@ __Parameters:__
 
 ## run_for_time()
 
-```
+``` python
 hub.port.A.motor.run_for_time(time,speed)
 ```
 Turn motor on for given time with given speed
@@ -155,14 +152,14 @@ __Parameters:__
 *  speed
 
 ## float()
-```
+``` python
 hub.port.A.motor.float()
 ```
 Coast motor from current position
 
 ## brake()
   
-```
+``` python
 hub.port.A.motor.brake()
 ```
 Brake at current position
@@ -171,7 +168,7 @@ Brake at current position
 
 ## hold()
 
-```
+``` python
 hub.port.A.motor.hold()
 ```
 Hold at motor current position
@@ -180,7 +177,7 @@ Hold at motor current position
 
 ## pair()
 
-```
+``` python
 hub.port.A.motor.pair(motor)
 ```
 
@@ -190,7 +187,7 @@ __Parameters:__
 
 ## pid()
 
-```
+``` python
 hub.port.A.motor.pid(p,i,d)
 ```
 set controller gains of PID. 
@@ -205,7 +202,7 @@ __Parameters:__
 
 ## preset()
 
-```
+``` python
 hub.port.A.motor.preset(position)
 ```
 Preset the relative position
@@ -216,7 +213,7 @@ __Parameters:__
 
 ## mode
 
-```
+``` python
 hub.port.A.motor.mode(mode)
 ```
 Set mode of the motor. This only affects result of get() callback
@@ -227,7 +224,7 @@ __Parameters:__
 
 ## default()
 
-```
+``` python
 hub.port.A.motor.default()
 ```
 
