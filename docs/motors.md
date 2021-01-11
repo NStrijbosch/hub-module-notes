@@ -42,32 +42,41 @@ hub.port.A.motor.STOP_HOLD = 2
 
 # Measurements
 
+## get()
+
 ```
 hub.port.A.motor.get()
 ```
 
-For SP motors
-__Returns:__
-
-* [power,speed,pos,absolute pos] 
-
-For other motors
+The behaviour of this callback depends on the mode of the motor. 
 
 __Returns:__
+
 *  power if mode = 0
 *  speed if mode = 1
 *  relative position if mode = 2
 *  absolute position if mode = 3 
 
+For SP motors the default mode is ([(2,0),(1,0),(3,1),(4,2)]<=not correct need to check)
+which returns in the following form:
+
+__Returns:__
+
+*  [power(PCT),speed(SI),pos(SI),absolute pos(RAW)] 
+
+## busy()
+
 ```
 hub.port.A.motor.busy()
 ```
-Paramter:
-hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
 
-if BUSY_MOTOR:
-returns TRUE if target not achieved
-returns FALSE if tracking not active
+__Parameters:__
+
+*  hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
+
+__Returns:__
+
+*  TRUE if target not achieved, FALSE if tracking not active
 
 # Actions
 
@@ -116,15 +125,19 @@ __Parameters:__
 hub.port.A.motor.run_to_position(position,speed,acceleration?,stop action)
 ```
 
-Turn motor to given _absolute?_ position with given speed
+Turn motor to given relative position with given speed. 
 
-stop action: float=0,  brake=1, hold =2
+> Position is the relative position since STARTING the hub. Best practice is to preset the position to the absolute position at the start of a program.
+
+TODO: stop action: float=0,  brake=1, hold =2
 
 __Parameters:__
 
-*  position _absolute?_ position
-
-> Test if this is absolute position. What does this mean for technic motors?
+*  relative position
+*  speed
+*  accelaration
+*  deceleration
+*  stop action
 
 ## run_for_time()
 
@@ -153,7 +166,7 @@ Brake at current position
 
 > test what this means with respect to hold at current position
 
-## Hold
+## hold()
 
 ```
 hub.port.A.motor.hold()
@@ -162,23 +175,57 @@ Hold at motor current position
 
 # Settings
 
+## pair()
+
 ```
 hub.port.A.motor.pair(motor)
 ```
-parameters: hub.port.X.motor
+
+__Parameters:__
+
+*  motor to pair, e.g. hub.port.A.motor
+
+## pid()
 
 ```
 hub.port.A.motor.pid(p,i,d)
 ```
+set controller gains of PID. 
+
+> Does not seems to work
+
+__paramters:__
+
+*  p: proportional gain
+*  i: integral gain
+*  d: derivative gain
+
+## preset()
 
 ```
-hub.port.A.motor.preset(hub.port.A.motor.FORMAT_X)
+hub.port.A.motor.preset(position)
 ```
+Preset the relative position
+
+__paramters:__
+
+*  position: the position you want to be zero? -> TODO: formulation
+
+## mode
+
+```
+hub.port.A.motor.mode(mode)
+```
+Set mode of the motor. This only affects result of get() callback
+
+__parameters:__
+
+*  mode: either a single mode (0,1,2,...) or array of modes ([(mode_1,format),(mode_2,format),(3,4)])
+
+
+## default()
 
 ```
 hub.port.A.motor.default()
 ```
 
-```
-hub.port.A.motor.mode(mode)
-```
