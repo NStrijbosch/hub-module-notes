@@ -25,6 +25,8 @@ __Parameters:__
 *  ___g___ (integer) green value between 0 and 255
 *  ___b___ (integer) blue value between 0 and 255
 
+> keep in mind that the colors seem skewed towards blue
+
 ``` python
 hub.led()
 
