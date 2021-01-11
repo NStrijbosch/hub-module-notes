@@ -61,22 +61,22 @@ hub.battery.USB_CH_PORT_DCP=3
 
 ## Led
 
-led colors:
+### led color:
 
-|number |name                 |r   |g   |b  |
+|Number |Name                 |R   |G   |B  |
 |-------|---------------------|----|----|---|
-|0      |off                  |0   |0   |0  |
-|1      |pink                 |255 |7   |20 |
-|2      |violet               |255 |10  |100|    
-|3      |blue                 |0   |0   |80 |
-|4      |light blue           |0   |57  |57 |
-|5      |light green          |0   |112 |28 |
-|6      |green                |0   |80  |0  |
-|7      |yellow               |255 |35  |0  |
-|8      |orange               |255 |15  |0  |
-|9      |red                  |255 |0   |0  |  
-|10     |bright white         |255 |70  |35 |
-|11     |white                |102 |28  |14 |
+|0      |Off                  |0   |0   |0  |
+|1      |Pink                 |255 |7   |20 |
+|2      |Violet               |255 |10  |100|    
+|3      |Blue                 |0   |0   |80 |
+|4      |Light blue           |0   |57  |57 |
+|5      |Light green          |0   |112 |28 |
+|6      |Green                |0   |80  |0  |
+|7      |Yellow               |255 |35  |0  |
+|8      |Orange               |255 |15  |0  |
+|9      |Red                  |255 |0   |0  |  
+|10     |Bright white         |255 |70  |35 |
+|11     |White                |102 |28  |14 |
 
 
 ```
