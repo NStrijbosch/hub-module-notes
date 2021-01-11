@@ -14,16 +14,8 @@ nav:
     - Battery: 'battery.md'
     - Bluetooth: 'bluetooth.md'
     - Config: 'config.md'
-    - File transfer: 'file_transfer.md'
-    - Info : 'info.md'
     - Port : 'port.md'
-    - power_off: 'power_off.md'
-    - powerdown_timeout: 'powerdown.md'
-    - repl_restart: 'repl_restart.md'
-    - reset: 'reset.md'
-    - status: 'status.md'
     - supervision: 'supervision.md'
-    - temperature: 'temperature.md'
     - hub: 'hub.md'
 theme: readthedocs
 extra_css: ['custom.css']
