@@ -26,6 +26,31 @@ hub.BOTTOM = 3
 hub.BACK = 4
 hub.LEFT = 5
 '''
+## Battery
+
+''' python
+hub.battery.BATTERY_VOLTAGE_TOO_LOW=-5  
+hub.battery.BATTERY_BAD_BATTERY=-4
+hub.battery.BATTERY_TEMPERATURE_SENSOR_FAIL=-3
+hub.battery.BATTERY_TEMPERATURE_OUT_OF_RANGE=-2
+hub.battery.BATTERY_HUB_TEMPERATURE_CRITICAL_OUT_OF_RANGE=-2
+hub.battery.BATTERY_NO_ERROR=0
+'''
+
+''' python
+hub.battery.CHARGER_STATE_FAIL=-1  
+hub.battery.CHARGER_STATE_DISCHARGING=0
+hub.battery.CHARGER_STATE_CHARGING_ONGOING=1  
+hub.battery.CHARGER_STATE_CHARGING_COMPLETED=2
+
+'''
+
+''' python
+hub.battery.USB_CH_PORT_NONE=0
+hub.battery.USB_CH_PORT_SDP=1
+hub.battery.USB_CH_PORT_CDP=2
+hub.battery.USB_CH_PORT_DCP=3                 
+'''
 
 ## Button
 
