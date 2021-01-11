@@ -6,11 +6,11 @@ This class controls all functions linked to the led ring around the center butto
 ```
 hub.led(color)
 ```
-Turn on the led with a given [___led-color___](data_types.md#led-color)
+Turn on the led with a given [___ledcolor___](data_types.md#led)
 
 __Parameter:__
 
-*  [___led-color___](data_types.md#led-color)
+*  [___ledcolor___](data_types.md#led)
 
 
 ``` 
