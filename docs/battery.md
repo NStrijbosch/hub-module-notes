@@ -1,22 +1,6 @@
-## capacity_left()
-
-__Returns:__
-
-*  integer
-
-## charger_detect()
-
-__Returns:__
-
-*  integer 0 or 1?
-
-## current()
-
-__Returns:__
-
-*  integer
-  
 ## info()
+
+Returns battery information
 
 __Returns:__
 
@@ -27,15 +11,43 @@ Example:
 ``` python
 {'temperature': 23.9, 'charge_voltage': 8357, 'charge_current': 353, 'charge_voltage_filtered': 8352, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
 ```
-  
-## temperature()
+
+## capacity_left()
+
+Measure the capacity of the battery left
 
 __Returns:__
 
-*  float
+*  integer values between 0 and 100, in increments of 20
+
+## current()
+
+Measure the current
+
+__Returns:__
+
+*  integer: unit unkown
 
 ## voltage()
 
+Measure the voltage of the battery
+
 __Returns:__
 
-*  integer
+*  integer unit unkown
+  
+## temperature()
+
+Measure the temperature of battery
+
+__Returns:__
+
+*  float unit Celcius
+  
+## charger_detect()
+
+check if a charger is detected
+
+__Returns:__
+
+*  integer: 1 if charger detected, 0 if charger not detected (have to check without USB cable)
