@@ -12,6 +12,18 @@ __Parameters:__
 
 *  [image](data_types.md#image) image
 
+## pixel()
+
+```
+hub.display.pixel(int x, int y, int b)
+```
+
+__Parameters:__
+
+*  int x: x coordinate value between 0 and 4
+*  int y: y coordinate value between 0 and 4
+*  int b: brightness value between 0 and 9
+
 ## clear()
 
 ```
