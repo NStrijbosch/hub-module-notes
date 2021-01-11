@@ -2,7 +2,7 @@
 
 ## Image()
 
-```
+``` python
 image = hub.Image(image_def)
 ```
 
@@ -14,7 +14,7 @@ __Parameters:__
 
 ### examples:
 
-```
+``` python
 image = hub.Image("90009:"
                   "09090:"
                   "00900:"
@@ -22,17 +22,17 @@ image = hub.Image("90009:"
                   "90009")    
 ```
 
-```
+``` python
 image = hub.Image("90009\n09090\n00900\n09090\n90009"
 ```
 
-```
+``` python
 image = hub.Image(2, 2, b'\x08\x08\x08\x08')
 ```
 
 ## set_pixel()
 
-```
+``` python
 image.set_pixel(x,y,intensity) 
 ``` 
 
@@ -48,7 +48,7 @@ __Parameters:__
 
 ## shift_up()
 
-```
+``` python
 myimage.shift_up(int shift)
 ``` 
 
@@ -62,7 +62,7 @@ __Parameters:__
 
 ## shift_down()
 
-```
+``` python
 myimage.shift_down(int shift)
 ``` 
 
@@ -76,7 +76,7 @@ __Parameters:__
 
 ## shift_left()
 
-```
+``` python
 myimage.shift_left(int shift)
 ``` 
 
@@ -90,7 +90,7 @@ __Parameters:__
 
 ## shift_up()
 
-```
+``` python
 myimage.shift_right(int shift)
 ``` 
 
@@ -106,7 +106,7 @@ __Parameters:__
 
 ## width()
 
-```
+``` python
 image.width()
 ```
 
@@ -118,7 +118,7 @@ __Returns:__
 
 ## height()
 
-```
+``` python
 image.height()
 ```
 
@@ -130,7 +130,7 @@ __Returns:__
 
 ## get_pixel()
 
-```
+``` python
 image.get_pixel(x,y)
 ```
 
