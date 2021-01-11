@@ -1,6 +1,7 @@
 site_name: Low level module documentation
 nav:
     - Getting started: 'index.md'
+    - hub: 'hub.md'
     - Sensors: 'sensors.md'
     - Motors: 'motors.md'
     - Sound: 'sound.md'
@@ -16,6 +17,6 @@ nav:
     - Config: 'config.md'
     - Port : 'port.md'
     - supervision: 'supervision.md'
-    - hub: 'hub.md'
+
 theme: readthedocs
 extra_css: ['custom.css']
