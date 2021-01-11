@@ -1,6 +1,6 @@
-a { text-decoration: overline;  background-color: yellow !important;}
+/* a { text-decoration: overline;  background-color: yellow !important;} 
 a:hover { text-decoration: underline; background-color: yellow;}
-a.toctree-12 { background-color: yellow;}
+a.toctree-12 { background-color: yellow;} */
 .section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
 .section li { list-style: none !important}
 .toctree-l2 a {margin-left: 0em;}
