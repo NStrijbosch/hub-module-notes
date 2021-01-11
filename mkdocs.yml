@@ -9,6 +9,6 @@ nav:
     - Motion: 'motion.md'
     - Display: 'display.md'
     - Button: 'button.md'
-    - Data types: 'data_types.md'
+    - Data types and constants: 'data_types.md'
 theme: readthedocs
 extra_css: ['custom.css']
