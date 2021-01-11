@@ -1,7 +1,6 @@
 <style type='text/css'>
-a { text-decoration: underline; }
-a:hover { text-decoration: underline; }
-ul { list-style-type: none; margin-left: 40px;}
+.toctree-l2 a {margin-left: 0em;}
+.toctree-l3 {margin-left: 2em;}
 </style>
 
-Since there is no official documentation available on the hub class, I started documenting some of it functionalities for my personal use untill official documentation is published. All commands are found by digging into the official software. This documentation is not complete and there are no guarantees on its correctness. 
+Since there is no official documentation available on the hub class, I started documenting some of it functionalities for my personal use until official documentation is published. All commands are found by digging into the official software. This documentation is not complete and there are no guarantees on its correctness. 
