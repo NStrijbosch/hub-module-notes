@@ -2,37 +2,27 @@
 # General
 
 ## mode()
-All of the sensors have a few different operating modes. Details about the modes for each specific sensor can be found below. 
+All of the sensors have a few different operating modes. Details about the modes for each specific sensor can be found [here]{todo fix link}. 
 
 The operation mode of the sensor can be changed using the following command
+
 ```
 hub.port.A.device.mode(mode)
 ```
 
+__Parameters:__
+*  mode
+  
+
 ## get()
 
-
 ```
-hub.port.A.device.get(unit)
-```
-These are the values obtained when using the scratch programming environment
-
-In RAW units
-```
-hub.port.A.device.get(hub.port.A.FORMAT_RAW)
-``` 
-
-this can significantly improve the resolution
-
-In Percent
-```
-hub.port.A.device.get(hub.port.A.FORMAT_PCT)
+hub.port.A.device.get( (unit))
 ```
 
-In SI units
-```
-hub.port.A.device.get(hub.port.A.FORMAT_SI)
-```
+__Parameters:__
+
+* (Optional) unit
 
 # Specific Sensor Info
 
