@@ -5,9 +5,9 @@ a.toctree-12 { background-color: yellow;} */
 .section li { list-style: none !important}
 .toctree-l2 a {margin-left: 0em;}
 .toctree-l3 {margin-left: 2em;}
-.hljs {background: #eeffcc;}
+.hljs {background: #000000;}
 
-code {background: #000000; }
+code {background: #eeffcc; }
 h1 {font-size: 150%;}
 h2 {font-size: 125%;}
 
@@ -20,6 +20,8 @@ h2 {font-size: 125%;}
 }
 
 .hljs-comment{
-    color:#992A96
+    color:#992A96;
+    font-style: normal;
 }
+
 
