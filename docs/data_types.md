@@ -197,5 +197,37 @@ hub.port.MODE_GPIO = 3
 
 ## Motors
 
+# Constants
+
+```
+hub.port.A.motor.BUSY_MODE = 0
+hub.port.A.motor.BUSY_MOTOR = 1
+```
+
+
+```
+hub.port.A.motor.EVENT_COMPLETED = 0
+hub.port.A.motor.EVENT_INTERRUPTED = 1
+```
+
+```
+hub.port.A.motor.FORMAT_RAW = 0
+hub.port.A.motor.FORMAT_PCT = 1
+hub.port.A.motor.FORMAT_SI = 2
+```
+
+```
+hub.port.A.motor.PID_POSITION = 0
+hub.port.A.motor.PID_SPEED = 1
+```
+
+
+```
+hub.port.A.motor.STOP_FLOAT = 0
+hub.port.A.motor.STOP_BRAKE = 1
+hub.port.A.motor.STOP_HOLD = 2
+```
+
+
 ## Sensors
 
