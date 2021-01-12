@@ -5,6 +5,15 @@
 
 `hub.port.A.motor.get() `
 
+``` 
+'hallo'
+asdfa
+asd
+x=10
+
+
+```
+
 
 The behaviour of this callback depends on the mode of the motor. 
 
