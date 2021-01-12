@@ -61,7 +61,7 @@ hub.port.A.device.mode(mode, )
 |8   |DEBUG|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
 |9   |CALIB|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|7       |1   |5      |0       |
 
-```
+``` python
 hub.port.A.device.mode(3) # Necessary before next line
 hub.port.A.device.mode(3, b''+chr(1*9)+chr(0*9)+chr(1*9))
 ```
@@ -74,7 +74,7 @@ hub.port.A.device.mode(3, b''+chr(1*9)+chr(0*9)+chr(1*9))
 ## Boost Color Sensor
 
 
-```
+``` python
 hub.port.A.device.mode(5) # Necessary before next line
 hub.port.A.device.mode(5, b''+chr(a))
 ```
