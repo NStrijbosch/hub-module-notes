@@ -2,6 +2,9 @@
 
 ## get()
 
+
+` hub.port.A.motor.get() `
+
 ``` python
 hub.port.A.motor.get()
 ```
