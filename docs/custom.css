@@ -5,7 +5,8 @@ a.toctree-12 { background-color: yellow;} */
 .section li { list-style: none !important}
 .toctree-l2 a {margin-left: 0em;}
 .toctree-l3 {margin-left: 2em;}
-.hljs {background: #000000;}
+.hljs {background: #000000;
+        color: white;}
 
 code {background: #eeffcc; }
 h1 {font-size: 150%;}
