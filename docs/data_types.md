@@ -133,10 +133,10 @@ hub.Image.YES
 Waveforms
 
 ``` 
-hub.sound.SOUND_SIN       
-hub.sound.SOUND_SQUARE
-hub.sound.SOUND_TRIANGLE
-hub.sound.SOUND_SAWTOOTH 
+hub.sound.SOUND_SIN=0       
+hub.sound.SOUND_SQUARE=1
+hub.sound.SOUND_TRIANGLE=2
+hub.sound.SOUND_SAWTOOTH=3
 ```
 
 ## Led
