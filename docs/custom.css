@@ -18,3 +18,7 @@ h2 {font-size: 125%;}
 .hljs-deletion {
   color: #ff0000;
 }
+
+.hljs-comment{
+    color: purple
+}

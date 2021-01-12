@@ -8,6 +8,8 @@ The operation mode of the sensor can be changed using the following command
 
 ```
 hub.port.A.device.mode(mode)
+
+# test
 ```
 
 __Parameters:__
