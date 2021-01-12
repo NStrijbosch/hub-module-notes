@@ -85,18 +85,16 @@ __Parameters:__
 
 
 ``` python
+from hub import port
+import utime
 
-from mindstorms import MSHub, Motor, MotorPair, ColorSensor, DistanceSensor, App
-from mindstorms.control import wait_for_seconds, wait_until, Timer
-from mindstorms.operator import greater_than, greater_than_or_equal_to, less_than, less_than_or_equal_to, equal_to, not_equal_to
-import math
+BoostSensor=port.A.device
 
+BoostSensor.mode(5)  # Set mode to RGB I
 
-# Create your objects here.
-hub = MSHub()
+colors = [3, 5, 9, 10] #3: Blue; 5: Green; 9: Red; 10: White
 
-
-# Write your program here.
-hub.speaker.beep()
-
+for c in colors:
+    BoostSensor.mode(5,b''+chr(c))
+    utime.sleep_ms(1000)
 ```
