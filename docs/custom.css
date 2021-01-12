@@ -24,4 +24,12 @@ h2 {font-size: 125%;}
     font-style: normal;
 }
 
+.hljs-keyword{
+    color:white
+}
+
+.hljs-text{
+    color: white
+}
+
 
