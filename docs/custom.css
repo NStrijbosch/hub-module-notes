@@ -12,12 +12,8 @@ code {background: #eeffcc; }
 h1 {font-size: 150%;}
 h2 {font-size: 125%;}
 
-.hljs-string,
-.hljs-section,
-.hljs-selector-class,
-.hljs-template-variable,
-.hljs-deletion {
-  color: #ff0000;
+.hljs-string {
+  color: #59cc33;
 }
 
 .hljs-comment{
@@ -29,5 +25,8 @@ h2 {font-size: 125%;}
     color:#cc681f
 }
 
+.hljs-number{
+    color:#91cea8
+}
 
 
