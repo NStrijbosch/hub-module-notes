@@ -3,11 +3,8 @@
 ## get()
 
 
-` python hub.port.A.motor.get() `
+`hub.port.A.motor.get() `
 
-``` python
-hub.port.A.motor.get()
-```
 
 The behaviour of this callback depends on the mode of the motor. 
 
@@ -27,9 +24,7 @@ __Returns:__
 
 ## busy()
 
-``` python
-hub.port.A.motor.busy()
-```
+`hub.port.A.motor.busy()`
 
 __Parameters:__
 
@@ -43,9 +38,7 @@ __Returns:__
 
 ## pwm()
 
-``` python
-hub.port.A.motor.pwm(duty cycle)
-```
+`hub.port.A.motor.pwm(duty cycle)`
 
 Turn on motor with given duty cycle
 
@@ -55,9 +48,8 @@ __Parameters:__
 
 ## run_at_speed()
 
-``` python
-hub.port.A.motor.run_at_speed(speed,max_power,acceleration,100,stall)
-```
+`hub.port.A.motor.run_at_speed(speed,max_power,acceleration,100,stall)`
+
 Turn on motor with given speed
 
 __Parameters:__
@@ -70,9 +62,8 @@ __Parameters:__
 
 ## run_for_degrees()
 
-``` python
-hub.port.A.motor.run_for_degrees(degrees,speed)
-```
+`hub.port.A.motor.run_for_degrees(degrees,speed)`
+
 Turn on motor with given number of degrees with given speed
 
 __Parameters:__
@@ -82,9 +73,7 @@ __Parameters:__
 
 ## run_to_position()
 
-``` python
-hub.port.A.motor.run_to_position(position,speed,acceleration?,stop action)
-```
+`hub.port.A.motor.run_to_position(position,speed,acceleration?,stop action)`
 
 Turn motor to given relative position with given speed. 
 
@@ -102,9 +91,8 @@ __Parameters:__
 
 ## run_for_time()
 
-``` python
-hub.port.A.motor.run_for_time(time,speed)
-```
+`hub.port.A.motor.run_for_time(time,speed)`
+
 Turn motor on for given time with given speed
 
 __Parameters:__
@@ -113,34 +101,29 @@ __Parameters:__
 *  speed
 
 ## float()
-``` python
-hub.port.A.motor.float()
-```
+`hub.port.A.motor.float()`
+
 Coast motor from current position
 
 ## brake()
   
-``` python
-hub.port.A.motor.brake()
-```
+`hub.port.A.motor.brake()`
+
 Brake at current position
 
 > test what this means with respect to hold at current position
 
 ## hold()
 
-``` python
-hub.port.A.motor.hold()
-```
+`hub.port.A.motor.hold()`
+
 Hold at motor current position
 
 # Settings
 
 ## pair()
 
-``` python
-hub.port.A.motor.pair(motor)
-```
+`hub.port.A.motor.pair(motor)`
 
 __Parameters:__
 
@@ -148,9 +131,7 @@ __Parameters:__
 
 ## pid()
 
-``` python
-hub.port.A.motor.pid(p,i,d)
-```
+`hub.port.A.motor.pid(p,i,d) `
 set controller gains of PID. 
 
 > Does not seems to work
@@ -163,9 +144,7 @@ __Parameters:__
 
 ## preset()
 
-``` python
-hub.port.A.motor.preset(position)
-```
+`hub.port.A.motor.preset(position)`
 Preset the relative position
 
 __Parameters:__
@@ -174,9 +153,8 @@ __Parameters:__
 
 ## mode
 
-``` python
-hub.port.A.motor.mode(mode)
-```
+`hub.port.A.motor.mode(mode)`
+
 Set mode of the motor. This only affects result of get() callback
 
 __Parameters:__
@@ -185,7 +163,6 @@ __Parameters:__
 
 ## default()
 
-```
-hub.port.A.motor.default()
-```
+`hub.port.A.motor.default()`
+
 

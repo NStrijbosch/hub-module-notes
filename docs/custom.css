@@ -10,3 +10,11 @@ a.toctree-12 { background-color: yellow;} */
 code {background: #eeffcc; color: #000000;}
 h1 {font-size: 150%;}
 h2 {font-size: 125%;}
+
+.hljs-string,
+.hljs-section,
+.hljs-selector-class,
+.hljs-template-variable,
+.hljs-deletion {
+  color: #ff0000;
+}
