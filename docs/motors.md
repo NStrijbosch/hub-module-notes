@@ -203,6 +203,25 @@ __Parameters:__
 
 ### Medium Motor
 
+hw_version = 4096
+fw_version = 4096
+combi_modes = (14,15)
+type = 48
+
+``` python
+from hub import port
+
+medium_motor = port.A.motor
+
+default_mode = port.A.motor.mode()
+
+print(default_mode)
+```
+
+```
+>>> [(1, 0), (2, 2), (3, 1), (0, 0)]
+```
+
 |Mode|Name |RAW |      |PCT |      |SI  |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
 |----|-----|----|------|----|------|----|------|------|------------------------|--------|----|-------|--------|
 |0   |POWER|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |1      |0       |
