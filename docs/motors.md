@@ -1,8 +1,16 @@
+The motor class is a sub class of the [port](port.md) class if and only if a PU motor is attached. 
+
+If a motor is connected to port A it can be used via
+
+`motor = hub.port.A.motor`
+
+see the examples below for mor details
+
 # Measurements
 
 ## get()
 
-`hub.port.A.motor.get() `
+`motor.get() `
 
 Measure sensor data from the motor. The specific measurements (speed, relative position, absolute position, power, load) depend on the mode of the motor, see [mode](#mode) for details to change mode, and [motors](#motors) for details on the default and available modes of each motor. 
 
@@ -10,19 +18,20 @@ __Returns:__
 
 *  list of measurement data depending on the mode of the motor.
 
-
 ### Example:
+Medium SP motor connected to port A. 
+
 ``` python
 from hub import port
 
-Motor = port.A.motor
+MotorA = port.A.motor
 
-Motor.mode(3)          # Absolute position mode
-abs_pos = Motor.get()[0]
+MotorA.mode(3)          # Absolute position mode
+abs_pos = MotorA.get()[0]
 print("Absolute position: " + str(abs_pos))
 
 Motor.mode([(1, 0), (2, 2)])  #Speed in RAW units and relative position in SI units
-measurements = Motor.get()
+measurements = MotorA.get()
 print("Speed : " + str(measurements[0]) + " Relative position: " + str(measurements[1]))
 
 ```
