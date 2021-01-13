@@ -101,11 +101,7 @@ __Parameters:__
 
 Turn motor to given relative position with given speed. 
 
-.. caution::
-   This is the example for **Caution** admonition.
-
-
-> Lorum ipsum
+> The position is relative to the position of the motor at the moment of starting the hub/connecting the motor. Best practice is to preset the position at the the start of a program
 
 __Parameters:__
 
