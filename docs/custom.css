@@ -13,7 +13,7 @@ h1 {font-size: 150%;}
 h2 {font-size: 10%; visibility:hidden;}
 h3 {font-size: 100%}
 
-blockquote{background: #ffedcc; border-top: solid 12px #f0b37e}
+blockquote{background: #ffedcc; border-top: solid 12px #f0b37e; margin-right: 24px;}
 
 .hljs-string {
   color: #59cc33;
