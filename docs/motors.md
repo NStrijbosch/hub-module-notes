@@ -24,7 +24,7 @@ __Returns:__
 *  relative position if mode = 2
 *  absolute position if mode = 3 
 
-For SP motors the default mode is ([(2,0),(1,0),(3,1),(4,2)]<=not correct need to check)
+For SP motors the default mode is ([(1, 0), (2, 2), (3, 1), (0, 0)]<=not correct need to check)
 which returns in the following form:
 
 __Returns:__
@@ -37,17 +37,15 @@ from hub import port
 
 Motor = port.A.motor
 
-Motor.mode(3)
-abs_pos = Motor.get()
-print(abs_rot)
-
-Motor.mode(2)
-rel_pos = Motor.get()
-print(rel_pos)
-
-Motor.mode([(1,0), (2,1)])
+Motor.mode([(1, 0), (2, 2), (3, 1), (0, 0)]) #Default motor mode for SP and RI motors
 measurements = Motor.get()
 print(measurements)
+
+Motor.mode(3)          # Absolute position mode
+abs_pos = Motor.get()[0]
+print("Absolute position: " + str(abs_pos))
+
+
 
 ```
 
@@ -201,3 +199,14 @@ __Parameters:__
 `hub.port.A.motor.default()`
 
 
+# Motors
+
+### Medium Motor
+
+|Mode|Name |RAW |      |PCT |      |SI  |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
+|----|-----|----|------|----|------|----|------|------|------------------------|--------|----|-------|--------|
+|0   |POWER|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |1      |0       |
+|1   |SPEED|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |4      |0       |
+|2   |POS  |-360|360   |-100|100   |-360|360   |DEG   |\x10\x00\x00\x00\x01\x04|1       |2   |4      |0       |
+|3   |APOS |-180|179   |-200|200   |-180|-179  |DEG   |\x10\x00\x00\x00\x01\x04|1       |1   |3      |0       |
+|4   |LOAD |0   |127   |0   |100   |0   |127   |PCT   |\x10\x00\x00\x00\x01\x04|1       |1   |1      |0       |
