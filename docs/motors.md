@@ -101,9 +101,11 @@ __Parameters:__
 
 Turn motor to given relative position with given speed. 
 
-```{note}
-This note is written in [markdown](https://example.com)
-```
+.. caution::
+   This is the example for **Caution** admonition.
+
+
+> Lorum ipsum
 
 __Parameters:__
 
