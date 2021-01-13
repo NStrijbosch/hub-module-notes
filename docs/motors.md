@@ -101,8 +101,12 @@ __Parameters:__
 
 Turn motor to given relative position with given speed. 
 
-!!! note
- Position is the relative position since STARTING the hub. Best practice is to preset the position to the absolute position at the start of a program.
+---
+*** Note ***
+
+Position is the relative position since STARTING the hub. Best practice is to preset the position to the absolute position at the start of a program.
+
+---
 
 __Parameters:__
 
