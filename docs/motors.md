@@ -37,15 +37,13 @@ from hub import port
 
 Motor = port.A.motor
 
-Motor.mode([(1, 0), (2, 2), (3, 1), (0, 0)]) #Default motor mode for SP and RI motors
+Motor.mode([(1, 0), (2, 2)])
 measurements = Motor.get()
-print(measurements)
+print("Speed : " + str(measurements[0]) + " Relative position: " + str(measurements[1]))
 
 Motor.mode(3)          # Absolute position mode
 abs_pos = Motor.get()[0]
 print("Absolute position: " + str(abs_pos))
-
-
 
 ```
 
