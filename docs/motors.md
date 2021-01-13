@@ -4,7 +4,7 @@
 
 `hub.port.A.motor.get() `
 
-Measure sensor data from the motor. The specific measurements (speed, relative position, absolute position, power, load) depend on the mode of the motor, see [mode](motors/#mode) for details to change mode, and [motors](motors/#motors) for details on the default and available modes of each motor. 
+Measure sensor data from the motor. The specific measurements (speed, relative position, absolute position, power, load) depend on the mode of the motor, see [mode](#mode) for details to change mode, and [motors](#motors) for details on the default and available modes of each motor. 
 
 __Returns:__
 
