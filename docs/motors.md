@@ -2,35 +2,13 @@
 
 ## get()
 
-
 `hub.port.A.motor.get() `
 
-``` 
-'hallo'
-asdfa
-asd
-x=10
-
-
-```
-
-
-The behaviour of this callback depends on the mode of the motor. 
+Measure all sensor data corresponding to current motor mode.
 
 __Returns:__
 
-*  power if mode = 0
-*  speed if mode = 1
-*  relative position if mode = 2
-*  absolute position if mode = 3 
-
-For SP motors the default mode is ([(1, 0), (2, 2), (3, 1), (0, 0)]<=not correct need to check)
-which returns in the following form:
-
-__Returns:__
-
-*  [power(PCT),speed(SI),pos(SI),absolute pos(RAW)] 
-
+*  list of measurement data depening on the mode of the motor.
 
 ``` python
 from hub import port
