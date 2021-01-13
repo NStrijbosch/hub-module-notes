@@ -47,7 +47,7 @@ __Returns:__
 
 ## pwm()
 
-`hub.port.A.motor.pwm(duty cycle)`
+`hub.port.A.motor.pwm([int](data_types.md#int) duty_cycle)`
 
 Turn on motor with given duty cycle
 
