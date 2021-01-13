@@ -4,12 +4,14 @@
 
 `hub.port.A.motor.get() `
 
-Measure sensor data from the motor. The specific measurements (speed, relative position, absolute position, power, load) depend on the mode of the motor, see [mode]{#mode} for details to change mode, and [motors]{#Motors} for details on the default and available modes of each motor. 
+Measure sensor data from the motor. The specific measurements (speed, relative position, absolute position, power, load) depend on the mode of the motor, see [mode](#mode) for details to change mode, and [motors](#Motors) for details on the default and available modes of each motor. 
 
 __Returns:__
 
 *  list of measurement data depending on the mode of the motor.
 
+
+### Example:
 ``` python
 from hub import port
 
@@ -19,7 +21,7 @@ Motor.mode(3)          # Absolute position mode
 abs_pos = Motor.get()[0]
 print("Absolute position: " + str(abs_pos))
 
-Motor.mode([(1, 0), (2, 2)])  #Speed in RAW and relative position in SI
+Motor.mode([(1, 0), (2, 2)])  #Speed in RAW units and relative position in SI units
 measurements = Motor.get()
 print("Speed : " + str(measurements[0]) + " Relative position: " + str(measurements[1]))
 
