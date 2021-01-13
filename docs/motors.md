@@ -1,10 +1,4 @@
-The motor class is a sub class of the [port](port.md) class if and only if a PU motor is attached. 
-
-If a motor is connected to port A it can be used via
-
-`motor = hub.port.A.motor`
-
-see the examples below for mor details
+The motor class is a sub class of the [port](port.md) class to control PU motors. It can be used via `motor = hub.port.A.motor`, see the examples below for more details. 
 
 # Measurements
 
