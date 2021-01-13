@@ -103,15 +103,32 @@ Turn motor to given relative position with given speed.
 
 > Position is the relative position since STARTING the hub. Best practice is to preset the position to the absolute position at the start of a program.
 
-TODO: stop action: float=0,  brake=1, hold =2
-
 __Parameters:__
 
-*  relative position
-*  speed
-*  accelaration
-*  deceleration
-*  stop action
+*  __position__ ([int](data_types.md#int)): desired relative position in degrees. 
+*  __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
+*  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
+*  __stop__ ([int](data_types.md#int)): stop action after reaching target: float (0); brake (1); hold(2)
+
+``` python
+from hub import port
+
+MotorA = port.A.motor
+MotorB = port.B.motor
+
+MotorA.mode(3)  # set mode to absolute position
+MotorB.mode(3)  # set mode to absolute position
+
+MotorA.preset(Motor.A.get()[0])  # preset 0 position to absolute zero position
+MotorB.preset(Motor.B.get()[0])  # preset 0 position to absolute zero position
+
+# Turn motors to different positions in parallel
+MotorA.run_to_position(100,speed=50,stall=True,acceleration=100,deceleration=100,stop=0)
+MotorB.run_to_position(-200,speed=50,stall=True,acceleration=100,deceleration=100,stop=0)
+
+```
 
 ## run_for_time()
 
