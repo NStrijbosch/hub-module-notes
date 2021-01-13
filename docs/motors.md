@@ -101,7 +101,8 @@ __Parameters:__
 
 Turn motor to given relative position with given speed. 
 
-> Position is the relative position since STARTING the hub. Best practice is to preset the position to the absolute position at the start of a program.
+!!! note
+ Position is the relative position since STARTING the hub. Best practice is to preset the position to the absolute position at the start of a program.
 
 __Parameters:__
 
@@ -125,8 +126,8 @@ MotorA.preset(Motor.A.get()[0])  # preset 0 position to absolute zero position
 MotorB.preset(Motor.B.get()[0])  # preset 0 position to absolute zero position
 
 # Turn motors to different positions in parallel
-MotorA.run_to_position(100,speed=50,stall=True,acceleration=100,deceleration=100,stop=0)
-MotorB.run_to_position(-200,speed=50,stall=True,acceleration=100,deceleration=100,stop=0)
+MotorA.run_to_position(100,speed=50)
+MotorB.run_to_position(-200,speed=50)
 
 ```
 
