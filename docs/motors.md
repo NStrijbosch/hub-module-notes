@@ -4,11 +4,11 @@
 
 `hub.port.A.motor.get() `
 
-Measure all sensor data corresponding to current motor mode.
+Measure sensor data from the motor. The specific measurements (speed, relative position, absolute position, power, load) depend on the mode of the motor, see [mode]{#mode} for details to change mode, and [motors]{#Motors} for details on the default and available modes of each motor. 
 
 __Returns:__
 
-*  list of measurement data depening on the mode of the motor.
+*  list of measurement data depending on the mode of the motor.
 
 ``` python
 from hub import port
