@@ -101,8 +101,9 @@ __Parameters:__
 
 Turn motor to given relative position with given speed. 
 
-!!! important ""
-    This is an admonition box without a title.
+```{note}
+This note is written in [markdown](https://example.com)
+```
 
 __Parameters:__
 
