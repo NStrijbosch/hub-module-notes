@@ -31,6 +31,32 @@ __Returns:__
 
 *  [power(PCT),speed(SI),pos(SI),absolute pos(RAW)] 
 
+
+``` python
+from hub import port
+
+Motor = port.A.motor
+
+Motor.mode(3)
+abs_pos = Motor.get()
+print(abs_rot)
+
+Motor.mode(2)
+rel_pos = Motor.get()
+print(rel_pos)
+
+Motor.mode([(1,0), (2,1)])
+measurements = Motor.get()
+print(measurements)
+
+```
+
+``` python
+>>> 80
+>>> 0
+>>> [0, 0]
+```
+
 ## busy()
 
 `hub.port.A.motor.busy()`
