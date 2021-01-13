@@ -1,10 +1,10 @@
-The motor class is a sub class of the [port](port.md) class to control PU motors. It can be used via `motor = hub.port.A.motor`, see the examples below for more details. 
+The motor class is a sub class of the [port](port.md) class which allows to control PU motors. It can be used via `motor=hub.port.A.motor`, see the examples below for more details. 
 
 # Measurements
 
 ## get()
 
-`motor.get() `
+`motor.get()`
 
 Measure sensor data from the motor. The specific measurements (speed, relative position, absolute position, power, load) depend on the mode of the motor, see [mode](#mode) for details to change mode, and [motors](#motors) for details on the default and available modes of each motor. 
 
@@ -51,27 +51,38 @@ __Returns:__
 
 ## pwm()
 
-`hub.port.A.motor.pwm([int](data_types.md#int) duty_cycle)`
+`hub.port.A.motor.pwm(duty_cycle)`
 
-Turn on motor with given duty cycle
+Turn on motor with a given duty cycle
 
 __Parameters:__
 
-*  [duty_cycle][(data_types.md/#duty_cycle) the amount of time the signal is in a high (on) state as a percentage of the total time of it takes to complete one cycle. Integer value in range -100 ... 100)
+*  __duty_cycle__ [int](data_types.md#int) percentage of a cycle for which the signal is high. Value in range -100 ... 100.
+
+``` python
+from hub import port
+from utime import sleep_ms
+
+MotorA = port.A.motor
+
+MotorA.pwm(40)      # start motor
+sleep_ms(1000)      # wait 1 second
+MOtorA.pwm(0)       # stop motor
+```
 
 ## run_at_speed()
 
-`hub.port.A.motor.run_at_speed(speed,max_power,acceleration,100,stall)`
+`hub.port.A.motor.run_at_speed(speed = 50, max_power = 100, acceleration = 100, deceleration = 100, stall = False)`
 
-Turn on motor with given speed
+Turn on motor with given speed.
 
 __Parameters:__
 
-*  speed
-*  maximum power
-*  max acceleration
-*  ?
-*  stall 
+*  __speed__ ([int](data_types.md#int)): desired velocity as percentage of maximum velocity. Value in range -100 ... 100.
+*  __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
+*  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
+*  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 
 ## run_for_degrees()
 
@@ -86,7 +97,7 @@ __Parameters:__
 
 ## run_to_position()
 
-`hub.port.A.motor.run_to_position(position,speed,acceleration?,stop action)`
+`hub.port.A.motor.run_to_position(position,speed=50,stall=True,acceleration=100,deceleration=100,stop=0)`
 
 Turn motor to given relative position with given speed. 
 
@@ -176,7 +187,19 @@ __Parameters:__
 
 ## default()
 
-`hub.port.A.motor.default()`
+`hub.port.A.motor.default(pid=(0, 0, 0), max_power=0, speed=0, stall=True, deceleration=150, stop=1, callback=<bound_method>, acceleration=100})`
+
+Set default settings of the motor
+
+__Parameters:__
+*  pid
+*  max_power
+*  speed
+*  stall
+*  deceleration
+*  stop
+*  callback
+*  acceleration
 
 
 # Motors
