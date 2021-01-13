@@ -8,7 +8,7 @@ a.toctree-12 { background-color: yellow;} */
 .hljs {background: #000000;
         color: white;}
 
-code {background: #eeffcc; color: black; font-size:100%;}
+code {    background: #e7f2fa;    color: #2980B9;    border-top: solid 3px #6ab0de; margin: 6px 0; padding: 6px;}
 h1 {font-size: 150%;}
 h2 {font-size: 125%;}
 
