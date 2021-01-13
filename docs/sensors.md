@@ -84,15 +84,19 @@ __Parameters:__
 *  a in [3 (green),4 (blue),6 (red),10 (white)]
 
 
+### Example
+
+Connect BoostSensor two port A and cycle through the 4 colors.
+
 ``` python
 from hub import port
 import utime
 
 BoostSensor=port.A.device
 
-BoostSensor.mode(5)  # Set mode to RGB I
+BoostSensor.mode(5)         # Set mode to RGB I
 
-colors = [3, 5, 9, 10] #3: Blue; 5: Green; 9: Red; 10: White
+colors = [3, 5, 9, 10]      #3: Blue; 5: Green; 9: Red; 10: White
 
 for c in colors:
     BoostSensor.mode(5,b''+chr(c))
