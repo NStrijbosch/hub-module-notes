@@ -1,40 +1,60 @@
 
 This class controls all functions linked to the led ring around the center button on the hub.
 
-## led()
+## led(color)
 
-```
-hub.led(color)
-```
-Turn on the led with a given [___ledcolor___](data_types.md#led)
+`hub.led(color)`
+
+Turn on the led with a given [ledcolor](data_types.md#led)
 
 __Parameter:__
 
-*  [___ledcolor___](data_types.md#led)
+*  [ledcolor](data_types.md#led):  
+   0: Off
+   1:  Pink           
+   2:  Violet             
+   3:  Blue           
+   4:  Light blue     
+   5:  Light green    
+   6:  Green          
+   7:  Yellow         
+   8:  Orange         
+   9:  Red             
+   10: Bright white   
+   11: white          
 
+__Sample code:__
 
-``` 
-hub.led(r,g,b)
+``` python
+import hub
+
+hub.led(7)  # set led light to yellow
 ```
+
+## led(r,g,b)
+
+`hub.led(r,g,b)`
 
 Turn the led color to a color defined by RGB values
 
 __Parameters:__  
 
-*  ___r___ (integer) red value between 0 and 255
-*  ___g___ (integer) green value between 0 and 255
-*  ___b___ (integer) blue value between 0 and 255
+*  r [int](data_types.md#int) red value between 0 and 255
+*  g [int](data_types.md#int) green value between 0 and 255
+*  b [int](data_types.md#int) blue value between 0 and 255
 
 > keep in mind that the colors seem skewed towards blue
 
+___Sample code:___
 ``` python
-hub.led()
+import hub
 
+hub.led(0,100,50)
 ```
 
 __Returns:__
 
-* tuple (int r,int g,int b) each has a value between 0 and 255S
+* tuple (int r,int g,int b) each has a value between 0 and 255. Only if no arguments are given.
 
 
  
