@@ -97,7 +97,7 @@ __Parameters:__
 
 ## run_to_position()
 
-`hub.port.A.motor.run_to_position(position,speed=50,stall=True,acceleration=100,deceleration=100,stop=0)`
+`hub.port.A.motor.run_to_position(position, speed=50, stall=True, acceleration=100, deceleration=100, stop=1)`
 
 Turn motor to given relative position with given speed. 
 
@@ -110,7 +110,9 @@ __Parameters:__
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
-*  __stop__ ([int](data_types.md#int)): stop action after reaching target: float (0); brake (1); hold(2)
+*  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
+
+### sample code: Turn motor connected to port A in paralled to motor connected to port B
 
 ``` python
 from hub import port
@@ -125,7 +127,7 @@ MotorA.preset(Motor.A.get()[0])  # preset 0 position to absolute zero position
 MotorB.preset(Motor.B.get()[0])  # preset 0 position to absolute zero position
 
 # Turn motors to different positions in parallel
-MotorA.run_to_position(100,speed=50)
+MotorA.run_to_position(100,speed=50, stop = motorA.STOP_FLOAT)
 MotorB.run_to_position(-200,speed=50)
 
 ```
