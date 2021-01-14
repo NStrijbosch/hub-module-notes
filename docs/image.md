@@ -1,114 +1,143 @@
-# Make Image
+The Image class controls allows to make images to be displayed on the screen of the hub. It can be used via `hub.Image`
+
+# Make an Image
 
 ## Image()
 
-``` python
-image = hub.Image(image_def)
-```
+`Image()`
 
 Define a custom image. 
 
 __Parameters:__
 
-*  [image](data_types.md#image) image_def: one of the following structures
+*  [image](data_types.md#image) image_def: one of the following structures:
 
-### examples:
+__Sample code:__
 
 ``` python
-image = hub.Image("90009:"
-                  "09090:"
-                  "00900:"
-                  "09090:"
+from hub import Image
+
+# all values in range 0,1,...,9
+
+imageN =    Image("90009:"
+                  "99009:"
+                  "90909:"
+                  "90099:"
                   "90009")    
-```
 
-``` python
-image = hub.Image("90009\n09090\n00900\n09090\n90009"
-```
-
-``` python
-image = hub.Image(2, 2, b'\x08\x08\x08\x08')
+imageH = Image("70007\n70007\n66666\n70007\n70007")
 ```
 
 ## set_pixel()
 
-``` python
-image.set_pixel(x,y,intensity) 
-``` 
+`image.set_pixel(x,y,brightness)`
 
-In the [image](data_types.md#image) set pixel (x,y) to given intensity
+In the [image](data_types.md#image) set pixel (x,y) to given brightness
 
 > Only works for custom images
 
 __Parameters:__
 
-*  [integer](data_types.md#integer) x: in range [0,5]
-*  [integer](data_types.md#integer) y: in range [0,5]
-*  [integer](data_types.md#integer) intensity:  in range [0,10]
+*  x [int](data_types.md#int) x: in range [0,5]
+*  y [int](data_types.md#int) y: in range [0,5]
+*  brightness [int](data_types.md#int):  in range [0,10]
+
+__Sample code:__
+
+``` python
+from hub import Image
+
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+imageH.set_pixel(2,2,0)
+```
 
 ## shift_up()
 
-``` python
-myimage.shift_up(int shift)
-``` 
+`image.shift_up(shift)`
 
-Shift all pixels of myimage up with (shift) pixels
+Shift all pixels of the [image](data_types.md#image) up with shift pixels
 
 > Only works for custom images
 
 __Parameters:__
 
-*  [integer](data_types.md#integer) shift: in range [0,5]
+*  shift [int](data_types.md#int): in range [0,5]
+
+__Sample code:__
+
+``` python
+from hub import Image
+
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+imageH.shift_up(1)
+```
 
 ## shift_down()
 
-``` python
-myimage.shift_down(int shift)
-``` 
+`image.shift_down(shift)`
 
-Shift all pixels of myimage down with (shift) pixels
+Shift all pixels of the [image](data_types.md#image) down with shift pixels
 
 > Only works for custom images
 
 __Parameters:__
 
-*  [integer](data_types.md#integer) shift: in range [0,5]
+*  shift [int](data_types.md#int): in range [0,5]
+
+__Sample code:__
+
+``` python
+from hub import Image
+
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+imageH.shift_down(1)
+```
 
 ## shift_left()
 
-``` python
-myimage.shift_left(int shift)
-``` 
+`image.shift_left(shift)`
 
-Shift all pixels of myimage left with (shift) pixels
+Shift all pixels of the [image](data_types.md#image) left with shift pixels
 
 > Only works for custom images
 
 __Parameters:__
 
-*  [integer](data_types.md#integer) shift: in range [0,5]
+*  shift [int](data_types.md#int): in range [0,5]
 
-## shift_up()
+__Sample code:__
 
 ``` python
-myimage.shift_right(int shift)
-``` 
+from hub import Image
 
-Shift all pixels of myimage right with (shift) pixels
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+imageH.shift_left(1)
+```
+## shift_right()
+
+`image.shift_right(shift)`
+
+Shift all pixels of the [image](data_types.md#image) right with shift pixels
 
 > Only works for custom images
 
 __Parameters:__
 
-*  [integer](data_types.md#integer) shift: in range [0,5]
+*  shift [int](data_types.md#int): in range [0,5]
 
+__Sample code:__
+
+``` python
+from hub import Image
+
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+imageH.shift_right(1)
+```
 # Image info
 
 ## width()
 
-``` python
-image.width()
-```
+`image.width()` 
 
 Get width of [image](data_types.md#image).
 
@@ -116,11 +145,21 @@ __Returns:__
 
 *  [integer](data_types.md#integer) width.
 
-## height()
+__Sample code:__
 
 ``` python
-image.height()
+from hub import Image
+
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+print("Width: " + str(imageH.width()))
 ```
+
+```
+>>> Width: 5
+```
+## Height()
+
+`image.height()` 
 
 Get height of [image](data_types.md#image).
 
@@ -128,14 +167,43 @@ __Returns:__
 
 *  [integer](data_types.md#integer) height.
 
-## get_pixel()
+__Sample code:__
 
 ``` python
-image.get_pixel(x,y)
+from hub import Image
+
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+print("Height: " + str(imageH.height()))
 ```
 
-Get intensity of pixel (x,y) in [image](data_types.md#image).
+```
+>>> Height: 5
+```
+
+## get_pixel()
+
+`image.get_pixel(x,y)` 
+
+Get brightness of pixel (x,y).
+
+__Parameters:__
+
+*  x [int](data_types.md#int): x coordinate
+*  y [int](data_types.md#int): y coordinate
 
 __Returns:__
 
-*  [integer](data_types.md#integer) itensity.
+*  [int](data_types.md#int) brightness
+
+__Sample code:__
+
+``` python
+from hub import Image
+
+imageH = Image("70007\n70007\n66666\n70007\n70007")
+print("Brightness pixel (2,2): " + str(imageH.get_pixel(2,2)))
+```
+
+```
+>>> Brightness pixel (2,2): 6
+```
