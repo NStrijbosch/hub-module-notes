@@ -25,7 +25,7 @@ __Returns:__
 
 *  current default settings. Only if no parameters are given.
 
-### Sample code
+__Sample code:__
 
 ``` python
 from hub import port
@@ -59,7 +59,7 @@ __Returns:__
 
 *  current mode. Only if no mode is given as parameter.
 
-### Sample code
+__Sample code:__
 
 ``` python
 from hub import port
@@ -91,7 +91,7 @@ __Paramters:__
 
 *  position ([int](data_types.md#int))
 
-### Sample code
+__Sample code:__
 
 ``` python
 from hub import port
@@ -117,6 +117,7 @@ __Parameters:__
 *  i ([int](data_types.md#int)): integral gain
 *  d ([int](data_types.md#int)): derivative gain
 
+__Sample code:__
 
 ``` python
 from hub import port
@@ -138,7 +139,8 @@ __Returns:__
 
 *  list of measurement data depending on the mode of the motor.
 
-### Sample code
+__Sample code:__
+
 ``` python
 from hub import port
 
@@ -151,7 +153,6 @@ print("Absolute position: " + str(abs_pos))
 Motor.mode([(1, 0), (2, 2)])  #Speed in RAW units and relative position in SI units
 measurements = MotorA.get()
 print("Speed : " + str(measurements[0]) + " Relative position: " + str(measurements[1]))
-
 ```
 
 ``` python
@@ -172,7 +173,8 @@ __Parameters:__
 *  __duty_cycle__ ([int](data_types.md#int)) percentage of a cycle for which the signal is high. Value in range -100 ... 100.
 
 
-### Sample code
+__Sample code:__
+
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -199,7 +201,8 @@ __Parameters:__
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 
 
-### Sample code
+__Sample code:__
+
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -226,7 +229,8 @@ __Parameters:__
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 
-### Sample code
+__Sample code:__
+
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -270,7 +274,7 @@ __Parameters:__
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
 
-### Sample code
+__Sample code:__
 
 ``` python
 from hub import port
@@ -295,7 +299,7 @@ MotorB.run_to_position(-200,speed=50)
 
 Coast motor from current position
 
-### Sample code
+__Sample code:__
 
 ``` python
 from hub import port
@@ -314,6 +318,8 @@ MOtorA.float()      # float motor
 
 Brake at current position, after applying brake the motor floats. 
 
+__Sample code:__
+
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -330,6 +336,8 @@ MotorA.brake()      # apply brake
 `motor.hold()`
 
 Actively hold the motor at its current position.
+
+__Sample code:__
 
 ``` python
 from hub import port
