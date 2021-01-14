@@ -12,9 +12,7 @@ __Returns:__
 
 *  list of measurement data depending on the mode of the motor.
 
-### Sample-code: read measurmenet data from motor connected to port A
-Medium SP motor connected to port A. 
-
+### sample code: read measurmenet data from motor connected to port A
 ``` python
 from hub import port
 
@@ -86,6 +84,21 @@ __Parameters:__
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 
+## run_for_time()
+
+`motor.run_for_time(time, speed=50, max_power=100, acceleration=100, deceleration=100, stall=False)`
+
+Turn on motor for given time with given speed
+
+__Parameters:__
+
+*  __time__ in milliseconds ([int](data_types.md#int)): time to turn the motor on
+*  __speed__ ([int](data_types.md#int)): desired velocity as percentage of maximum velocity. Value in range -100 ... 100.
+*  __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
+*  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
+*  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+
 ## run_for_degrees()
 
 `motor.run_for_degrees(degrees, speed=50, stall=True, acceleration=100, deceleration=100, stop=1)`
@@ -107,7 +120,7 @@ __Parameters:__
 
 Turn motor to given relative position with given speed. 
 
-> The position is relative to the position of the motor at the moment of starting the hub/connecting the motor. Best practice is to preset the position at the the start of a program
+> The position is relative to the position of the motor since starting the hub/connecting the motor. Best practice is to preset the position at the the start of a program
 
 __Parameters:__
 
@@ -135,44 +148,30 @@ MotorB.preset(Motor.B.get()[0])  # preset 0 position to absolute zero position
 # Turn motors to different positions in parallel
 MotorA.run_to_position(100,speed=50, stop = motorA.STOP_FLOAT)
 MotorB.run_to_position(-200,speed=50)
-
 ```
 
-## run_for_time()
-
-`hub.port.A.motor.run_for_time(time,speed)`
-
-Turn motor on for given time with given speed
-
-__Parameters:__
-
-*  time (ms)
-*  speed
-
 ## float()
-`hub.port.A.motor.float()`
+`motor.float()`
 
 Coast motor from current position
 
 ## brake()
   
-`hub.port.A.motor.brake()`
+`motor.brake()`
 
-Brake at current position
-
-> test what this means with respect to hold at current position
+Brake at current position, after applying brake the motor floats. 
 
 ## hold()
 
-`hub.port.A.motor.hold()`
+`motor.hold()`
 
-Hold at motor current position
+Hold at motor current position, motor is actively controlled to stay at current position.
 
 # Settings
 
 ## pair()
 
-`hub.port.A.motor.pair(motor)`
+`motor.pair(motor)`
 
 __Parameters:__
 
@@ -180,7 +179,7 @@ __Parameters:__
 
 ## pid()
 
-`hub.port.A.motor.pid(p,i,d) `
+`motor.pid(p,i,d) `
 set controller gains of PID. 
 
 > Does not seems to work
@@ -225,7 +224,6 @@ __Parameters:__
 *  stop
 *  callback
 *  acceleration
-
 
 # Motors
 
