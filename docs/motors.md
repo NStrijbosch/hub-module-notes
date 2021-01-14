@@ -10,10 +10,23 @@ Set mode of the motor, see [motors](#motors) for details on the default and avai
 
 __Parameters:__
 
-*  mode:  
+*  mode can be one of the following  
   ([int](data_types.md#int)): a single mode, i.e., [get()](#get) will only return one measurement  
-  ([tuple](data_types.md#tuple)): '(mode ([int](data_types.md#int)),unit [int](data_types.md#int))', a single mode including its unit. Possible units: FORMAT_RAW = 0, FORMAT_PCT = 1,FORMAT_SI = 2.  
-  ([list](data_types.md#int)): a list of multiple modes either as [int](data_types.md#int) or [tuple](data_types.md#tuple). 
+  ([tuple](data_types.md#tuple)): `(mode (int),unit (int))`, a single mode including its unit. Possible units: FORMAT_RAW = 0, FORMAT_PCT = 1,FORMAT_SI = 2.  
+  ([list](data_types.md#int)): `[(mode1 (int),unit1 (int)),(mode2 (int),unit2 (int)), ...]` a list of multiple modes either as [int](data_types.md#int) or [tuple](data_types.md#tuple). 
+
+### Sample code
+
+``` python
+from hub import port
+
+MotorA = port.A.motor
+
+MotorA.mode(3)              # Set motor mode to absolute position
+MotorA.mode((3,0))          # Set motor mode to absolute position in RAW units
+MotorA.mode([3,2])          # Set motor mode to absolute position and relative position
+MotorA.mode([(3,0),(2,2)])  # Set motor mode to absolute position in RAW units and relative position in SI units
+``` 
 
 
 # Measurements
