@@ -12,10 +12,10 @@ nav:
     - device (sensor): 'sensors.md'
     - motor: 'motors.md'    
     - Data types and constants: 'data_types.md'
-    - Virtual Com Port: 'VCP.md'
-    - Battery: 'battery.md'
-    - Bluetooth: 'bluetooth.md'
-    - Config: 'config.md'
-    - supervision: 'supervision.md'
+#  - Virtual Com Port: 'VCP.md'
+#  - Battery: 'battery.md'
+#   - Bluetooth: 'bluetooth.md'
+#   - Config: 'config.md'
+#   - supervision: 'supervision.md'
 theme: readthedocs
 extra_css: ['custom.css']
