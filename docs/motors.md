@@ -10,7 +10,7 @@ Set the default values of the motor settings. These values will be used when the
 
 __Parameters:__
 
-*  pid ([tuple](data_types.md#tuple)): PID gain
+*  __pid__ ([tuple](data_types.md#tuple)): PID gain (does not seem to have any effect)
 *   __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
 *   __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
@@ -75,6 +75,49 @@ print("Mode motor port A: " + str(MotorA.mode()))
 >>> Mode motor port A: [(3,0),(2,2)]
 ```
 
+
+## preset()
+
+`motor.preset(position)`
+
+Preset the value of the relative position
+
+__Paramters:__
+
+*  position ([int](data_types.md#int))
+
+### Sample code
+
+``` python
+from hub import port
+
+MotorA = port.A.motor
+
+MotorA.preset(100)
+```
+
+## pid()
+
+`motor.pid(p,i,d) `
+
+set controller gains of the PID controller. 
+
+> The applied values of the actual controller do not seem to change.
+
+__Parameters:__
+
+*  p ([int](data_types.md#int)): proportional gain
+*  i ([int](data_types.md#int)): integral gain
+*  d ([int](data_types.md#int)): derivative gain
+
+
+``` python
+from hub import port
+
+MotorA = port.A.motor
+
+MotorA.pid(100,100,100)
+```
 
 # Measurements
 
@@ -252,9 +295,23 @@ MotorB.run_to_position(-200,speed=50)
 ```
 
 ## float()
+
 `motor.float()`
 
 Coast motor from current position
+
+### Sample code
+
+``` python
+from hub import port
+from utime import sleep_ms
+
+MotorA = port.A.motor
+
+MotorA.pwm(40)      # start motor
+sleep_ms(1000)      # wait 1 second
+MOtorA.float()      # float motor
+```
 
 ## brake()
   
@@ -262,13 +319,37 @@ Coast motor from current position
 
 Brake at current position, after applying brake the motor floats. 
 
+``` python
+from hub import port
+from utime import sleep_ms
+
+MotorA = port.A.motor
+
+MotorA.pwm(40)      # start motor
+sleep_ms(1000)      # wait 1 second
+MotorA.brake()      # apply brake
+```
+
 ## hold()
 
 `motor.hold()`
 
 Actively hold the motor at its current position.
 
-# Settings
+``` python
+from hub import port
+from utime import sleep_ms
+
+MotorA = port.A.motor
+
+MotorA.pwm(40)      # start motor
+sleep_ms(1000)      # wait 1 second
+MotorA.hold()       # actively hold position
+sleep_ms(10000)     # wait 10 second active resistance should be noticable
+MotorA.float()      # float motor
+```
+
+# TODO
 
 ## pair()
 
@@ -277,28 +358,6 @@ Actively hold the motor at its current position.
 __Parameters:__
 
 *  motor to pair, e.g. hub.port.A.motor
-
-## pid()
-
-`motor.pid(p,i,d) `
-set controller gains of PID. 
-
-> Does not seems to work
-
-__Parameters:__
-
-*  p: proportional gain
-*  i: integral gain
-*  d: derivative gain
-
-## preset()
-
-`hub.port.A.motor.preset(position)`
-Preset the relative position
-
-__Parameters:__
-
-*  position: the position you want to be zero? -> TODO: formulation
 
 # Motors
 
