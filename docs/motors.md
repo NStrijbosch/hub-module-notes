@@ -2,7 +2,7 @@ The motor class is a sub class of the [port](port.md) class which allows to cont
 
 # Motor settings
 
-***
+---
 
 ## default()
 
@@ -19,7 +19,7 @@ __Parameters:__
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
-*  __calback__ : unknown
+*  __calLback__ : unknown
 
 __Returns:__
 
@@ -40,7 +40,7 @@ print("default settings: " + str(MotorA.default()))
 >>> TODO: add result
 ```
   
-***
+---
 
 ## mode()
 
@@ -79,7 +79,7 @@ print("Mode motor port A: " + str(MotorA.mode()))
 >>> Mode motor port A: [(3,0),(2,2)]
 ```
 
-***
+---
 
 ## preset()
 
@@ -101,7 +101,7 @@ MotorA = port.A.motor
 MotorA.preset(100)
 ```
 
-***
+---
 
 ## pid()
 
