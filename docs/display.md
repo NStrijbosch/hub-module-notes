@@ -58,42 +58,76 @@ display.pixel(0,0,9)  #TODO check which corner
 
 ## rotate()
 
-```
-hub.display.rotate(angle)
-```
+`display.rotate(angle)`
 
-Change orientation of of display. 
+Change orientation of the display. 
 
 > Keep in mind this rotation is not reset at the start of each program. 
 
 __Parameters:__
 
-*  [integer](data_types.md#integer) angle: 0, 90, 180, 270
+*  angle ([int](data_types.md#int): value of either 0, 90, 180, or 270
+
+__Sample code:__
+
+``` python
+from hub import display
+
+display.show(hub.Image.HAPPY)
+
+display.rotate(90)
+```
 
 ## align()
 
-``` python
-hub.display.align()
-```
-Set orientation of display.
+`hub.display.align(direction)`
+
+Set the orientation of display.
+
+
+TODO check connection integer and TOP BOTTOM etc.
 
 __Parameters:__
 
-*  integer: (1: default, 2: 90 degrees clockwise with respect to default, 4: 180 degrees with respect to default, 5: 90 degrees counter clockwise with respect to default)
+*  direction [int](data_types.md#int): value could be  
+   1: default  
+   2: 90 degrees clockwise with respect to default  
+   4: 180 degrees with respect to default  
+   5: 90 degrees counter clockwise with respect to default
 
-> Difference rotate() and align(): align is absolute rotation, rotate is relative rotation to current orientation of display.
+> Difference between rotate() and align(): align() is absolute rotation, rotate() is relative rotation to current orientation of display. 
+
+__Sample code:__
+
+``` python
+from hub import display
+
+display.show(hub.Image.HAPPY)
+
+display.align(4)
+```
 
 ## invert()
 
-``` python
-hub.display.invert(bool)
-```
+`display.invert(invert)`
+
+invert the brightness of all pixels: 9 -> 0, 8 -> 1, ...
 
 __Parameters:__
 
-* bool: True: invert led brightness; False: keep default brightness
+*  invert [bool](data_types.md#bool): `True`: invert led brightness; `False`: keep default brightness.
 
-## callback()
+__Sample code:__
+
+``` python
+from hub import display
+
+display.show(hub.Image.HAPPY)
+
+display.invert(True)
+```
+
+## callback() TODO
 
 unknown behaviour
 
