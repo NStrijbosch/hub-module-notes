@@ -1,53 +1,88 @@
 
-This class controls all functions linked to the buttons, i.e., the left, center, right, connect buttons on the hub.
-
+The device class controls all functions linked to the buttons, i.e., left, center, right, connect. It can be used via using:
 ```
 hub.button.left 
 hub.button.right
 hub.button.center
 hub.button.connect
 ```
+see the examples below for more details.
 
-## is_pressed()
+## is pressed()
 
-```
-hub.button.left.is_pressed()
-```
+`button.left.is_pressed()`
 
-Check if button is pressed 
+Check if button is pressed.
 
 __Returns:__
 
-*  [boolean](data_types.md#bool) True if the button is pressed, otherwise False 
+*  [boolean](data_types.md#bool): `True` if the button is pressed, otherwise `False`. 
 
+``` python
+from hub import button
+
+while not button.left.is_pressed():
+    print('press left button')
+```
+
+```
+>>> press left button
+>>> press left button
+>>> press left button  (after this button is pressed)
+```
 
 ## was_pressed()
 
-```
-hub.button.left.was_pressed()
-```
+`button.left.was_pressed()`
 
 Check if button was pressed since last call
 
 __Returns;__
 
-*  [boolean](data_types.md#bool) True if the button was pressed since last call, otherwise False 
+*  [boolean](data_types.md#bool) `True` if the button was pressed since last call, otherwise `False`
+
+``` python
+from hub import button
+from utime import sleep_ms
+
+while not button.left.was_pressed():
+    print('press left button')
+    sleep_ms(1000)
+```
+
+```
+>>> press left button
+>>> press left button
+>>> press left button  (after this button is pressed)
+```
+
 
 ## pressed()
 
-```
-hub.button.right.pressed()
-```
+`button.left.pressed()`
 
 __Returns:__
 
-* [integer](data_types.md#int) Number of presses since last call
+* [integer](data_types.md#int): Number of presses since last call
 
-## on_change()
+``` python
+from hub import button
+from utime import sleep_ms
+
+for i in range(3):
+    print('number of presses: '+ str(button.left.pressed()))
+    sleep_ms(2000)
+```
 
 ```
-hub.button.right.on_change(lambda function)
+number of presses: 0
+number of presses: 3
+number of presses: 1
 ```
+
+## on_change() TODO
+
+`button.left.on_change(lambda function)`
 
 __Parameters:__
 
