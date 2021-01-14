@@ -1,5 +1,21 @@
 The motor class is a sub class of the [port](port.md) class which allows to control PU motors. It can be used via `motor=hub.port.A.motor`, see the examples below for more details. 
 
+# Motor settings
+
+## mode()
+
+`hub.port.A.motor.mode(mode)`
+
+Set mode of the motor, see [motors](#motors) for details on the default and available modes of each motor. This method only affects result of [get()](#get) callback.
+
+__Parameters:__
+
+*  mode: 
+    - ([int](data_types.md#int)): a single mode, i.e., [get()](#get) will only return one measurement
+    - ([tuple](data_types.md#tuple)): '(mode ([int](data_types.md#int)),unit [int](data_types.md#int))', a single mode including its unit. Possible units: FORMAT_RAW = 0, FORMAT_PCT = 1,FORMAT_SI = 2.
+    - ([list](data_types.md#int)): a list of multiple modes either as [int](data_types.md#int) or [tuple](data_types.md#tuple). 
+
+
 # Measurements
 
 ## get()
@@ -12,7 +28,7 @@ __Returns:__
 
 *  list of measurement data depending on the mode of the motor.
 
-### Sample code: read measurmenet data from motor connected to port A
+### Sample code
 ``` python
 from hub import port
 
@@ -55,10 +71,10 @@ Turn on motor with a given duty cycle
 
 __Parameters:__
 
-*  __duty_cycle__ [int](data_types.md#int) percentage of a cycle for which the signal is high. Value in range -100 ... 100.
+*  __duty_cycle__ ([int](data_types.md#int)) percentage of a cycle for which the signal is high. Value in range -100 ... 100.
 
 
-### Sample code: turn on motor connected to port A
+### Sample code
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -85,7 +101,7 @@ __Parameters:__
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 
 
-### Sample code: turn motor connected to port A at given speed
+### Sample code
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -112,7 +128,7 @@ __Parameters:__
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 
-### Sample code: turn motor connected to port A for given time
+### Sample code
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -154,7 +170,7 @@ __Parameters:__
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
 
-### Sample code: turn on motor connected to port A in parallel to motor connected to port B
+### Sample code
 
 ``` python
 from hub import port
@@ -222,15 +238,7 @@ __Parameters:__
 
 *  position: the position you want to be zero? -> TODO: formulation
 
-## mode()
 
-`hub.port.A.motor.mode(mode)`
-
-Set mode of the motor. This only affects result of get() callback
-
-__Parameters:__
-
-*  mode: either a single mode (0,1,2,...) or array of modes ([(mode_1,format),(mode_2,format),(3,4)])
 
 ## default()
 
