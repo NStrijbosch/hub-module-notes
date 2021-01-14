@@ -6,7 +6,7 @@ The motor class is a sub class of the [port](port.md) class which allows to cont
 
 `motor.default(pid=(0, 0, 0), max_power=0, speed=0, stall=True, deceleration=150, stop=1, callback=<bound_method>, acceleration=100})`
 
-Set default settings of the motor. The default values which are used during operation. 
+Set the default values of the motor settings. These values will be used when the settings are not given in one of the [actions](#actions) methods. 
 
 __Parameters:__
 
@@ -19,6 +19,10 @@ __Parameters:__
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
 *  __calback__ : unknown
 
+__Returns:__
+
+*  current default settings. Only if no parameters are given.
+
 ### Sample code
 
 ``` python
@@ -27,6 +31,11 @@ from hub import port
 MotorA = hub.port.A.motor
 
 MotorA.default(max_power = 50, stop = 2) #set max power to 50 and stop action to hold
+print("default settings: " + str(MotorA.default()))
+```
+
+``` python
+>>> TODO: add result
 ```
   
 ## mode()
