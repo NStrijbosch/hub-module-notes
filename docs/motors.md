@@ -11,9 +11,9 @@ Set mode of the motor, see [motors](#motors) for details on the default and avai
 __Parameters:__
 
 *  mode: 
-    - ([int](data_types.md#int)): a single mode, i.e., [get()](#get) will only return one measurement
-    - ([tuple](data_types.md#tuple)): '(mode ([int](data_types.md#int)),unit [int](data_types.md#int))', a single mode including its unit. Possible units: FORMAT_RAW = 0, FORMAT_PCT = 1,FORMAT_SI = 2.
-    - ([list](data_types.md#int)): a list of multiple modes either as [int](data_types.md#int) or [tuple](data_types.md#tuple). 
+  ([int](data_types.md#int)): a single mode, i.e., [get()](#get) will only return one measurement
+  ([tuple](data_types.md#tuple)): '(mode ([int](data_types.md#int)),unit [int](data_types.md#int))', a single mode including its unit. Possible units: FORMAT_RAW = 0, FORMAT_PCT = 1,FORMAT_SI = 2.
+  ([list](data_types.md#int)): a list of multiple modes either as [int](data_types.md#int) or [tuple](data_types.md#tuple). 
 
 
 # Measurements
