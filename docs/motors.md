@@ -2,6 +2,33 @@ The motor class is a sub class of the [port](port.md) class which allows to cont
 
 # Motor settings
 
+## default()
+
+`motor.default(pid=(0, 0, 0), max_power=0, speed=0, stall=True, deceleration=150, stop=1, callback=<bound_method>, acceleration=100})`
+
+Set default settings of the motor. The default values which are used during operation. 
+
+__Parameters:__
+
+*  pid ([tuple](data_types.md#tuple)): PID gain
+*   __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
+*   __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
+*  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
+*  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
+*  __calback__ : unknown
+
+### Sample code
+
+``` python
+from hub import port
+
+MotorA = hub.port.A.motor
+
+MotorA.default(max_power = 50, stop = 2) #set max power to 50 and stop action to hold
+```
+  
 ## mode()
 
 `hub.port.A.motor.mode(mode)`
@@ -29,7 +56,8 @@ MotorA = port.A.motor
 MotorA.mode(3)              # Set motor mode to absolute position
 MotorA.mode((3,0))          # Set motor mode to absolute position in RAW units
 MotorA.mode([3,2])          # Set motor mode to absolute position and relative position
-MotorA.mode([(3,0),(2,2)])  # Set motor mode to absolute position in RAW units and relative position in SI units
+MotorA.mode([(3,0),(2,2)])  # Set motor mode to absolute position in RAW units 
+                            #   and relative position in SI units
 
 print("Mode motor port A: " + str(MotorA.mode()))
 ``` 
@@ -163,7 +191,7 @@ MotorA.run_for_time(1000,speed=50)   # turn motor for 1000 milliseconds at speed
 
 ## run_for_degrees()
 
-`motor.run_for_degrees(degrees, speed=50, stall=True, acceleration=100, deceleration=100, stop=1)`
+`motor.run_for_degrees(degrees, speed=50, max_power=100, stall=True, acceleration=100, deceleration=100, stop=1)`
 
 Turn motor a given number of degrees from current position
 
@@ -171,6 +199,7 @@ __Parameters:__
 
 *  __position__ ([int](data_types.md#int)): desired number of degrees to turn. 
 *  __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
+*   __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
@@ -178,7 +207,7 @@ __Parameters:__
 
 ## run_to_position()
 
-`motor.run_to_position(position, speed=50, stall=True, acceleration=100, deceleration=100, stop=1)`
+`motor.run_to_position(position, speed=50, max_power=100, stall=True, acceleration=100, deceleration=100, stop=1)`
 
 Turn motor to given relative position with given speed. 
 
@@ -188,6 +217,7 @@ __Parameters:__
 
 *  __position__ ([int](data_types.md#int)): desired relative position in degrees. 
 *  __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
+*   __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
 *  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
@@ -260,24 +290,6 @@ Preset the relative position
 __Parameters:__
 
 *  position: the position you want to be zero? -> TODO: formulation
-
-
-
-## default()
-
-`hub.port.A.motor.default(pid=(0, 0, 0), max_power=0, speed=0, stall=True, deceleration=150, stop=1, callback=<bound_method>, acceleration=100})`
-
-Set default settings of the motor
-
-__Parameters:__
-*  pid
-*  max_power
-*  speed
-*  stall
-*  deceleration
-*  stop
-*  callback
-*  acceleration
 
 # Motors
 
