@@ -12,7 +12,7 @@ __Returns:__
 
 *  list of measurement data depending on the mode of the motor.
 
-### sample code: read measurmenet data from motor connected to port A
+### Sample code: read measurmenet data from motor connected to port A
 ``` python
 from hub import port
 
@@ -58,7 +58,7 @@ __Parameters:__
 *  __duty_cycle__ [int](data_types.md#int) percentage of a cycle for which the signal is high. Value in range -100 ... 100.
 
 
-### sample-code: turn on motor connected to port A
+### Sample code: turn on motor connected to port A
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -131,7 +131,7 @@ __Parameters:__
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
 
-### sample code: Turn motor connected to port A in paralled to motor connected to port B
+### Sample code: turn on motor connected to port A in parallel to motor connected to port B
 
 ``` python
 from hub import port
@@ -165,7 +165,7 @@ Brake at current position, after applying brake the motor floats.
 
 `motor.hold()`
 
-Hold at motor current position, motor is actively controlled to stay at current position.
+Actively hold the motor at its current position.
 
 # Settings
 
