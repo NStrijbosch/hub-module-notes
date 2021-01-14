@@ -12,7 +12,7 @@ __Returns:__
 
 *  list of measurement data depending on the mode of the motor.
 
-### Example:
+### Sample-code: read measurmenet data from motor connected to port A
 Medium SP motor connected to port A. 
 
 ``` python
@@ -51,7 +51,7 @@ __Returns:__
 
 ## pwm()
 
-`hub.port.A.motor.pwm(duty_cycle)`
+`motor.pwm(duty_cycle)`
 
 Turn on motor with a given duty cycle
 
@@ -59,6 +59,8 @@ __Parameters:__
 
 *  __duty_cycle__ [int](data_types.md#int) percentage of a cycle for which the signal is high. Value in range -100 ... 100.
 
+
+### sample-code: turn on motor connected to port A
 ``` python
 from hub import port
 from utime import sleep_ms
@@ -72,7 +74,7 @@ MOtorA.pwm(0)       # stop motor
 
 ## run_at_speed()
 
-`hub.port.A.motor.run_at_speed(speed = 50, max_power = 100, acceleration = 100, deceleration = 100, stall = False)`
+`motor.run_at_speed(speed=50, max_power=100, acceleration=100, deceleration=100, stall=False)`
 
 Turn on motor with given speed.
 
@@ -86,18 +88,22 @@ __Parameters:__
 
 ## run_for_degrees()
 
-`hub.port.A.motor.run_for_degrees(degrees,speed)`
+`motor.run_for_degrees(degrees, speed=50, stall=True, acceleration=100, deceleration=100, stop=1)`
 
-Turn on motor with given number of degrees with given speed
+Turn motor a given number of degrees from current position
 
 __Parameters:__
 
-*  degrees
-*  speed
+*  __position__ ([int](data_types.md#int)): desired number of degrees to turn. 
+*  __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
+*  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
+*  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
 
 ## run_to_position()
 
-`hub.port.A.motor.run_to_position(position, speed=50, stall=True, acceleration=100, deceleration=100, stop=1)`
+`motor.run_to_position(position, speed=50, stall=True, acceleration=100, deceleration=100, stop=1)`
 
 Turn motor to given relative position with given speed. 
 
