@@ -152,18 +152,6 @@ print("Speed : " + str(measurements[0]) + " Relative position: " + str(measureme
 >>> Speed : 0 Relative position: 0
 ```
 
-## busy()
-
-`hub.port.A.motor.busy()`
-
-__Parameters:__
-
-*  hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
-
-__Returns:__
-
-*  TRUE if target not achieved, FALSE if tracking not active
-
 # Actions
 
 ## pwm()
@@ -358,6 +346,19 @@ MotorA.float()      # float motor
 __Parameters:__
 
 *  motor to pair, e.g. hub.port.A.motor
+
+## busy()
+
+`hub.port.A.motor.busy()`
+
+__Parameters:__
+
+*  hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
+
+__Returns:__
+
+*  TRUE if target not achieved, FALSE if tracking not active
+
 
 # Motors
 
