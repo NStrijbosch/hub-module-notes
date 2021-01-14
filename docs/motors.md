@@ -2,6 +2,8 @@ The motor class is a sub class of the [port](port.md) class which allows to cont
 
 # Motor settings
 
+***
+
 ## default()
 
 `motor.default(pid=(0, 0, 0), max_power=0, speed=0, stall=True, deceleration=150, stop=1, callback=<bound_method>, acceleration=100})`
@@ -38,6 +40,8 @@ print("default settings: " + str(MotorA.default()))
 >>> TODO: add result
 ```
   
+***
+
 ## mode()
 
 `hub.port.A.motor.mode(mode)`
@@ -75,6 +79,7 @@ print("Mode motor port A: " + str(MotorA.mode()))
 >>> Mode motor port A: [(3,0),(2,2)]
 ```
 
+***
 
 ## preset()
 
@@ -95,6 +100,8 @@ MotorA = port.A.motor
 
 MotorA.preset(100)
 ```
+
+***
 
 ## pid()
 
