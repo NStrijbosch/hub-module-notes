@@ -1,36 +1,60 @@
 
+The display class controls all functions linked to the display. It can be used via `hub.display`. For more details see the examples below.
+
 
 ## show()
 
-```
-hub.display.show(image)
-```
+`hub.display.show(image)`
 
-Show image on screen
+Show an image on the display.
 
 __Parameters:__
 
-*  [image](data_types.md#image) image
+*  [image](data_types.md#image) image. See [image](data_types.md#image) for all build in images and the [Image](image.md) class on how to create a custom image.
 
-## pixel()
+``` python
+from hub import display
 
+hub.display(hub.Image.HAPPY)
 ```
-hub.display.pixel(int x, int y, int b)
-```
-
-__Parameters:__
-
-*  int x: x coordinate value between 0 and 4
-*  int y: y coordinate value between 0 and 4
-*  int b: brightness value between 0 and 9
 
 ## clear()
 
 ```
+display.clear()
+```
+
+Set the light intensity of all pixels to 0. 
+
+__Sample code:__
+
+``` python
+from hub import display
+
+hub.display(hub.Image.HAPPY)
 hub.display.clear()
 ```
 
-set the light intensity of all pixels to 0. 
+## pixel()
+
+```
+display.pixel(x, y, brightness)
+```
+
+__Parameters:__
+
+*  x ([int](data_types.md#int)): x coordinate: value between 0 and 4
+*  y ([int](data_types.md#int)): y coordinate: value between 0 and 4
+*  brightness ([int](data_types.md#int)): brightness: value between 0 and 4
+
+__Sample code:__
+
+``` python
+from hub import display
+
+display.clear()
+display.pixel(0,0,9)  #TODO check which corner
+```
 
 ## rotate()
 
