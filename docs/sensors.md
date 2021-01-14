@@ -1,32 +1,96 @@
+The device class is a sub class of the [port](port.md) class which allows to control PU Sensor. It can be used via `sensor=hub.port.A.device`, see the examples below for more details. 
+
 
 # General
 
 ## mode()
-All of the sensors have a few different operating modes. Details about the modes for each specific sensor can be found [here]{todo fix link}. 
 
-The operation mode of the sensor can be changed using the following command
+`device.mode(mode)`
 
-```
-hub.port.A.device.mode(mode)
-
-# test
-```
+Set mode of the sensor, see [sensors](#sensors) for details on the default and available modes of each sensor. This method only affects result of [get()](#get).
 
 __Parameters:__
-*  mode
-  
+
+*  mode can be one of the following:
+  ([int](data_types.md#int)): a single mode, i.e., [get()](#get) will only return one measurement  
+  ([tuple](data_types.md#tuple)): `(mode (int),unit (int))`, a single mode including its unit. Possible units: FORMAT_RAW = 0, FORMAT_PCT = 1,FORMAT_SI = 2.  
+  ([list](data_types.md#int)): `[(mode1 (int),unit1 (int)),(mode2 (int),unit2 (int)), ...]` a list of multiple modes either as [int](data_types.md#int) or [tuple](data_types.md#tuple). 
+
+__Returns:__
+
+*  current mode. Only if no mode is given as parameter.
+
+__Sample code:__
+
+``` python
+from hub import port
+
+SensorA = port.A.device
+
+MotorA.mode(3)              # Set sensor to mode 3
+MotorA.mode((3,0))          # Set sensor to mode 3 in RAW units
+MotorA.mode([3,2])          # Set sensor to mode 3 and mode 2
+MotorA.mode([(3,0),(2,2)])  # Set sensor to mode 3 in RAW units 
+                            #   and mode 2 in SI units 
+
+print("Mode sensor port A: " + str(MotorA.mode()))
+``` 
+
+``` python
+>>> Mode sensor port A: [(3,0),(2,2)]
+```
+
+Some PU sensor modes allow to affect send data to the sensor. This can be achieved using the following
+
+`device.mode(mode,data)`
+
+__Parameters:__
+
+*  mode ([int](data_types.md#int)): a single mode
+*  data ([bytearray](data_types.md#bytearray)): data to be send
+
+__Sample code:__
+
+``` python
+from hub import port
+
+SensorA = port.A.device
+
+SensorA.mode(5)  # first set the correct mode before sending data
+SensorA.mode(5,b''+chr(3))
+```
+
+> See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
+
+---
 
 ## get()
 
+`device.get()`
+
+Obtain measurement data from the sensor depending on the mode of the motor, see [mode](#mode) for details to change mode, and [sensors](#sensors) for details on the default and available modes of each motor. 
+
+__Returns:__
+
+*  list of measurement data depending on the mode of the motor.
+
+__Sample code:__
+
+``` python
+from hub import port
+
+DistanceSensor = port.A.device
+
+DistanceSensor.mode((1,0))          # Distance short in RAW units
+distance = DistanceSensor.get()[0]
+print("distance: " + str(distance))
 ```
-hub.port.A.device.get( (unit))
+
+``` python
+>>> Distance: 20.0
 ```
 
-__Parameters:__
-
-* (Optional) unit
-
-# Specific Sensor Info
+# Sensors
 
 ## Ultrasonic Sensor
 |Mode|Name |RAW          |PCT        |SI           |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
@@ -102,3 +166,7 @@ for c in colors:
     BoostSensor.mode(5,b''+chr(c))
     utime.sleep_ms(1000)
 ```
+
+## WeDo distance sensor
+
+## WeDo gyro
