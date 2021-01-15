@@ -206,11 +206,11 @@ BoostSensor=port.A.device
 
 BoostSensor.mode(7)         # Set mode IR
 
-BoostSensor.mode(7, b'' + chr(247) + chr(255)) 
-BoostSensor.mode(7, b'' + chr(1) + chr(15)) 
+BoostSensor.mode(7, b'' + chr(247) + chr(255))  # channel 4 
+BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 
 ### Two bytes seem necessary
-### Observed behaviour is for now quite inconsistent
+### Observed behaviour is for now really inconsistent, given that I am sending random bytes
 ### A member from the community is working on a library (hopefully published soon!)
 ```
 
