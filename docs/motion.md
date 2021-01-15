@@ -177,5 +177,5 @@ else:
 
 `motion.align_to_model(angle?, angle?)`
 
-align axis to align with robot (more test necessary)
+align axis to align with robot (more tests necessary)
 
