@@ -4,11 +4,11 @@
 
 `hub.info()`
 
-Get all hub information.
+Get hub information.
 
 __Returns:__
 
-* [json string](data_types.md#json) including:  
+* [dictionary](data_types.md#dictionary) including:  
   usb_vid(?)  
   device_uuid  
   1ms_tick_on_time(?)  
@@ -39,7 +39,7 @@ Get hub status of hub including all sensors and motors
 
 __Returns:__ 
 
-*  [json string](data_types.md#json) including:  
+*  [dictionary](data_types.md#dictionary) including:  
    gyroscope
    port
    accelerometer
@@ -61,11 +61,11 @@ print(hub.status())
 
 `hub.temperature()`
 
-Get temperature of the hub (?)
+Get temperature of the hub (probably internal sensor?)
 
 __Returns:__
 
-* [float](data_types.md#float) Temperature of the hub in Celcius.
+* [float](data_types.md#float): Temperature of the hub in Celcius.
 
 # Hub actions
 
@@ -73,7 +73,7 @@ __Returns:__
 
 `hub.powerdown_timeout(time)`
 
-Set the idle time until automatic power down
+Set the idle time until automatic power down.
 
 __Parameters:__
 
@@ -110,19 +110,16 @@ import hub
 hub.reset()
 ```
 
-# TODO
+## repl_restart() TODO
 
-## repl_restart()
+Restart REPL, in running REPL nothing is observed.
 
-Restart REPL, in running REPL nothing is observed
-
-## power_off()
+## power_off() TODO
 
 Expeted behaviour: power_off hub
 
 Observed behaviour in REPL: led turns off hub stays connected
 
+## file_tansfer() TODO
 
-## file_tansfer()
-
-Unknown
+Usage unknown
