@@ -27,13 +27,10 @@ from hub import port
 
 SensorA = port.A.device
 
-MotorA.mode(3)              # Set sensor to mode 3
-MotorA.mode((3,0))          # Set sensor to mode 3 in RAW units
-MotorA.mode([3,2])          # Set sensor to mode 3 and mode 2
-MotorA.mode([(3,0),(2,2)])  # Set sensor to mode 3 in RAW units 
-                            #   and mode 2 in SI units 
+SensorA.mode(1)            # Set sensor to mode 3
+SensorA.mode((1,0))        # Set sensor to mode 3 in RAW units
 
-print("Mode sensor port A: " + str(MotorA.mode()))
+print("Mode sensor port A: " + str(SensorA.mode()))
 ``` 
 
 ``` python
@@ -57,7 +54,7 @@ from hub import port
 SensorA = port.A.device
 
 SensorA.mode(5)  # first set the correct mode before sending data
-SensorA.mode(5,b''+chr(3))
+SensorA.mode(5,b''+chr(9)+chr(9)+chr(9)+chr(9))
 ```
 
 > See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
@@ -79,15 +76,15 @@ __Sample code:__
 ``` python
 from hub import port
 
-DistanceSensor = port.A.device
+ForceSensor = port.A.device
 
-DistanceSensor.mode((1,0))          # Distance short in RAW units
-distance = DistanceSensor.get()[0]
-print("distance: " + str(distance))
+ForceSensor.mode(4)        # Force in RAW units
+force = ForceSensor.get()[0]
+print("force: " + str(force))
 ```
 
 ``` python
->>> Distance: 20.0
+>>> force: 598
 ```
 
 # Sensors
@@ -119,17 +116,16 @@ __Sample code:__
 ``` python
 from hub import port
 
-USsensor = port.A.device
+USSensor = port.A.device
 
-USSensor.mode(5)  # set mode to light
+USSensor.mode(5)# set mode to light
 
-led1 = 9  #brightness in range 0...9
-led2 = 0  #brightness in range 0...9
-led3 = 9  #brightness in range 0...9
-led4 = 0  #brightness in range 0...9
+led1 = 9 #brightness in range 0...9
+led2 = 0 #brightness in range 0...9
+led3 = 0 #brightness in range 0...9
+led4 = 9 #brightness in range 0...9
 USSensor.mode(5,b''+chr(led1)+chr(led2)+chr(led3)+chr(led4))
 ```
-
 
 ## Color Sensor
 
@@ -155,7 +151,7 @@ __Sample code:__
 ``` python
 from hub import port
 
-COLORsensor = port.A.device
+COLORSensor = port.A.device
 
 COLORSensor.mode(3)  # set mode to light
 
@@ -168,9 +164,31 @@ COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 
 ## Force Sensor
 
+|Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
+|----|-----|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
+|0   |FORCE|0  |100   |0  |100   |0  |10    |N     |\x00\x00\x00\x00\x04\x04|1       |0   |3      |0       |
+|1   |TOUCH|0  |1     |0  |100   |0  |1     |ST    |\x00\x00\x00\x00\x04\x04|1       |0   |4      |0       |
+|2   |TAP  |0  |3     |0  |100   |0  |3     |TEV   |\x00\x00\x00\x00\x04\x04|1       |0   |3      |0       |
+|3   |FPEAK|0  |100   |0  |100   |0  |10    |N     |\x00\x00\x00\x00\x04\x04|1       |1   |4      |0       |
+|4   |FRAW |0  |1023  |0  |100   |0  |1023  |RAW   |\x00\x00\x00\x00\x04\x04|1       |1   |4      |0       |
+|5   |FPRAW|0  |1023  |0  |100   |0  |1023  |RAW   |\x00\x00\x00\x00\x04\x04|1       |1   |4      |0       |
+|6   |CALIB|0  |1023  |0  |100   |0  |1023  |      |                        |8       |1   |4      |0       |
 
 ## Boost Color Sensor
 
+|Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
+|----|-----|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
+|0   |COLOR|0  |10    |0  |100   |0  |10    |IDX   |\x00\x00\x00\x00\x00\x00|1       |0   |3      |0       |
+|1   |PROX |0  |10    |0  |100   |0  |10    |DIS   |\x00\x00\x00\x00\x00\x01|1       |0   |3      |0       |
+|2   |COUNT|0  |100   |0  |100   |0  |100   |CNT   |\x00\x00\x00\x00\x00\x02|1       |2   |4      |0       |
+|3   |REFLT|0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x00\x00\x03|1       |0   |3      |0       |
+|4   |AMBI |0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x00\x00\x04|1       |0   |3      |0       |
+|5   |COL O|0  |10    |0  |100   |0  |10    |IDX   |\x00\x00\x00\x00\x00\x05|1       |0   |3      |0       |
+|6   |RGB I|0  |1023  |0  |100   |0  |1023  |RAW   |\x00\x00\x00\x00\x00\x06|3       |1   |5      |0       |
+|7   |IR Tx|0  |65535 |0  |100   |0  |65535 |N/A   |\x00\x00\x00\x00\x00\x07|1       |1   |5      |0       |
+|8   |SPEC 1|0  |255   |0  |100   |0  |255   |N/A   |\x00\x00\x00\x00\x00\x08|4       |0   |3      |0       |
+|9   |DEBUG|0  |1023  |0  |100   |0  |10    |N/A   |\x00\x00\x00\x00\x00\x09|2       |1   |5      |0       |
+|10  |CALIB|0  |65535 |0  |100   |0  |65535 |N/A   |\x00\x00\x00\x00\x00\x10|8       |1   |5      |0       |
 
 
 ### Mode 5: Setting the color of the led
@@ -223,4 +241,12 @@ BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 |2   |LPF2-CAL   |0  |1023  |0  |100   |0  |1023  |RAW   |\x10\x00\x00\x00\x00\x00|3       |1   |3      |0       |
 
 ## WeDo gyro
+
+|Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
+|----|-----|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
+|0   |LPF2-ANGLE|-45|-45   |-100|100   |-45|45    |DEG   |\x00\x00\x00\x00\x04\x04|2       |0   |3      |0       |
+|1   |LPF2-TILT|0  |10    |0  |100   |0  |10    |DIR   |\x00\x00\x00\x00\x04\x04|1       |0   |2      |0       |
+|2   |LPF2-CRASH|0  |100   |0  |100   |0  |100   |CNT   |\x00\x00\x00\x00\x04\x04|3       |0   |3      |0       |
+|3   |LPF2_CAL|-45|45    |-100|100   |-45|45    |CAL   |\x00\x00\x00\x00\x04\x04|3       |0   |3      |0       |
+
 
