@@ -11,7 +11,7 @@ __Advantages:__
 
 The motor commands do not block the remainder of your program, this can be useful when you want motors to run (almost) in parallel, or if you want to motors to track a trajectory  
 
-UART communication
+UART:
 
  *  To use of third party TTL UART sensors  
  *  To get hub to hub communication.  (with the right cable)
