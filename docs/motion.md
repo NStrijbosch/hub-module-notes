@@ -22,11 +22,11 @@ from hub import motion
 
 accelerations = motion.accelerometer()
 
-print("a_x: " str(acclerations[0]) + " a_y: " str(acclerations[1]) + " a_z: " str(acclerations[2]) )
+print("a_x: " + str(accelerations[0]) + " a_y: " + str(accelerations[1]) + " a_z: " + str(accelerations[2]))
 ```
 
 ```
-a_x: 1000 a_y: 0 a_z: 0
+a_x: -108 a_y: -349 a_z: 950
 ```
 
 ## gyroscope()
@@ -46,11 +46,11 @@ from hub import motion
 
 rates = motion.gyroscope()
 
-print("r_x: " str(rates[0]) + " r_y: " str(rates[1]) + " r_z: " str(rates[2]) )
+print("r_x: " + str(rates[0]) + " r_y: " + str(rates[1]) + " r_z: " + str(rates[2]))
 ```
 
 ```
-r_x: 0 r_y: 0 r_z: 0
+r_x: -1 r_y: 0 r_z: 0
 ```
 
 ## yaw_pitch_roll()
@@ -72,11 +72,11 @@ from hub import motion
 
 rotations = motion.yaw_pitch_roll()
 
-print("yaw: " str(rotations[0]) + " pitch: " str(rotations[1]) + " roll: " str(rotations[2]) )
+print("yaw: " + str(rotations[0]) + " pitch: " + str(rotations[1]) + " roll: " + str(rotations[2]))
 ```
 
 ```
-yaw: 0 pitch: 0 roll: 0
+yaw: 12 pitch: -19 roll: 6
 ```
 
 # Gestures
@@ -107,9 +107,9 @@ print('Orientation: ' + str(motion.orientation()))
 
 ## gesture()
 
-`motion.gesture(gesture)`
+`motion.gesture()`
 
-Check if gesture is currently applied
+Returns gesture currently applied
 
 __Parameters:__
 
@@ -118,6 +118,7 @@ __Parameters:__
     DOUBLETAPPED=1  
     SHAKE=2  
     FREEFALL=3  
+* `None` if no gesture applied
 
 __Returns:__
 
@@ -128,12 +129,12 @@ __Sample code:__
 ``` python
 from hub import motion
 
-if motion.gesture(2):
-    print("Hub is shaking!")
-else:
-    print("Hub is not shaking")
+print("Gesture: " + str(motion.gesture()))
 ```
-  
+
+```
+>>> Gesture: 2
+```
 
 ## (was_gesture())
 
