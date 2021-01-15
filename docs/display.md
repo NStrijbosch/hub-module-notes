@@ -17,7 +17,7 @@ __Sample code:__
 ``` python
 from hub import display, Image
 
-hub.display(Image.HAPPY)
+display.show(Image.HAPPY)
 ```
 
 ## clear()
@@ -32,9 +32,11 @@ __Sample code:__
 
 ``` python
 from hub import display, Image
+from utime import sleep_ms
 
-hub.display(Image.HAPPY)
-hub.display.clear()
+display.show(Image.HAPPY)
+sleep_ms(1000)
+display.clear()
 ```
 
 ## pixel()
@@ -55,7 +57,7 @@ __Sample code:__
 from hub import display
 
 display.clear()
-display.pixel(0,0,9)  #TODO check which corner
+display.pixel(0,0,9)  #Top left corner
 ```
 
 ## rotate()
@@ -65,6 +67,8 @@ display.pixel(0,0,9)  #TODO check which corner
 Change the orientation of the display. 
 
 > Keep in mind this rotation is not reset at the start of each program. 
+
+> Not available in latest SPIKE 1.3.3 firmware?
 
 __Parameters:__
 
@@ -101,9 +105,9 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import display
+from hub import display, Image
 
-display.show(hub.Image.HAPPY)
+display.show(Image.HAPPY)
 
 display.align(4)
 ```
