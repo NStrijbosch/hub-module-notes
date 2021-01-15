@@ -360,6 +360,42 @@ sleep_ms(10000)    # wait 10 second active resistance should be noticable
 MotorA.float()     # float motor
 ```
 
+## busy()
+
+`port.A.motor.busy(type)`
+
+__Parameters:__
+
+*  type [int](data_types.md#int): which type of busy:  
+   0: busy mode ?(yet unknown meaning)
+   1: busy motor (target not reached or not)
+
+__Returns:__
+
+*  TRUE if busy, FALSE if not busy
+
+__Sample code:__
+
+```python
+from hub import port
+from utime import sleep_ms
+
+from hub import port
+
+MotorA = port.A.motor
+MotorB = port.B.motor
+
+# Turn motors to different positions in parallel
+MotorA.run_for_degrees(100,speed=50)
+MotorB.run_for_degrees(-400,speed=50)
+
+while MotorA.busy(1) or MotorB.busy(1):
+    sleep_ms(10)
+
+print('Both motors reached their target')
+
+```
+
 ## pair()
 
 `motorA.pair(motorB)`
@@ -402,17 +438,3 @@ The default mode of the Large/Medium Angular motor is: (see [mode](#mode) for mo
 ```
 >>> [(1, 0), (2, 2), (3, 1), (0, 0)]
 ```
-
-# TODO
-
-## busy()
-
-`hub.port.A.motor.busy()`
-
-__Parameters:__
-
-*  hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
-
-__Returns:__
-
-*  TRUE if target not achieved, FALSE if tracking not active
