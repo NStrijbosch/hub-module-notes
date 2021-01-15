@@ -127,7 +127,7 @@ hub.reset()
 
 ## power_off() TODO
 
-> Not acutaal shutdown, display is cleared and led is turned off. Hub stays connected. 
+> Not actual shutdown, display is cleared and led is turned off. Hub stays connected. 
 
 __Sample code:__
 ``` python
