@@ -11,10 +11,10 @@ __Advantages:__
 
 The motor commands do not block the remainder of your program, this can be useful when you want motors to run (almost) in parallel, or if you want to motors to track a trajectory  
 
-Exploit UART communication over the PU ports. This allows:  
+UART communication
 
- *  The use of third party TTL UART sensors  
- *  With the right cable, hub to hub communication.  
+ *  To use of third party TTL UART sensors  
+ *  To get hub to hub communication.  (with the right cable)
 
 Use BT_VCP and USB_VCP class to get more control over the communication between a computer and the hub  
 
