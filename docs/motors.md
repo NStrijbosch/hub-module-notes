@@ -375,33 +375,23 @@ __Returns:__
 *  TRUE if target not achieved, FALSE if tracking not active
 
 
-# Motors
+# Motor Modes
 
 ### Medium Motor
 
-hw_version = 4096
-fw_version = 4096
-combi_modes = (14,15)
-type = 48
+All motors with rotation sensor have the following modes
 
-``` python
-from hub import port
 
-medium_motor = port.A.motor
+|Mode|Name |RAW |      |PCT |      |SI  |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
+|----|-----|----|------|----|------|----|------|------|------------------------|--------|----|-------|--------|
+|0   |POWER (pwm)|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |1      |0       |
+|1   |SPEED (rotation rate)|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |4      |0       |
+|2   |POS  (relative rotation)|-360|360   |-100|100   |-360|360   |DEG   |\x10\x00\x00\x00\x01\x04|1       |2   |4      |0       |
+|3   |APOS (absolute rotation)|-180|179   |-200|200   |-180|-179  |DEG   |\x10\x00\x00\x00\x01\x04|1       |1   |3      |0       |
+|4   |LOAD (load) |0   |127   |0   |100   |0   |127   |PCT   |\x10\x00\x00\x00\x01\x04|1       |1   |1      |0       |
 
-default_mode = port.A.motor.mode()
-
-print(default_mode)
-```
+The default mode of the Large/Medium Angular motor is: (see [mode](#mode) for more details)
 
 ```
 >>> [(1, 0), (2, 2), (3, 1), (0, 0)]
 ```
-
-|Mode|Name |RAW |      |PCT |      |SI  |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
-|----|-----|----|------|----|------|----|------|------|------------------------|--------|----|-------|--------|
-|0   |POWER|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |1      |0       |
-|1   |SPEED|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |4      |0       |
-|2   |POS  |-360|360   |-100|100   |-360|360   |DEG   |\x10\x00\x00\x00\x01\x04|1       |2   |4      |0       |
-|3   |APOS |-180|179   |-200|200   |-180|-179  |DEG   |\x10\x00\x00\x00\x01\x04|1       |1   |3      |0       |
-|4   |LOAD |0   |127   |0   |100   |0   |127   |PCT   |\x10\x00\x00\x00\x01\x04|1       |1   |1      |0       |

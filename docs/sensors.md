@@ -110,7 +110,7 @@ __Available modes:__
 |7   |ADRAW(Analog on Pin 5/6 to Digital?)|0.0...1024.0 |0.0...100.0|0.0...1024.0 |pct   |\x80\x00\x00\x04\x84|1       |1   |4      |0       |
 |8   |CALIB|0.0...255.0  |0.0...100.0|0.0...255.0  |pct   |\x00\x00\x04\x84    |7       |0   |3      |0       |
 
-### Sending data to leds
+### Mode 5: Sending data to leds
 
 All four leds of the ultrasonic sensor can be controlled individually, see [mode](#mode) for details on how to send data. 
 
@@ -135,15 +135,15 @@ USSensor.mode(5,b''+chr(led1)+chr(led2)+chr(led3)+chr(led4))
 
 |Mode|Name |RAW |       |PCT|     |SI |     |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
 |----|-----|---|------|---|------|---|------|------|--------------------|--------|----|-------|--------|
-|0   |COLOR|0  |10    |0  |100   |0  |10    |IDX   |\x00\x00\x00\x04\x84|1       |0   |2      |0       |
-|1   |REFLT|0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x04\x84|1       |0   |3      |0       |
-|2   |AMBI |0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x04\x84|1       |0   |3      |0       |
-|3   |LIGHT|0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x04\x84|3       |0   |3      |0       |
-|4   |RREFL|0  |1024  |0  |100   |0  |1024  |RAW   |\x00\x00\x00\x04\x84|2       |1   |4      |0       |
-|5   |RGB I|0  |1024  |0  |100   |0  |1024  |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
-|6   |HSV  |0  |360   |0  |100   |0  |360   |RAW   |\x00\x00\x00\x04\x84|3       |1   |4      |0       |
-|7   |SHSV |0  |360   |0  |100   |0  |360   |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
-|8   |DEBUG|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
+|0   |COLOR (color)|0  |10    |0  |100   |0  |10    |IDX   |\x00\x00\x00\x04\x84|1       |0   |2      |0       |
+|1   |REFLT (reflected light)|0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x04\x84|1       |0   |3      |0       |
+|2   |AMBI (ambient light)|0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x04\x84|1       |0   |3      |0       |
+|3   |LIGHT (turn on leds)|0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x04\x84|3       |0   |3      |0       |
+|4   |RREFL (reflected light RAW)|0  |1024  |0  |100   |0  |1024  |RAW   |\x00\x00\x00\x04\x84|2       |1   |4      |0       |
+|5   |RGB I (RGB values)|0  |1024  |0  |100   |0  |1024  |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
+|6   |HSV  (HSV values)|0  |360   |0  |100   |0  |360   |RAW   |\x00\x00\x00\x04\x84|3       |1   |4      |0       |
+|7   |SHSV (SHSV values)|0  |360   |0  |100   |0  |360   |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
+|8   |DEBUG (debug?)|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
 |9   |CALIB|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|7       |1   |5      |0       |
 
 ### Sending data to leds
