@@ -25,7 +25,6 @@ __Disadvantages:__
 *  There is no official documentation. I cannot guarantee any of my findings are correct.
 *  The behaviour of some functions, e.g., relative position, are not automatically reset at the start of a program. This can cause strange behaviour.
 *  It is not recommended to use this module parallel to the standard modules. 
-*  It does not cover all functionalities of the standard modules.  
 
 
 I started this documentation for my personal use until official documentation is published. All commands are found by trial and error. This documentation is not complete and there are no guarantees on its correctness. I am highly interested if you have some additional insights into the hub module!

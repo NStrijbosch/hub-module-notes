@@ -110,7 +110,7 @@ __Available modes:__
 |7   |ADRAW(Analog on Pin 5/6 to Digital?)|0.0...1024.0 |0.0...100.0|0.0...1024.0 |pct   |\x80\x00\x00\x04\x84|1       |1   |4      |0       |
 |8   |CALIB|0.0...255.0  |0.0...100.0|0.0...255.0  |pct   |\x00\x00\x04\x84    |7       |0   |3      |0       |
 
-### Mode 5: Sending data to leds
+### Mode 5: control the leds
 
 All four leds of the ultrasonic sensor can be controlled individually, see [mode](#mode) for details on how to send data. 
 
@@ -146,7 +146,7 @@ USSensor.mode(5,b''+chr(led1)+chr(led2)+chr(led3)+chr(led4))
 |8   |DEBUG (debug?)|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
 |9   |CALIB|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|7       |1   |5      |0       |
 
-### Sending data to leds
+### Mode 3: control the leds
 
 All three leds of the color sensor can be controlled individually, see [mode](#mode) for details on how to send data to activate them. 
 
@@ -173,7 +173,7 @@ COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 
 
 
-### Setting the color of the led
+### Mode 5: Setting the color of the led
 
 Led of the boost sensor can be controlled, see [mode](#mode) for details on how to send data to activate it. 
 
@@ -194,7 +194,7 @@ for c in colors:
     sleep_ms(1000)
 ```
 
-### Sending IR signals to PF receiver
+### Mode 7: Sending IR signals to PF receiver
 
 The BoostSensor is capable of sending IR data, see [mode](#mode) for details on how to send data. 
 
