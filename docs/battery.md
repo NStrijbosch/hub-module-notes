@@ -3,11 +3,11 @@
 
 `battery.info()`
 
-Retrieve information on the
+Retrieve information of the hub
 
 __Returns:__
 
-*  [json string ](data_types.md#json) including:  
+*  [dictionary](data_types.md#dictionary) including:  
 temperature  
 charge_voltage  
 charge_current  
@@ -32,7 +32,7 @@ print(battery.info())
 
 `battery.capacity()`
 
-Measure the capacity of the battery left.
+Measure the capacity left in the battery.
 
 __Returns:__
 
@@ -96,12 +96,12 @@ Measure the temperature of the battery.
 
 __Returns:__
 
-*  temperature ([float](data_types.md#float)) in Celcius
+*  Temperature ([float](data_types.md#float)) in Celcius
 
 ``` python
 from hub import battery
 
-print("Temperature: " + str(battery.voltage()))
+print("Temperature: " + str(battery.temperature()))
 ```
 
 ``` python
@@ -112,7 +112,7 @@ print("Temperature: " + str(battery.voltage()))
 
 `battery.charger_detect()`
 
-Check if a charger is pluged into the hub.
+Check if a charger is plugged into the hub.
 
 __Returns:__
 
