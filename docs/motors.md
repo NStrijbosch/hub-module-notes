@@ -15,7 +15,7 @@ __Parameters:__
 *  __pid__ ([tuple](data_types.md#tuple)): PID gain (does not seem to have any effect)
 *   __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
 *   __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
-*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected (not sure if this works)
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
@@ -198,7 +198,7 @@ __Parameters:__
 *  __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
-*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected (not sure if this works)
 
 
 __Sample code:__
@@ -227,7 +227,7 @@ __Parameters:__
 *  __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
-*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected (not sure if this works)
 
 __Sample code:__
 
@@ -251,7 +251,7 @@ __Parameters:__
 *  __position__ ([int](data_types.md#int)): desired number of degrees to turn. 
 *  __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
 *   __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
-*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected (not sure if this works)
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
@@ -269,7 +269,7 @@ __Parameters:__
 *  __position__ ([int](data_types.md#int)): desired relative position in degrees. 
 *  __speed__ ([int](data_types.md#int)): desired speed as percentage of maximum velocity. Value in range -100 ... 100.
 *   __max_power__ ([int](data_types.md#int)): maximum power consumption as percentage of the maximum. Value in range 0 ... 100.
-*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected
+*  __stall__ ([bool](data_types.md#bool)): `True`: stop when motor stall is detected; `False`: do not stop when motor stall is detected (not sure if this works)
 *  __acceleration__ ([int](data_types.md#int)): maximum accleration to reach desired velocity as percentage of maximum acceleration. Value in range 0 ... 100
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
@@ -352,28 +352,30 @@ sleep_ms(10000)     # wait 10 second active resistance should be noticable
 MotorA.float()      # float motor
 ```
 
-# TODO
-
 ## pair()
 
-`motor.pair(motor)`
+`motorA.pair(motorB)`
+
+Pair two motors. Both motors can now be controlled via motorA (even with different speeds). 
 
 __Parameters:__
 
-*  motor to pair, e.g. hub.port.A.motor
+*  motor to pair, e.g. port.B.motor()
 
-## busy()
+__Sample code:__
 
-`hub.port.A.motor.busy()`
+``` python
+from hub import port
 
-__Parameters:__
+MotorA = port.A.motor
+MotorB = port.B.motor
 
-*  hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
+MotorA.pair(MotorB)
 
-__Returns:__
+MotorA.run_for_degrees(270, 100, 50) # Motor A turns 360 and Motor B turns 180 
+                                     # Combined distance = 2*270 
 
-*  TRUE if target not achieved, FALSE if tracking not active
-
+```
 
 # Motor Modes
 
@@ -393,3 +395,17 @@ The default mode of the Large/Medium Angular motor is: (see [mode](#mode) for mo
 ```
 >>> [(1, 0), (2, 2), (3, 1), (0, 0)]
 ```
+
+# TODO
+
+## busy()
+
+`hub.port.A.motor.busy()`
+
+__Parameters:__
+
+*  hub.port.A.motor.BUSY_MODE or hub.port.A.motor.BUSY_MOTOR
+
+__Returns:__
+
+*  TRUE if target not achieved, FALSE if tracking not active
