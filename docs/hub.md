@@ -1,3 +1,6 @@
+
+
+
 # Hub status
 
 ## info()
@@ -28,7 +31,7 @@ print(hub.info())
 ```
 
 ```
->>> {'usb_vid': 1684, 'device_uuid': '03970000-3900-5000-1851-383332353732', '1ms_tick_on_time': 99.9855, 'usb_pid': 9, '1ms_tick_min': 114000.0, '1ms_tick_miss': 82, 'hardware_version': 'Version_E', '1ms_tick_max': 3.6746e+07, 'product_variant': 0, '1ms_tick_total': 567713}
+>>> {'usb_vid': 1684, 'device_uuid': '03970000-3900-5000-1851-383332353732', '1ms_tick_on_time': 99.8596, 'usb_pid': 9, '1ms_tick_min': 58000.0, '1ms_tick_miss': 1022, 'hardware_version': 'Version_E', '1ms_tick_max': 2.6265e+07, 'product_variant': 0, '1ms_tick_total': 728280}
 ```
 
 ## status()
@@ -54,7 +57,7 @@ print(hub.status())
 ```
 
 ```
->>> {'gyroscope': (0, 0, 0), 'port': {'C': [], 'D': [], 'B': [], 'E': [], 'A': [], 'F': []}, 'accelerometer': (48, -89, 1010), 'yaw_pitch_roll': (-1, -5, -2), 'position': (-1, -5, -2), 'display': '09090:99999:99999:09990:00900'}
+>>> {'gyroscope': (0, 0, 0), 'port': {'C': [], 'D': [], 'B': [], 'E': [], 'A': [0, 0, -2, 0], 'F': []}, 'accelerometer': (-78, -305, 966), 'yaw_pitch_roll': (-27, -17, 4), 'position': (-27, -17, 4), 'display': '00000:00000:00000:00000:00000'}
 ```
 
 ## temperature()
@@ -66,6 +69,18 @@ Get temperature of the hub (probably internal sensor?)
 __Returns:__
 
 * [float](data_types.md#float): Temperature of the hub in Celcius.
+
+__Sample code:__
+
+``` python
+import hub
+
+print('Temperature: ' + str(hub.temperature()))
+```
+
+```
+>>> Temperature: 24.0
+```
 
 # Hub actions
 
@@ -110,15 +125,21 @@ import hub
 hub.reset()
 ```
 
-## repl_restart() TODO
-
-Restart REPL, in running REPL nothing is observed.
-
 ## power_off() TODO
 
-Expeted behaviour: power_off hub
+> Not acutaal shutdown, display is cleared and led is turned off. Hub stays connected. 
 
-Observed behaviour in REPL: led turns off hub stays connected
+__Sample code:__
+``` python
+import hub
+
+hub.power_off()
+```
+
+## repl_restart() TODO
+
+Restart REPL, in running REPL nothing is observed, in SPIKE app: keyboard interrupt + error message. Not advised to use!
+
 
 ## file_tansfer() TODO
 
