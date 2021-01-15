@@ -91,7 +91,7 @@ print("force: " + str(force))
 
 Below you find a list of all available PU sensors with a table that shows their available modes. Moreover, it is possible to send data to some sensor, sample codes are given to demonstrate this. 
 
-## Ultrasonic Sensor
+### Ultrasonic Sensor
 
 __Available modes:__
 
@@ -107,7 +107,7 @@ __Available modes:__
 |7   |ADRAW(Analog on Pin 5/6 to Digital?)|0.0...1024.0 |0.0...100.0|0.0...1024.0 |pct   |\x80\x00\x00\x04\x84|1       |1   |4      |0       |
 |8   |CALIB|0.0...255.0  |0.0...100.0|0.0...255.0  |pct   |\x00\x00\x04\x84    |7       |0   |3      |0       |
 
-### Mode 5: control the leds
+#### Mode 5: control the leds
 
 All four leds of the ultrasonic sensor can be controlled individually, see [mode](#mode) for details on how to send data. 
 
@@ -127,7 +127,7 @@ led4 = 9 #brightness in range 0...9
 USSensor.mode(5,b''+chr(led1)+chr(led2)+chr(led3)+chr(led4))
 ```
 
-## Color Sensor
+### Color Sensor
 
 |Mode|Name |RAW |       |PCT|     |SI |     |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
 |----|-----|---|------|---|------|---|------|------|--------------------|--------|----|-------|--------|
@@ -142,7 +142,7 @@ USSensor.mode(5,b''+chr(led1)+chr(led2)+chr(led3)+chr(led4))
 |8   |DEBUG (debug?)|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
 |9   |CALIB|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|7       |1   |5      |0       |
 
-### Mode 3: control the leds
+#### Mode 3: control the leds
 
 All three leds of the color sensor can be controlled individually, see [mode](#mode) for details on how to send data to activate them. 
 
@@ -162,7 +162,7 @@ led3 = 9  #brightness in range 0...9
 COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 ```
 
-## Force Sensor
+### Force Sensor
 
 |Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
 |----|-----|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
@@ -174,7 +174,7 @@ COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 |5   |FPRAW|0  |1023  |0  |100   |0  |1023  |RAW   |\x00\x00\x00\x00\x04\x04|1       |1   |4      |0       |
 |6   |CALIB|0  |1023  |0  |100   |0  |1023  |      |                        |8       |1   |4      |0       |
 
-## Boost Color Sensor
+### Boost Color Sensor
 
 |Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
 |----|-----|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
@@ -191,7 +191,7 @@ COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 |10  |CALIB|0  |65535 |0  |100   |0  |65535 |N/A   |\x00\x00\x00\x00\x00\x10|8       |1   |5      |0       |
 
 
-### Mode 5: Setting the color of the led
+#### Mode 5: Setting the color of the led
 
 Led of the boost sensor can be controlled, see [mode](#mode) for details on how to send data to activate it. 
 
@@ -212,7 +212,7 @@ for c in colors:
     sleep_ms(1000)
 ```
 
-### Mode 7: Sending IR signals to PF receiver
+#### Mode 7: Sending IR signals to PF receiver
 
 The BoostSensor is capable of sending IR data, see [mode](#mode) for details on how to send data. 
 
@@ -232,7 +232,7 @@ BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 ### A member from the community is working on a library (hopefully published soon!)
 ```
 
-## WeDo distance sensor
+### WeDo distance sensor
 
 |Mode|Name       |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
 |----|-----------|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
@@ -240,7 +240,7 @@ BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 |1   |LPF2-COUNT |0  |100   |0  |100   |0  |100   |CNT   |\x10\x00\x00\x00\x00\x00|1       |2   |4      |0       |
 |2   |LPF2-CAL   |0  |1023  |0  |100   |0  |1023  |RAW   |\x10\x00\x00\x00\x00\x00|3       |1   |3      |0       |
 
-## WeDo gyro
+### WeDo gyro
 
 |Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
 |----|-----|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
