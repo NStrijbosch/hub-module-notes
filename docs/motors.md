@@ -23,21 +23,21 @@ __Parameters:__
 
 __Returns:__
 
-*  current default settings. Only if no parameters are given.
+*  [dictionary](data_types.md#dictionary): list of current default motor settings
 
 __Sample code:__
 
 ``` python
 from hub import port
 
-MotorA = hub.port.A.motor
+MotorA = port.A.motor
 
 MotorA.default(max_power = 50, stop = 2) #set max power to 50 and stop action to hold
 print("default settings: " + str(MotorA.default()))
 ```
 
 ``` python
->>> TODO: add result
+>>> default settings: {'pid': (0, 0, 0), 'max_power': 50, 'speed': 0, 'stall': True, 'deceleration': 150, 'stop': 2, 'callback': None, 'acceleration': 100}
 ```
   
 ---
@@ -89,7 +89,7 @@ Preset the value of the relative position
 
 __Paramters:__
 
-*  position ([int](data_types.md#int))
+*  position ([int](data_types.md#int)): best practice is to use current position, or absolute position
 
 __Sample code:__
 
@@ -156,8 +156,8 @@ print("Speed : " + str(measurements[0]) + " Relative position: " + str(measureme
 ```
 
 ``` python
->>> Absolute position: -20
->>> Speed : 0 Relative position: 0
+>>> Absolute position: -2
+>>> Speed : 0 Relative position: 100
 ```
 
 # Actions
@@ -181,9 +181,9 @@ from utime import sleep_ms
 
 MotorA = port.A.motor
 
-MotorA.pwm(40)      # start motor
-sleep_ms(1000)      # wait 1 second
-MOtorA.pwm(0)       # stop motor
+MotorA.pwm(40)    # start motor
+sleep_ms(1000)    # wait 1 second
+MotorA.pwm(0)     # stop motor
 ```
 
 ## run_at_speed()
@@ -256,6 +256,18 @@ __Parameters:__
 *  __deceleration__ ([int](data_types.md#int)): maximum deceleration to reach desired velocity as percentage of maximum deceleration. Value in range 0 ... 100
 *  __stop__ ([int](data_types.md#int)): stop action after reaching target: STOP_FLOAT=0; STOP_BRAKE=1; STOP_HOLD=2.
 
+__Sample code:__
+```python
+from hub import port
+
+MotorA = port.A.motor
+MotorB = port.B.motor
+
+# Turn motors to different positions in parallel
+MotorA.run_for_degrees(100,speed=50)
+MotorB.run_for_degrees(-400,speed=50)
+```
+
 ## run_to_position()
 
 `motor.run_to_position(position, speed=50, max_power=100, stall=True, acceleration=100, deceleration=100, stop=1)`
@@ -280,17 +292,13 @@ __Sample code:__
 from hub import port
 
 MotorA = port.A.motor
-MotorB = port.B.motor
 
-MotorA.mode(3)  # set mode to absolute position
-MotorB.mode(3)  # set mode to absolute position
+MotorA.mode(2)# set mode to absolute position
 
-MotorA.preset(Motor.A.get()[0])  # preset 0 position to absolute zero position
-MotorB.preset(Motor.B.get()[0])  # preset 0 position to absolute zero position
+MotorA.preset(MotorA.get()[0])# preset 0 position to absolute zero position
 
 # Turn motors to different positions in parallel
-MotorA.run_to_position(100,speed=50, stop = motorA.STOP_FLOAT)
-MotorB.run_to_position(-200,speed=50)
+MotorA.run_to_position(180,speed=50)
 ```
 
 ## float()
@@ -309,7 +317,7 @@ MotorA = port.A.motor
 
 MotorA.pwm(40)      # start motor
 sleep_ms(1000)      # wait 1 second
-MOtorA.float()      # float motor
+MotorA.float()      # float motor
 ```
 
 ## brake()
@@ -345,11 +353,11 @@ from utime import sleep_ms
 
 MotorA = port.A.motor
 
-MotorA.pwm(40)      # start motor
-sleep_ms(1000)      # wait 1 second
-MotorA.hold()       # actively hold position
-sleep_ms(10000)     # wait 10 second active resistance should be noticable
-MotorA.float()      # float motor
+MotorA.pwm(40)     # start motor
+sleep_ms(1000)     # wait 1 second
+MotorA.hold()      # actively hold position
+sleep_ms(10000)    # wait 10 second active resistance should be noticable
+MotorA.float()     # float motor
 ```
 
 ## pair()
@@ -370,11 +378,10 @@ from hub import port
 MotorA = port.A.motor
 MotorB = port.B.motor
 
-MotorA.pair(MotorB)
+Pair=MotorA.pair(MotorB)
 
-MotorA.run_for_degrees(270, 100, 50) # Motor A turns 360 and Motor B turns 180 
-                                     # Combined distance = 2*270 
-
+Pair.run_for_degrees(270, 100, 50) # Motor A turns 360 and Motor B turns 180
+                                    # Combined distance = 2*270
 ```
 
 # Motor Modes
