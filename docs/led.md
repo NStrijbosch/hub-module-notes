@@ -45,16 +45,17 @@ __Parameters:__
 
 > keep in mind that the colors seem skewed towards blue
 
-___Sample code:___
+
+__Returns:__
+
+* tuple (int r,int g,int b) each has a value between 0 and 255. Only if no arguments are given.
+
+__Sample code:__
 ``` python
 import hub
 
 hub.led(0,100,50)
 ```
-
-__Returns:__
-
-* tuple (int r,int g,int b) each has a value between 0 and 255. Only if no arguments are given.
 
 
  
