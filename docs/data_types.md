@@ -2,19 +2,51 @@
 
 ## int
 
-## str
+__int:__ 
+
+*  Postive or negative whole number, e..g, `1` `99`
 
 ## float
 
+__float:__
+
+*  any real number with a fractional component, e..g, `1.4` `3.14`
+
+## str
+
+__str:__ 
+
+*  a collection of one or more characters, e.g,. `"hello"`
+
 ## bool
+
+__bool:__
+
+*  either `True` or `False`
 
 ## bytearray
 
 ## tuple
 
+__tuple:__
+
+*  ordered collection of one or more data items, not necessarily of the same type, in parentheses.`(1,2,3,4)`
+
 ## list
 
+__list:__
+
+* ordered collection of one or more data items, not necessarily of the same time, put in square brackets, e,g,. `[1,2,3,4]`
+
+## dictionary
+
+__dictionary:__
+
+* unordered collection of data in a key: value pair form, e.g., `{1: 'motor', 2: 'sensor'}`
+
 # Constants
+
+The following constants are obtained from the hub library
 
 ## hub
 
@@ -28,7 +60,6 @@ hub.LEFT = 5
 ```
 
 ## Battery
-
 
 ``` python
 hub.battery.BATTERY_VOLTAGE_TOO_LOW=-5  
@@ -50,12 +81,12 @@ hub.battery.CHARGER_STATE_CHARGING_COMPLETED=2
 hub.battery.USB_CH_PORT_NONE=0
 hub.battery.USB_CH_PORT_SDP=1
 hub.battery.USB_CH_PORT_CDP=2
-hub.battery.USB_CH_PORT_DCP=3                 
+hub.battery.USB_CH_PORT_DCP=3               
 ```
 
 ## Image
 
-build in images
+build in images:
 ```
 hub.Image.ALL_ARROWS
 hub.Image.ALL_CLOCKS      
@@ -131,7 +162,6 @@ hub.Image.YES
 ## Sound
 
 Waveforms
-
 ``` 
 hub.sound.SOUND_SIN=0       
 hub.sound.SOUND_SQUARE=1
@@ -162,9 +192,6 @@ hub.sound.SOUND_SAWTOOTH=3
 ## Motion
 
 ### gesture
-
-movement of the hub measured with build in gyroscope and accelerometer
-
 possible gestures:
 
 ```
@@ -174,18 +201,12 @@ hub.motion.SHAKE=2
 hub.motion.FREEFALL=3
 ```
 
-## Port
-
-###
-
-attached port
+### Port
 
 ```
 hub.port.ATTACED = 1
 hub.port.DETACHED = 0
 ```
-
-Possible modes for a PU port
 
 ```
 hub.port.MODE_DEFAULT = 0
@@ -195,9 +216,7 @@ hub.port.MODE_GPIO = 3
 ```
 
 
-## Motors
-
-# Constants
+### Motors
 
 ```
 hub.port.A.motor.BUSY_MODE = 0
@@ -230,4 +249,6 @@ hub.port.A.motor.STOP_HOLD = 2
 
 
 ## Sensors
+
+
 
