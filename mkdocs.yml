@@ -1,4 +1,4 @@
-site_name: Low level module documentation
+site_name: Unofficial hub module documentation
 nav:
     - Getting started: 'index.md'
     - Hub: 'hub.md'
@@ -9,11 +9,10 @@ nav:
     - Button: 'button.md'
     - Motion: 'motion.md'
     - Port : 'port.md'
-    - Device (sensors): 'sensors.md'
+    - Sensors (Device): 'sensors.md'
     - Motor: 'motors.md'  
     - Virtual Com Port: 'VCP.md'  
     - Data types and constants: 'data_types.md'
-
 #  - Battery: 'battery.md'
 #   - Bluetooth: 'bluetooth.md'
 #   - Config: 'config.md'
