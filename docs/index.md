@@ -13,8 +13,8 @@ The motor commands do not block the remainder of your program, this can be usefu
 
 UART:
 
- *  To use of third party TTL UART sensors  
- *  To get hub to hub communication.  (with the right cable)
+ *  Allows to use third party TTL UART sensors via the Ultrasonic sensor's breakout.  
+ *  Allows to get hub to hub communication.  (with the right cable)
 
 Use BT_VCP and USB_VCP class to get more control over the communication between a computer and the hub  
 
