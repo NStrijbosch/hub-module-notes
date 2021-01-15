@@ -116,5 +116,68 @@ portA.baud(115200) # set baud rate
 data=portA.write('test')
 ```
 
-# Port mode GPIO
+# Port mode GPIO TODO
+
+When in GPIO mode after a small delay the functions to control pin 5 and pin 6 appear. 
+
+## direction
+
+`port.A.p5.direction(read_write)`
+`port.A.p6.direction(read_write)`
+
+Set the direction of the pins, either write high or low values or read high low values.
+
+__Parameters:__
+
+* read_write [int](data_types.md#int): value 1: write; value 0: read
+
+__Sample code:__ 
+
+``` python
+from hub import port
+
+p5 = port.A.p5
+p6 = port.A.p6
+
+p5.direction(1) # write to pin 5
+p6.direction(0) # read from pin 6
+
+```
+  
+## value
+
+`port.A.p5.value(signal)`
+`port.A.p6.value(signal)`
+
+Either read or write to the pin depending on its direction.
+
+__Parameters:__
+
+*  signal [int](data_types.md#int): 1 (High) or 0(Low) if direction is write (1)
+*  None: if direction is read
+
+__Returns:__
+
+*   [int](data_types.md#int): : 1 (High) or 0(Low) if direction is read (0)
+
+__Sample code:__
+
+``` python
+from hub import port
+
+p5 = port.A.p5
+p6 = port.A.p6
+
+p5.direction(1) # write to pin 5
+p6.direction(0) # read from pin 6
+
+p5.value(1)  # set pin 5 to high
+
+print("Signal on pin 6: " + str(p6.value()))
+```
+
+
+
+
+
 
