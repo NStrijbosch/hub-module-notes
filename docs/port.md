@@ -53,7 +53,6 @@ portA.mode(1)   # set full duplex mode
 sleep_ms(1000)  # wait for all duplex methods to appear
 
 portA.baud(115200) # set baud rate
-
 ```
 
 ## read()
@@ -141,7 +140,6 @@ p6 = port.A.p6
 
 p5.direction(1) # write to pin 5
 p6.direction(0) # read from pin 6
-
 ```
   
 ## value()
@@ -164,6 +162,11 @@ __Sample code:__
 
 ``` python
 from hub import port
+from utime import sleep_ms
+
+port.A.mode(3) #set GPIO mode
+
+sleep_ms(1000) #small delay to wait for GPIO methods to appear
 
 p5 = port.A.p5
 p6 = port.A.p6
@@ -171,13 +174,13 @@ p6 = port.A.p6
 p5.direction(1) # write to pin 5
 p6.direction(0) # read from pin 6
 
-p5.value(1)  # set pin 5 to high
+p5.value(1)# set pin 5 to high
 
 print("Signal on pin 6: " + str(p6.value()))
 ```
 
 ```
->>> Signal on pin 6: 0
+>>> Signal on pin 6: 1
 ```
 
 
