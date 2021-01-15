@@ -60,13 +60,13 @@ display.pixel(0,0,9)  #TODO check which corner
 
 `display.rotate(angle)`
 
-Change orientation of the display. 
+Change the orientation of the display. 
 
 > Keep in mind this rotation is not reset at the start of each program. 
 
 __Parameters:__
 
-*  angle ([int](data_types.md#int): value of either 0, 90, 180, or 270
+*  angle in degrees ([int](data_types.md#int): value of either 0, 90, 180, or 270
 
 __Sample code:__
 
@@ -84,8 +84,7 @@ display.rotate(90)
 
 Set the orientation of display.
 
-
-TODO check connection integer and TOP BOTTOM etc.
+> There does not seem a relation between direction and orientation
 
 __Parameters:__
 
@@ -111,7 +110,7 @@ display.align(4)
 
 `display.invert(invert)`
 
-invert the brightness of all pixels: 9 -> 0, 8 -> 1, ...
+Invert the brightness of all pixels: 9 -> 0, 8 -> 1, ...
 
 __Parameters:__
 
