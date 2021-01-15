@@ -15,17 +15,22 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import Image
+from hub import Image, display
+from utime import sleep_ms
 
 # all values in range 0,1,...,9
 
 imageN =    Image("90009:"
-                  "99009:"
-                  "90909:"
-                  "90099:"
-                  "90009")    
+                "99009:"
+                "90909:"
+                "90099:"
+                "90009")
+
+display.show(imageN)
+sleep_ms(1000)
  # or
 imageH = Image("70007\n70007\n66666\n70007\n70007")
+display.show(imageH)
 ```
 
 ## set_pixel()
@@ -45,10 +50,11 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import Image
+from hub import Image, display
 
 imageH = Image("70007\n70007\n66666\n70007\n70007")
 imageH.set_pixel(2,2,0)
+display.show(imageH)
 ```
 
 ## shift_up()
@@ -66,10 +72,11 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import Image
+from hub import Image, display
 
 imageH = Image("70007\n70007\n66666\n70007\n70007")
-imageH.shift_up(1)
+imageHup = imageH.shift_up(1)
+display.show(imageHup)
 ```
 
 ## shift_down()
@@ -87,10 +94,11 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import Image
+from hub import Image, display
 
 imageH = Image("70007\n70007\n66666\n70007\n70007")
-imageH.shift_down(1)
+imageHdown = imageH.shift_down(1)
+display.show(imageHdown)
 ```
 
 ## shift_left()
@@ -108,10 +116,11 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import Image
+from hub import Image, display
 
 imageH = Image("70007\n70007\n66666\n70007\n70007")
-imageH.shift_left(1)
+imageHleft = imageH.shift_left(1)
+display.show(imageHleft)
 ```
 ## shift_right()
 
@@ -128,10 +137,11 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import Image
+from hub import Image, display
 
 imageH = Image("70007\n70007\n66666\n70007\n70007")
-imageH.shift_right(1)
+imageHright = imageH.shift_right(1)
+display.show(imageHright)
 ```
 # Image info
 
@@ -150,12 +160,12 @@ __Sample code:__
 ``` python
 from hub import Image
 
-imageH = Image("70007\n70007\n66666\n70007\n70007")
+imageH = Image("700079\n700079\n666669\n700079\n700079\n999999")
 print("Width: " + str(imageH.width()))
 ```
 
 ```
->>> Width: 5
+>>> Width: 6
 ```
 ## Height()
 
@@ -172,12 +182,12 @@ __Sample code:__
 ``` python
 from hub import Image
 
-imageH = Image("70007\n70007\n66666\n70007\n70007")
+imageH = Image("700079\n700079\n666669\n700079\n700079\n999999")
 print("Height: " + str(imageH.height()))
 ```
 
 ```
->>> Height: 5
+>>> Height: 6
 ```
 
 ## get_pixel()
