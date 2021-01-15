@@ -49,6 +49,8 @@ __Sample code:__
 from hub import button
 from utime import sleep_ms
 
+button.left.was_pressed() # first call; behaviour before program is unknown
+
 while not button.left.was_pressed():
     print('press left button')
     sleep_ms(1000)
@@ -57,12 +59,12 @@ while not button.left.was_pressed():
 ```
 >>> press left button
 >>> press left button
->>> press left button  (after this button is pressed)
+>>> press left button  (after this left button is pressed)
 ```
 
-## pressed()
+## presses()
 
-`button.left.pressed()`
+`button.left.presses()`
 
 __Returns:__
 
@@ -74,8 +76,8 @@ __Sample code:__
 from hub import button
 from utime import sleep_ms
 
-for i in range(3):
-    print('number of presses: '+ str(button.left.pressed()))
+for i in range(4):
+    print('number of presses: '+ str(button.left.presses()))
     sleep_ms(2000)
 ```
 
