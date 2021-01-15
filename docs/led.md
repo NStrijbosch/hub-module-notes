@@ -1,5 +1,5 @@
 
-This class controls all functions linked to the led ring around the center button on the hub.
+The Led class controls all functions linked to the led ring around the center button on the hub.
 
 ## led(color)
 

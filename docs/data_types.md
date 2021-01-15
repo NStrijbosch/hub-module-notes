@@ -1,16 +1,18 @@
 # Data types
 
+The following data types are used.
+
 ## int
 
 __int:__ 
 
-*  Postive or negative whole number, e..g, `1` `99`
+*  Postive or negative whole number, e..g, `1`, `99`
 
 ## float
 
 __float:__
 
-*  any real number with a fractional component, e..g, `1.4` `3.14`
+*  any real number with a fractional component, e..g, `1.4`, `3.14`
 
 ## str
 

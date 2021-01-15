@@ -1,4 +1,4 @@
-The motor class is a sub class of the [port](port.md) class which allows to control PU motors. It can be used via `motor=hub.port.A.motor`, see the examples below for more details. 
+The motor class is a sub class of the [port](port.md) class which allows to control all PU motors. It can be used via `motor=hub.port.A.motor`, see the examples below for more details. 
 
 # Motor settings
 
@@ -376,8 +376,6 @@ __Returns:__
 
 
 # Motor Modes
-
-### Medium Motor
 
 All motors with rotation sensor have the following modes
 
