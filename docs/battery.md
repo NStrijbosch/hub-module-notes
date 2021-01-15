@@ -25,12 +25,12 @@ print(battery.info())
 ```
 
 ``` python
->>> {'temperature': 23.9, 'charge_voltage': 8357, 'charge_current': 353, 'charge_voltage_filtered': 8352, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
+>>> {'temperature': 20.2, 'charge_voltage': 8389, 'charge_current': 332, 'charge_voltage_filtered': 8359, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
 ```
 
-## capacity()
+## capacity_left()
 
-`battery.capacity()`
+`battery.capacity_left()`
 
 Measure the capacity left in the battery.
 
@@ -41,7 +41,7 @@ __Returns:__
 ``` python
 from hub import battery
 
-print("Capacity left: " + str(battery.capacity()))
+print("Capacity left: " + str(battery.capacity_left()))
 ```
 
 ``` python
@@ -52,7 +52,7 @@ print("Capacity left: " + str(battery.capacity()))
 
 `battery.current()`
 
-Measure the current of the battery.
+Measure the (charge?) current of the battery.
 
 __Returns:__
 
@@ -65,18 +65,20 @@ print("Current: " + str(battery.current()))
 ```
 
 ``` python
->>> Current: ????
+>>> Current: 75
 ```
 
 ## voltage()
 
 `battery.voltage()`
 
-Measure the voltage of the battery.
+Measure the charging voltage of the battery.
 
 __Returns:__
 
 *  [int](data_types.md#int) with unknown unit
+
+__Sample code__
 
 ``` python
 from hub import battery
@@ -85,7 +87,7 @@ print("Voltage: " + str(battery.voltage()))
 ```
 
 ``` python
->>> Voltage: ????
+>>> Voltage: 8391
 ```
 
 ## temperature()
@@ -105,7 +107,7 @@ print("Temperature: " + str(battery.temperature()))
 ```
 
 ``` python
->>> Temperature: 25.4
+>>> Temperature: 21.0
 ```
 
 ## charger_detect()
@@ -117,6 +119,8 @@ Check if a charger is plugged into the hub.
 __Returns:__
 
 *  [bool](data_types.md#bool): 'True' if charger detected, 'False' if charger not detected.
+
+__Sample code:__
 
 ``` python
 from hub import battery

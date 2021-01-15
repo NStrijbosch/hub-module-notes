@@ -12,8 +12,9 @@ nav:
     - Sensors (Device): 'sensors.md'
     - Motor: 'motors.md'  
     - Virtual Com Port: 'VCP.md'  
+    - Battery: 'battery.md'
     - Data types and constants: 'data_types.md'
-#  - Battery: 'battery.md'
+
 #   - Bluetooth: 'bluetooth.md'
 #   - Config: 'config.md'
 #   - supervision: 'supervision.md'
