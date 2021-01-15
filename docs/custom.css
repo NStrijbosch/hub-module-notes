@@ -1,12 +1,12 @@
 /* a { text-decoration: overline;  background-color: yellow !important;} 
 a:hover { text-decoration: underline; background-color: yellow;}
 a.toctree-12 { background-color: yellow;} */
-.section ul { list-style: none !important; margin-left: 80px; margin-top:-3em;}
+.section ul { list-style: none !important; margin-left: 84px; margin-top:-3em;}
 .section li { list-style: none !important}
 .toctree-l2 a {margin-left: 0em;}
 .toctree-l3 {margin-left: 2em;}
 .hljs {background: #000000;
-        color: white; border-top:  none; margin-left: 104px;}
+        color: white; border-top:  none; margin-left: 108px;}
 
 code {    background: #e7f2fa;    color: #2980B9;  font-weight: bold;  border-top: solid 3px #6ab0de; margin: 6px 0; padding: 6px;}
 h1 {font-size: 150%;}
