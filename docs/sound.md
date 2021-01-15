@@ -21,7 +21,7 @@ __Sample code:__
 ``` python
 from hub import sound
 
-hub.sound.beep(1,1000,0)
+sound.beep(10,1000,0)
 ```
 
 ## volume()
@@ -38,11 +38,15 @@ __Sample code:__
 
 ``` python
 from hub import sound
+from utime import sleep_ms
 
-hub.sound.volume(3)
-hub.sound.beep(1,1000,0)
-hub.sound.volume(10)
-hub.sound.beep(1,1000,0)
+sound.volume(10)
+sound.beep(20,1000,0)
+
+sleep_ms(1000) #wait for previous beep to end
+
+sound.volume(3)
+sound.beep(20,1000,0)
 ```
 
 
