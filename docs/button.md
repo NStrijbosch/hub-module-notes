@@ -18,6 +18,8 @@ __Returns:__
 
 *  [boolean](data_types.md#bool): `True` if the button is pressed, otherwise `False`. 
 
+__Sample code:__
+
 ``` python
 from hub import button
 
@@ -37,9 +39,11 @@ while not button.left.is_pressed():
 
 Check if button was pressed since last call.
 
-__Returns;__
+__Returns:__
 
 *  [boolean](data_types.md#bool) `True` if the button was pressed since last call, otherwise `False`
+
+__Sample code:__
 
 ``` python
 from hub import button
@@ -56,7 +60,6 @@ while not button.left.was_pressed():
 >>> press left button  (after this button is pressed)
 ```
 
-
 ## pressed()
 
 `button.left.pressed()`
@@ -64,6 +67,8 @@ while not button.left.was_pressed():
 __Returns:__
 
 * [integer](data_types.md#int): Number of presses since last call
+
+__Sample code:__
 
 ``` python
 from hub import button

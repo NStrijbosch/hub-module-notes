@@ -223,3 +223,4 @@ BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 |2   |LPF2-CAL   |0  |1023  |0  |100   |0  |1023  |RAW   |\x10\x00\x00\x00\x00\x00|3       |1   |3      |0       |
 
 ## WeDo gyro
+

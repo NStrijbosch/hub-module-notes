@@ -1,7 +1,7 @@
 
 The motion class controls all functions linked to the internal IMU of the hub. It can read accelerometer data, gyro rates, yaw pitch and roll and detect gestures applied to the hub. It can be used via `hub.motion`.
 
-# Gyro/Accelerometer Sensor Data
+# IMU Sensor Data
 
 The hub can measure acceleration, yaw rate, and rotation directly from the IMU using the following commands.
 

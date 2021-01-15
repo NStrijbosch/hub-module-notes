@@ -14,10 +14,10 @@ The port class controls everything that is connected to the PU connectors on the
 __Parameters:__
 
 *  mode [int](data_types.md#int): value could be  
-    MODE_DEFAULT = 0
-    MODE_FULL_DUPLEX = 1
-    MODE_HALF_DUPLEX = 2
-    MODE_GPIO = 3
+    MODE_DEFAULT = 0  
+    MODE_FULL_DUPLEX = 1  
+    MODE_HALF_DUPLEX = 2  
+    MODE_GPIO = 3  
 
 __Sample code:__
 

@@ -12,10 +12,12 @@ __Parameters:__
 
 *  [image](data_types.md#image) image. See [image](data_types.md#image) for all build in images and the [Image](image.md) class on how to create a custom image.
 
-``` python
-from hub import display
+__Sample code:__
 
-hub.display(hub.Image.HAPPY)
+``` python
+from hub import display, Image
+
+hub.display(Image.HAPPY)
 ```
 
 ## clear()
@@ -29,9 +31,9 @@ Set the light intensity of all pixels to 0.
 __Sample code:__
 
 ``` python
-from hub import display
+from hub import display, Image
 
-hub.display(hub.Image.HAPPY)
+hub.display(Image.HAPPY)
 hub.display.clear()
 ```
 
@@ -71,9 +73,9 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-from hub import display
+from hub import display, Image
 
-display.show(hub.Image.HAPPY)
+display.show(Image.HAPPY)
 
 display.rotate(90)
 ```
@@ -84,7 +86,7 @@ display.rotate(90)
 
 Set the orientation of display.
 
-> There does not seem a relation between direction and orientation
+> There does not seems to be a relation between direction and orientation, but numbers look weird
 
 __Parameters:__
 
@@ -108,20 +110,20 @@ display.align(4)
 
 ## invert()
 
-`display.invert(invert)`
+`display.invert(inv)`
 
 Invert the brightness of all pixels: 9 -> 0, 8 -> 1, ...
 
 __Parameters:__
 
-*  invert [bool](data_types.md#bool): `True`: invert led brightness; `False`: keep default brightness.
+*  inv [bool](data_types.md#bool): `True`: invert led brightness; `False`: keep default brightness.
 
 __Sample code:__
 
 ``` python
-from hub import display
+from hub import display, Image
 
-display.show(hub.Image.HAPPY)
+display.show(Image.HAPPY)
 
 display.invert(True)
 ```
