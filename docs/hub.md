@@ -127,6 +127,8 @@ hub.reset()
 
 ## power_off() TODO
 
+`power_off()`
+
 > Not actual shutdown, display is cleared and led is turned off. Hub stays connected. 
 
 __Sample code:__
@@ -138,9 +140,13 @@ hub.power_off()
 
 ## repl_restart() TODO
 
+`repl_restart()`
+
 Restart REPL, in running REPL nothing is observed, in SPIKE app: keyboard interrupt + error message. Not advised to use!
 
 
 ## file_tansfer() TODO
+
+`file_transfer()`
 
 Usage unknown
