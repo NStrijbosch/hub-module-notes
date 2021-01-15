@@ -92,7 +92,12 @@ print("distance: " + str(distance))
 
 # Sensors
 
+Below you find a list of all available PU sensors with a table that shows their available modes. Moreover, it is possible to send data to some sensor, sample codes are given to demonstrate this. 
+
 ## Ultrasonic Sensor
+
+__Available modes:__
+
 |Mode|Name |RAW          |PCT        |SI           |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
 |----|-----|-------------|-----------|-------------|------|--------------------|--------|----|-------|--------|
 |0   |DISTL|0.0...2500.0 |0.0...100.0|0.0...250.0  |cm    |\x00\x00\x00\x04\x84|1       |1   |5      |1       |
@@ -105,8 +110,24 @@ print("distance: " + str(distance))
 |7   |ADRAW|0.0...1024.0 |0.0...100.0|0.0...1024.0 |pct   |\x80\x00\x00\x04\x84|1       |1   |4      |0       |
 |8   |CALIB|0.0...255.0  |0.0...100.0|0.0...255.0  |pct   |\x00\x00\x04\x84    |7       |0   |3      |0       |
 
-```
-hub.port.A.device.mode(mode, )
+### Sending data to leds
+
+All four leds of the ultrasonic sensor can be controlled individually, see [mode](#mode) for details on how to send data. 
+
+__Sample code:__
+
+``` python
+from hub import port
+
+USsensor = port.A.device
+
+USSensor.mode(5)  # set mode to light
+
+led1 = 9  #brightness in range 0...9
+led2 = 0  #brightness in range 0...9
+led3 = 9  #brightness in range 0...9
+led4 = 0  #brightness in range 0...9
+USSensor.mode(5,b''+chr(led1)+chr(led2)+chr(led3)+chr(led4))
 ```
 
 
@@ -125,12 +146,25 @@ hub.port.A.device.mode(mode, )
 |8   |DEBUG|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|4       |1   |4      |0       |
 |9   |CALIB|0  |65535 |0  |100   |0  |65535 |RAW   |\x00\x00\x00\x04\x84|7       |1   |5      |0       |
 
+### Sending data to leds
+
+All three leds of the color sensor can be controlled individually, see [mode](#mode) for details on how to send data to activate them. 
+
+__Sample code:__
+
 ``` python
-hub.port.A.device.mode(3) # Necessary before next line
-hub.port.A.device.mode(3, b''+chr(1*9)+chr(0*9)+chr(1*9))
+from hub import port
+
+COLORsensor = port.A.device
+
+COLORSensor.mode(3)  # set mode to light
+
+led1 = 9  #brightness in range 0...9
+led2 = 0  #brightness in range 0...9
+led3 = 9  #brightness in range 0...9
+
+COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 ```
-
-
 
 ## Force Sensor
 
@@ -138,23 +172,16 @@ hub.port.A.device.mode(3, b''+chr(1*9)+chr(0*9)+chr(1*9))
 ## Boost Color Sensor
 
 
-``` python
-hub.port.A.device.mode(5) # Necessary before next line
-hub.port.A.device.mode(5, b''+chr(a))
-```
 
-__Parameters:__ 
+### Setting the color of the led
 
-*  a in [3 (green),4 (blue),6 (red),10 (white)]
+Led of the boost sensor can be controlled, see [mode](#mode) for details on how to send data to activate it. 
 
-
-### Example
-
-Connect BoostSensor two port A and cycle through the 4 colors.
+__Sample code:__
 
 ``` python
 from hub import port
-import utime
+from utime import sleep_ms
 
 BoostSensor=port.A.device
 
@@ -164,7 +191,27 @@ colors = [3, 5, 9, 10]      #3: Blue; 5: Green; 9: Red; 10: White
 
 for c in colors:
     BoostSensor.mode(5,b''+chr(c))
-    utime.sleep_ms(1000)
+    sleep_ms(1000)
+```
+
+### Sending IR signals to PF receiver
+
+The BoostSensor is capable of sending IR data, see [mode](#mode) for details on how to send data. 
+
+``` python
+from hub import port
+from utime import sleep_ms
+
+BoostSensor=port.A.device
+
+BoostSensor.mode(7)         # Set mode IR
+
+BoostSensor.mode(7, b'' + chr(247) + chr(255)) 
+BoostSensor.mode(7, b'' + chr(1) + chr(15)) 
+
+### Two bytes seem necessary
+### Observed behaviour is for now quite inconsistent
+### A member from the community is working on a library (hopefully published soon!)
 ```
 
 ## WeDo distance sensor
