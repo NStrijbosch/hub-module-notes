@@ -1,12 +1,12 @@
+The button class controls all functions linked to the buttons, i.e., left, center, right, connect. It can be used via:
 
-The device class controls all functions linked to the buttons, i.e., left, center, right, connect. It can be used via using:
 ```
 hub.button.left 
 hub.button.right
 hub.button.center
 hub.button.connect
 ```
-see the examples below for more details.
+See the examples below for more details.
 
 ## is pressed()
 
@@ -28,14 +28,14 @@ while not button.left.is_pressed():
 ```
 >>> press left button
 >>> press left button
->>> press left button  (after this button is pressed)
+>>> press left button  (after left button is pressed messages stop)
 ```
 
 ## was_pressed()
 
 `button.left.was_pressed()`
 
-Check if button was pressed since last call
+Check if button was pressed since last call.
 
 __Returns;__
 
