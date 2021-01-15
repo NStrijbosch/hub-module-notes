@@ -116,13 +116,13 @@ portA.baud(115200) # set baud rate
 data=portA.write('test')
 ```
 
-# Port mode GPIO TODO
+# Port mode GPIO
 
 When in GPIO mode after a small delay the functions to control pin 5 and pin 6 appear. 
 
-## direction
+## direction()
 
-`port.A.p5.direction(read_write)`
+`port.A.p5.direction(read_write)`  
 `port.A.p6.direction(read_write)`
 
 Set the direction of the pins, either write high or low values or read high low values.
@@ -144,9 +144,9 @@ p6.direction(0) # read from pin 6
 
 ```
   
-## value
+## value()
 
-`port.A.p5.value(signal)`
+`port.A.p5.value(signal)`  
 `port.A.p6.value(signal)`
 
 Either read or write to the pin depending on its direction.
@@ -174,6 +174,10 @@ p6.direction(0) # read from pin 6
 p5.value(1)  # set pin 5 to high
 
 print("Signal on pin 6: " + str(p6.value()))
+```
+
+```
+>>> Signal on pin 6: 0
 ```
 
 
