@@ -216,4 +216,10 @@ BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 
 ## WeDo distance sensor
 
+|Mode|Name       |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
+|----|-----------|---|------|---|------|---|------|------|------------------------|--------|----|-------|--------|
+|0   |LPF2-DETECT|0  |10    |0  |100   |0  |10    |      |\x10\x00\x00\x00\x00\x00|1       |0   |3      |0       |
+|1   |LPF2-COUNT |0  |100   |0  |100   |0  |100   |CNT   |\x10\x00\x00\x00\x00\x00|1       |2   |4      |0       |
+|2   |LPF2-CAL   |0  |1023  |0  |100   |0  |1023  |RAW   |\x10\x00\x00\x00\x00\x00|3       |1   |3      |0       |
+
 ## WeDo gyro

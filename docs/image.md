@@ -1,4 +1,4 @@
-The Image class controls allows to make images to be displayed on the screen of the hub. It can be used via `hub.Image`
+Using the Image class you can make images to be displayed on the screen of the hub. It can be used via `hub.Image`. See [display](display.md) for details on how to show images on the display.
 
 # Make an Image
 
@@ -24,7 +24,7 @@ imageN =    Image("90009:"
                   "90909:"
                   "90099:"
                   "90009")    
-
+ # or
 imageH = Image("70007\n70007\n66666\n70007\n70007")
 ```
 
@@ -61,7 +61,7 @@ Shift all pixels of the [image](data_types.md#image) up with shift pixels
 
 __Parameters:__
 
-*  shift [int](data_types.md#int): in range [0,5]
+*  shift [int](data_types.md#int): number of pixels
 
 __Sample code:__
 
@@ -82,7 +82,7 @@ Shift all pixels of the [image](data_types.md#image) down with shift pixels
 
 __Parameters:__
 
-*  shift [int](data_types.md#int): in range [0,5]
+*  shift [int](data_types.md#int): number of pixels
 
 __Sample code:__
 
@@ -103,7 +103,7 @@ Shift all pixels of the [image](data_types.md#image) left with shift pixels
 
 __Parameters:__
 
-*  shift [int](data_types.md#int): in range [0,5]
+*  shift [int](data_types.md#int): number of pixels
 
 __Sample code:__
 
