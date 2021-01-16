@@ -21,7 +21,7 @@ span.shell_output {
     border-top: none;
     margin-left: 108px;
     font-size: 12px;
-    line-height: 18px;
+    line-height: normal;
     font-style: normal;
 }
 
