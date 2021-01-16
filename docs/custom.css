@@ -1,7 +1,7 @@
 /* a { text-decoration: overline;  background-color: yellow !important;} 
 a:hover { text-decoration: underline; background-color: yellow;}
 a.toctree-12 { background-color: yellow;} */
-.index_list ul{list-style: disc !important; margin-left: 20px; margin-top:0;}
+.index_list li{list-style: disc !important; margin-left: 20px; margin-top:0;}
 
 .section ul { list-style: none !important; margin-left: 84px; margin-top:-3em;}
 .section li { list-style: none !important}
