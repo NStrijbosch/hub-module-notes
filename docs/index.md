@@ -7,9 +7,9 @@ There are both advantages and disadvantages of using this module:
 __Advantages:__
 
 <ul class='index_list'>
-   <li>The motor commands do not block the remainder of your program, this can be useful when you want motors to run (almost) in parallel, or if you want to motors to track a trajectory
+   <li>The motor commands do not block the remainder of your program, this can be useful when you want motors to run (almost) in parallel, or if you want motors to track a trajectory
    </li>
-   <li> Use UART communication over the PU ports. This allows
+   <li> Use UART communication over the PU ports. This allows for:
       <ul  class="index_list">
          <li>
          third party TTL UART sensors via the Ultrasonic sensor's breakout.  
@@ -50,21 +50,19 @@ __Advantages:__
    </li>
 </ul>
 
-
-
-
- 
-
-
-
-
 __Disadvantages:__
 
-There is no official documentation. I cannot guarantee any of my findings are correct.  
-
-The behaviour of some functions, e.g., relative position, are not automatically reset at the start of a program. This can cause strange behaviour.  
-
-It is not recommended to use this module parallel to the standard modules. This sometimes causes strange behaviour.
+<ul class="index list">
+   <li>
+      There is no official documentation. I cannot guarantee any of my findings are correct. 
+   </li>
+   <li>
+      The behaviour of some functions, e.g., relative position, are not automatically reset at the start of a program. This can cause strange behaviour.
+   </li>
+   <li>
+      It is not recommended to use this module parallel to the standard modules. This sometimes causes strange behaviour.
+   </li>
+</ul>
 
 ---
 
