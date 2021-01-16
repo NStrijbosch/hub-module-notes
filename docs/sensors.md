@@ -91,7 +91,6 @@ print("force: " + str(force))
 
 Below you find a list of all available PU sensors with a table that shows their available modes. Moreover, it is possible to send data to some sensor, sample codes are given to demonstrate this. 
 
-## Ultrasonic Sensor
 ### Ultrasonic Sensor
 
 __Available modes:__
@@ -128,7 +127,6 @@ led4 = 9 #brightness in range 0...9
 USSensor.mode(5,b''+chr(led1)+chr(led2)+chr(led3)+chr(led4))
 ```
 
-## Color Sensor
 ### Color Sensor
 
 |Mode|Name |RAW |       |PCT|     |SI |     |Symbol|Capabilities?       |Datasets|Type|Figures|Decimals|
@@ -164,7 +162,6 @@ led3 = 9  #brightness in range 0...9
 COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 ```
 
-## Force Sensor
 ### Force Sensor
 
 |Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
@@ -177,7 +174,6 @@ COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 |5   |FPRAW|0  |1023  |0  |100   |0  |1023  |RAW   |\x00\x00\x00\x00\x04\x04|1       |1   |4      |0       |
 |6   |CALIB|0  |1023  |0  |100   |0  |1023  |      |                        |8       |1   |4      |0       |
 
-## Boost Color Sensor
 ### Boost Color Sensor
 
 |Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
@@ -236,7 +232,6 @@ BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 ### A member from the community is working on a library (hopefully published soon!)
 ```
 
-## WeDo distance sensor
 ### WeDo distance sensor
 
 |Mode|Name       |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
@@ -246,7 +241,6 @@ BoostSensor.mode(7, b'' + chr(3) + chr(14))     # channel 3 motor red
 |2   |LPF2-CAL   |0  |1023  |0  |100   |0  |1023  |RAW   |\x10\x00\x00\x00\x00\x00|3       |1   |3      |0       |
 
 
-## WeDo gyro
 ### WeDo gyro
 
 |Mode|Name |RAW|      |PCT|      |SI |      |Symbol|Capabilities?           |Datasets|Type|Figures|Decimals|
