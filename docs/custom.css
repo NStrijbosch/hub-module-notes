@@ -4,7 +4,9 @@ a.toctree-12 { background-color: yellow;} */
 
 .section ul { list-style: none !important; margin-left: 84px; margin-top:-3em;}
 .section li { list-style: none !important}
-.index_list li{list-style: disc !important; margin-left: 20px; margin-top:0;}
+
+.index_list ul{list-style: none !important; margin-left: 20px; margin-top:0em;}
+.index_list li{list-style: disc !important}
 
 .toctree-l2 a {margin-left: 0em;}
 .toctree-l3 {margin-left: 2em;}
