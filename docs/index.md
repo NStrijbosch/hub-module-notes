@@ -1,5 +1,6 @@
-
-
+<style type='text/css'> 
+ul.index_list{color:yellow}
+</style>
 
 This documentation covers all my findings on the hub module of the SPIKE Prime and MINDSTORMS Robot Inventor hubs. This module is a lower level module as the given documented modules provided in the official SPIKE Prime and MINDSTORMS Robot Inventor apps. 
 
@@ -9,14 +10,18 @@ There are both advantages and disadvantages of using this module:
 
 __Advantages:__
 
-The motor commands do not block the remainder of your program, this can be useful when you want motors to run (almost) in parallel, or if you want to motors to track a trajectory  
+<ul class='index_list'>
+   <li>The motor commands do not block the remainder of your program, this can be useful when you want motors to run (almost) in parallel, or if you want to motors to track a trajectory
+   </li>
+   <li> Use UART communication over the PU ports. This allows
+      *  third party TTL UART sensors via the Ultrasonic sensor's breakout.  
+      *  hub to hub communication  (with the right cable)
+   </li>
+   <li>
+      Use BT_VCP and USB_VCP class to get more control over the communication between a computer and the hub  
+   </li>
+</ul>
 
-UART:
-
- *  Allows to use third party TTL UART sensors via the Ultrasonic sensor's breakout.  
- *  Allows to get hub to hub communication.  (with the right cable)
-
-Use BT_VCP and USB_VCP class to get more control over the communication between a computer and the hub  
 
 Use ALL PoweredUp Sensors and Motors, including all their functionality. It is even possible to use the Boost color sensor to control Power Function motors!
 
