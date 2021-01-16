@@ -10,7 +10,7 @@ __Advantages:__
    <li>The motor commands do not block the remainder of your program, this can be useful when you want motors to run (almost) in parallel, or if you want to motors to track a trajectory
    </li>
    <li> Use UART communication over the PU ports. This allows
-      <ul>
+      <ul  class="index_list">
          <li>
          third party TTL UART sensors via the Ultrasonic sensor's breakout.  
          </li>
@@ -30,7 +30,7 @@ __Advantages:__
    </li>
    <li>
       A wide variety of other functions that are not available in the standard python modules, among others: 
-      <ul>
+      <ul class="index_list">
          <li>
           Reboot the hub  
          </li>
@@ -46,7 +46,7 @@ __Advantages:__
          <li>
             ....
          </li>
-      <ul>
+      </ul>
    </li>
 </ul>
 
