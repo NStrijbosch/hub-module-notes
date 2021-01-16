@@ -30,6 +30,8 @@ import hub
 print(hub.info())
 ```
 
+[some text]{.c}
+
 <span class='c'>
 > {'usb_vid': 1684, 'device_uuid': '03970000-3900-5000-1851-383332353732', '1ms_tick_on_time': 99.8596, 'usb_pid': 9, '1ms_tick_min': 58000.0, '1ms_tick_miss': 1022, 'hardware_version': 'Version_E', '1ms_tick_max': 2.6265e+07, 'product_variant': 0, '1ms_tick_total': 728280}
 </span>

@@ -8,6 +8,15 @@ a.toctree-12 { background-color: yellow;} */
 .index_list { margin-left: 20px !important; margin-top:0em !important;}
 .index_list li{list-style: disc !important}
 
+span.c {
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;    
+    background-color: yellow; 
+  }
+
 .toctree-l2 a {margin-left: 0em;}
 .toctree-l3 {margin-left: 2em;}
 .hljs {background: #000000;
