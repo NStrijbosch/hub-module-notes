@@ -30,7 +30,7 @@ span.shell_output {
 .toctree-l2 a {margin-left: 0em;}
 .toctree-l3 {margin-left: 2em;}
 .hljs {background: #000000;
-        color: white; border-top:  none; margin-left: 108px; margin-top:-3em;}
+        color: white; border-top:  none; margin-left: 108px; margin-top:-3.5em;}
 
 code {    background: #e7f2fa;    color: #2980B9;  font-weight: bold;  border-top: solid 3px #6ab0de; margin: 6px 0; padding: 6px;}
 h1 {font-size: 150%;}
