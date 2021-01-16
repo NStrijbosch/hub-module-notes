@@ -1,7 +1,3 @@
-<style type='text/css'> 
-ul.index_list{list-style-type: circle !important; margin-left: 20px; margin-top:0;}
-</style>
-
 This documentation covers all my findings on the hub module of the SPIKE Prime and MINDSTORMS Robot Inventor hubs. This module is a lower level module as the given documented modules provided in the official SPIKE Prime and MINDSTORMS Robot Inventor apps. 
 
 ---
