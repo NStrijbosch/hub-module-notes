@@ -10,7 +10,7 @@ Turn on the led with a given [ledcolor](data_types.md#led)
 __Parameter:__
 
 *  [ledcolor](data_types.md#led):  
-   0: Off
+   0: Off  
    1:  Pink           
    2:  Violet             
    3:  Blue           
