@@ -33,9 +33,9 @@ SensorA.mode((1,0))        # Set sensor to mode 3 in RAW units
 print("Mode sensor port A: " + str(SensorA.mode()))
 ``` 
 
-``` python
->>> Mode sensor port A: [(3,0),(2,2)]
-```
+<span class='shell_output'>
+\> Mode sensor port A: [(3,0),(2,2)]
+</span>
 
 Some PU sensor modes allow to affect send data to the sensor. This can be achieved using the following
 
@@ -59,8 +59,6 @@ SensorA.mode(5,b''+chr(9)+chr(9)+chr(9)+chr(9))
 
 > See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
 
----
-
 ## get()
 
 `device.get()`
@@ -83,9 +81,9 @@ force = ForceSensor.get()[0]
 print("force: " + str(force))
 ```
 
-``` python
->>> force: 598
-```
+<span class='shell_output'>
+\> force: 598
+</span>
 
 # Sensors
 
