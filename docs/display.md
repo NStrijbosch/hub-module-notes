@@ -85,7 +85,7 @@ display.rotate(90)
 
 Set the orientation of display.
 
-> There does not seems to be a relation between direction and orientation, but numbers look weird
+> values of direction are not intuitive, there does not seem to be a relation between the direction and avilable [constants](data_types.md#constants).
 
 __Parameters:__
 
