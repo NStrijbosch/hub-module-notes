@@ -158,7 +158,7 @@ __Parameters:__
 
 __Returns:__
 
-*   [int](data_types.md#int): : 1 (High) or 0(Low) if direction is read (0)
+*   [int](data_types.md#int): 1 (High) or 0(Low) if direction is read (0)
 
 __Sample code:__
 
