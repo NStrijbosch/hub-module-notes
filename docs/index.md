@@ -1,4 +1,6 @@
-This documentation covers all my findings on the hub module of the SPIKE Prime and MINDSTORMS Robot Inventor hubs. This module is a lower level module as the given documented modules provided in the official SPIKE Prime and MINDSTORMS Robot Inventor apps. 
+This documentation covers all my findings on the hub module of the SPIKE Prime and MINDSTORMS Robot Inventor hubs. This module is a lower level module as the given documented modules provided in the official SPIKE Prime and MINDSTORMS Robot Inventor apps.
+
+Use the menu to explore all functions available in the hub module!
 
 ---
 

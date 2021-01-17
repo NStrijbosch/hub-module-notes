@@ -87,9 +87,9 @@ data=portA.read(4)
 print('data received: ' + str(data.decode('UTF-8')))
 ```
 
-```
-data received: test
-```
+<span class='shell_output'>
+\> data received: test
+</span>
 
 ## write
 
@@ -179,9 +179,9 @@ p5.value(1)# set pin 5 to high
 print("Signal on pin 6: " + str(p6.value()))
 ```
 
-```
->>> Signal on pin 6: 1
-```
+<span class='shell_output'>
+\> Signal on pin 6: 1
+</span>
 
 
 
