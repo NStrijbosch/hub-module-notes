@@ -75,11 +75,9 @@ MotorA.mode([(3,0),(2,2)])  # Set motor mode to absolute position in RAW units
 print("Mode motor port A: " + str(MotorA.mode()))
 ``` 
 
-``` python
->>> Mode motor port A: [(3,0),(2,2)]
-```
-
----
+<span class='shell_output'>
+\> Mode motor port A: [(3,0),(2,2)]
+</span>
 
 ## preset()
 
@@ -100,8 +98,6 @@ MotorA = port.A.motor
 
 MotorA.preset(100)
 ```
-
----
 
 ## pid()
 
