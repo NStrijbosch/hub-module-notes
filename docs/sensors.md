@@ -214,6 +214,8 @@ for c in colors:
 
 The BoostSensor is capable of sending IR data, see [mode](#mode) for details on how to send data. 
 
+__Sample code:__
+
 ``` python
 from hub import port
 from utime import sleep_ms
