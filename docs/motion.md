@@ -115,7 +115,7 @@ print('Orientation: ' + str(motion.orientation()))
 
 Returns gesture currently applied.
 
-__Parameters:__
+__Returns:__
 
 * gesture ([int](data_types.md#int))
     TAPPED=0  
@@ -123,10 +123,6 @@ __Parameters:__
     SHAKE=2  
     FREEFALL=3  
 * `None` if no gesture applied
-
-__Returns:__
-
-* [bool](data_types.bool): `True` if input gesture is active, otherwise `False`.
 
 __Sample code:__
 
@@ -142,7 +138,7 @@ print("Gesture: " + str(motion.gesture()))
 
 ## (was_gesture())
 
-`motion.gesture(gesture)`
+`motion.was_gesture(gesture)`
 
 Check if gesture was applied since last call.
 
