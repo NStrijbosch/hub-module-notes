@@ -1,7 +1,6 @@
 
 The display class controls all functions linked to the display. It can be used via `hub.display`. For more details see the examples below.
 
-
 ## show()
 
 `hub.display.show(image)`
@@ -22,9 +21,7 @@ display.show(Image.HAPPY)
 
 ## clear()
 
-```
-display.clear()
-```
+`display.clear()`
 
 Set the light intensity of all pixels to 0. 
 
@@ -41,9 +38,7 @@ display.clear()
 
 ## pixel()
 
-```
-display.pixel(x, y, brightness)
-```
+`display.pixel(x, y, brightness)`
 
 __Parameters:__
 
@@ -68,6 +63,8 @@ Change the orientation of the display.
 
 > Keep in mind this rotation is not reset at the start of each program. 
 
+
+
 > Not available in latest SPIKE 1.3.3 firmware?
 
 __Parameters:__
@@ -90,7 +87,7 @@ display.rotate(90)
 
 Set the orientation of display.
 
-> There does not seems to be a relation between direction and orientation, but numbers look weird
+> values of direction are not intuitive, there does not seem to be a relation between the direction and avilable [constants](data_types.md#constants).  
 
 __Parameters:__
 

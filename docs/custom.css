@@ -1,12 +1,36 @@
 /* a { text-decoration: overline;  background-color: yellow !important;} 
 a:hover { text-decoration: underline; background-color: yellow;}
 a.toctree-12 { background-color: yellow;} */
+
 .section ul { list-style: none !important; margin-left: 84px; margin-top:-3em;}
 .section li { list-style: none !important}
+
+.index_list { margin-left: 20px !important; margin-top:0em !important;}
+.index_list li{list-style: disc !important}
+
+span.shell_output {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    font-weight: bold;
+    border: solid 1px #e1e4e5;
+    max-width: 100%;
+    font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+    background: #000000;
+    color: white;
+    border-top: none;
+    margin-left: 108px;
+    font-size: 12px;
+    line-height: normal;
+    font-style: normal;
+}
+
+
+
 .toctree-l2 a {margin-left: 0em;}
 .toctree-l3 {margin-left: 2em;}
 .hljs {background: #000000;
-        color: white; border-top:  none; margin-left: 108px;}
+        color: white; border-top:  none; margin-left: 108px; margin-top:-4em;}
 
 code {    background: #e7f2fa;    color: #2980B9;  font-weight: bold;  border-top: solid 3px #6ab0de; margin: 6px 0; padding: 6px;}
 h1 {font-size: 150%;}
@@ -16,7 +40,7 @@ h4 {font-size: 100%}
 
 /*hr {border-top: 3px solid #f0b37e;}*/
 
-blockquote{background: #ffedcc; border-top: solid 3px #f0b37e; margin-right: 24px;}
+blockquote{background: #ffedcc; border-top: solid 3px #f0b37e; padding-left: 6px; padding-right: 6px; margin-right: 24px;}
 
 .hljs-string {
   color: #59cc33;

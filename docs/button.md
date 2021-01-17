@@ -1,11 +1,12 @@
 The button class controls all functions linked to the buttons, i.e., left, center, right, connect. It can be used via:
 
-```
-hub.button.left 
-hub.button.right
-hub.button.center
-hub.button.connect
-```
+<span class='shell_output'>
+hub.button.left </br>
+hub.button.right  </br>
+hub.button.center  </br>
+hub.button.connect  
+</span>
+
 See the examples below for more details.
 
 ## is pressed()
@@ -16,7 +17,7 @@ Check if button is pressed.
 
 __Returns:__
 
-*  [boolean](data_types.md#bool): `True` if the button is pressed, otherwise `False`. 
+*  [bool](data_types.md#bool): `True` if the button is pressed, otherwise `False`. 
 
 __Sample code:__
 
@@ -27,11 +28,11 @@ while not button.left.is_pressed():
     print('press left button')
 ```
 
-```
->>> press left button
->>> press left button
->>> press left button  (after left button is pressed messages stop)
-```
+<span class='shell_output'>
+/> press left button </br>
+/> press left button</br>
+/> press left button  (after left button is pressed messages stop)
+</span>
 
 ## was_pressed()
 
@@ -41,7 +42,7 @@ Check if button was pressed since last call.
 
 __Returns:__
 
-*  [boolean](data_types.md#bool) `True` if the button was pressed since last call, otherwise `False`
+*  [bool](data_types.md#bool) `True` if the button was pressed since last call, otherwise `False`
 
 __Sample code:__
 
@@ -56,11 +57,11 @@ while not button.left.was_pressed():
     sleep_ms(1000)
 ```
 
-```
->>> press left button
->>> press left button
->>> press left button  (after this left button is pressed)
-```
+<span class='shell_output'>
+/> press left button  
+/> press left button  
+/> press left button  (after this left button is pressed)  
+</span>
 
 ## presses()
 
@@ -81,11 +82,11 @@ for i in range(4):
     sleep_ms(2000)
 ```
 
-```
-number of presses: 0
-number of presses: 3
-number of presses: 1
-```
+<span class='shell_output'>
+/> number of presses: 0 </br>
+/> number of presses: 3 </br>
+/> number of presses: 1 </br> 
+</span>
 
 ## on_change() TODO
 

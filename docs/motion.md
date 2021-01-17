@@ -25,9 +25,9 @@ accelerations = motion.accelerometer()
 print("a_x: " + str(accelerations[0]) + " a_y: " + str(accelerations[1]) + " a_z: " + str(accelerations[2]))
 ```
 
-```
-a_x: -108 a_y: -349 a_z: 950
-```
+<span class='shell_output'>
+\> a_x: -108 a_y: -349 a_z: 950
+</span>
 
 ## gyroscope()
 
@@ -49,9 +49,9 @@ rates = motion.gyroscope()
 print("r_x: " + str(rates[0]) + " r_y: " + str(rates[1]) + " r_z: " + str(rates[2]))
 ```
 
-```
-r_x: -1 r_y: 0 r_z: 0
-```
+<span class='shell_output'>
+\> r_x: -1 r_y: 0 r_z: 0
+</span>
 
 ## yaw_pitch_roll()
 
@@ -59,7 +59,7 @@ r_x: -1 r_y: 0 r_z: 0
 
 Measure rotation compared to fixed world. 
 
-> In previews firmware versions this was `motion.position()`
+> In previous firmware versions this was `motion.position()`
 
 __Returns:__
 
@@ -75,17 +75,17 @@ rotations = motion.yaw_pitch_roll()
 print("yaw: " + str(rotations[0]) + " pitch: " + str(rotations[1]) + " roll: " + str(rotations[2]))
 ```
 
-```
-yaw: 12 pitch: -19 roll: 6
-```
+<span class='shell_output'>
+\> yaw: 12 pitch: -19 roll: 6
+</span>
 
 # Gestures
 
-The hub can detect both the orientation or movement using the build in gyroscope and accelerometer
+The hub processess the IMU data to determine the orientation or if a gesture is applied.
 
 ## orientation()  
 
-`motion.orientation()'
+`motion.orientation()`
 
 __Returns:__
 
@@ -105,24 +105,24 @@ from hub import motion
 print('Orientation: ' + str(motion.orientation()))
 ```
 
+<span class='shell_output'>
+\> Orientation: 0
+</span>
+
 ## gesture()
 
 `motion.gesture()`
 
-Returns gesture currently applied
+Returns gesture currently applied.
 
-__Parameters:__
+__Returns:__
 
-* gesture ([int](data_types.md#int))
+* gesture ([int](data_types.md#int)):  
     TAPPED=0  
     DOUBLETAPPED=1  
     SHAKE=2  
     FREEFALL=3  
 * `None` if no gesture applied
-
-__Returns:__
-
-* [bool](data_types.bool): `True` if input gesture is active, otherwise `False`.
 
 __Sample code:__
 
@@ -132,15 +132,15 @@ from hub import motion
 print("Gesture: " + str(motion.gesture()))
 ```
 
-```
->>> Gesture: 2
-```
+<span class='shell_output'>
+\> Gesture: 2
+</span>
 
 ## (was_gesture())
 
-`motion.gesture(gesture)`
+`motion.was_gesture(gesture)`
 
-Check if gesture was applied since last call
+Check if gesture was applied since last call.
 
 >  Missing from SPIKE firmware since 1.3.3
 

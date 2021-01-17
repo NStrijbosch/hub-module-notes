@@ -50,130 +50,130 @@ __dictionary:__
 
 The following constants are obtained from the hub library
 
-## hub
+### hub
 
-``` python
-hub.TOP = 0
-hub.FRONT = 1
-hub.RIGHT = 2
-hub.BOTTOM = 3
-hub.BACK = 4
+<span class='shell_output'>
+hub.TOP = 0 </br>
+hub.FRONT = 1</br>
+hub.RIGHT = 2</br>
+hub.BOTTOM = 3</br>
+hub.BACK = 4</br>
 hub.LEFT = 5
-```
+</span>
 
-## Battery
+### Battery
 
-``` python
-hub.battery.BATTERY_VOLTAGE_TOO_LOW=-5  
-hub.battery.BATTERY_BAD_BATTERY=-4
-hub.battery.BATTERY_TEMPERATURE_SENSOR_FAIL=-3
-hub.battery.BATTERY_TEMPERATURE_OUT_OF_RANGE=-2
-hub.battery.BATTERY_HUB_TEMPERATURE_CRITICAL_OUT_OF_RANGE=-2
+<span class='shell_output'>
+hub.battery.BATTERY_VOLTAGE_TOO_LOW=-5  </br>
+hub.battery.BATTERY_BAD_BATTERY=-4</br>
+hub.battery.BATTERY_TEMPERATURE_SENSOR_FAIL=-3</br>
+hub.battery.BATTERY_TEMPERATURE_OUT_OF_RANGE=-2</br>
+hub.battery.BATTERY_HUB_TEMPERATURE_CRITICAL_OUT_OF_RANGE=-2</br>
 hub.battery.BATTERY_NO_ERROR=0
-```
+</span>
 
-``` python
-hub.battery.CHARGER_STATE_FAIL=-1  
-hub.battery.CHARGER_STATE_DISCHARGING=0
-hub.battery.CHARGER_STATE_CHARGING_ONGOING=1  
+<span class='shell_output'>
+hub.battery.CHARGER_STATE_FAIL=-1  </br>
+hub.battery.CHARGER_STATE_DISCHARGING=0</br>
+hub.battery.CHARGER_STATE_CHARGING_ONGOING=1  </br>
 hub.battery.CHARGER_STATE_CHARGING_COMPLETED=2
-```
+</span>
 
-``` python
-hub.battery.USB_CH_PORT_NONE=0
-hub.battery.USB_CH_PORT_SDP=1
-hub.battery.USB_CH_PORT_CDP=2
+<span class='shell_output'>
+hub.battery.USB_CH_PORT_NONE=0</br>
+hub.battery.USB_CH_PORT_SDP=1</br>
+hub.battery.USB_CH_PORT_CDP=2</br>
 hub.battery.USB_CH_PORT_DCP=3               
-```
+</span>
 
-## Image
+### Image
 
 build in images:
-```
-hub.Image.ALL_ARROWS
-hub.Image.ALL_CLOCKS      
-hub.Image.ANGRY           
-hub.Image.ARROW_E         
-hub.Image.ARROW_N
-hub.Image.ARROW_NE        
-hub.Image.ARROW_NW        
-hub.Image.ARROW_S         
-hub.Image.ARROW_SE
-hub.Image.ARROW_SW        
-hub.Image.ARROW_W         
-hub.Image.ASLEEP          
-hub.Image.BUTTERFLY
-hub.Image.CHESSBOARD      
-hub.Image.CLOCK1          
-hub.Image.CLOCK10         
-hub.Image.CLOCK11
-hub.Image.CLOCK12         
-hub.Image.CLOCK2          
-hub.Image.CLOCK3          
-hub.Image.CLOCK4
-hub.Image.CLOCK5          
-hub.Image.CLOCK6          
-hub.Image.CLOCK7          
-hub.Image.CLOCK8
-hub.Image.CLOCK9          
-hub.Image.CONFUSED        
-hub.Image.COW             
-hub.Image.DIAMOND
-hub.Image.DIAMOND_SMALL   
-hub.Image.DUCK            
-hub.Image.FABULOUS        
-hub.Image.GHOST
-hub.Image.GIRAFFE         
-hub.Image.GO_DOWN         
-hub.Image.GO_LEFT         
-hub.Image.GO_RIGHT
-hub.Image.GO_UP           
-hub.Image.HAPPY           
-hub.Image.HEART           
-hub.Image.HEART_SMALL
-hub.Image.HOUSE           
-hub.Image.MEH             
-hub.Image.MUSIC_CROTCHET  
-hub.Image.MUSIC_QUAVER
-hub.Image.MUSIC_QUAVERS   
-hub.Image.NO              
-hub.Image.PACMAN          
-hub.Image.PITCHFORK
-hub.Image.RABBIT          
-hub.Image.ROLLERSKATE     
-hub.Image.SAD             
-hub.Image.SILLY
-hub.Image.SKULL           
-hub.Image.SMILE           
-hub.Image.SNAKE           
-hub.Image.SQUARE
-hub.Image.SQUARE_SMALL    
-hub.Image.STICKFIGURE     
-hub.Image.SURPRISED       
-hub.Image.SWORD
-hub.Image.TARGET          
-hub.Image.TORTOISE        
-hub.Image.TRIANGLE        
-hub.Image.TRIANGLE_LEFT
-hub.Image.TSHIRT          
-hub.Image.UMBRELLA        
-hub.Image.XMAS            
+<span class='shell_output'>
+hub.Image.ALL_ARROWS  </br>
+hub.Image.ALL_CLOCKS</br>
+hub.Image.ANGRY</br>
+hub.Image.ARROW_E</br>
+hub.Image.ARROW_N</br>
+hub.Image.ARROW_NE</br>
+hub.Image.ARROW_NW</br>
+hub.Image.ARROW_S</br>
+hub.Image.ARROW_SE</br>
+hub.Image.ARROW_SW</br> 
+hub.Image.ARROW_W</br>
+hub.Image.ASLEEP</br>
+hub.Image.BUTTERFLY</br>
+hub.Image.CHESSBOARD</br>
+hub.Image.CLOCK1</br>
+hub.Image.CLOCK10</br>
+hub.Image.CLOCK11</br>
+hub.Image.CLOCK12</br>
+hub.Image.CLOCK2</br>
+hub.Image.CLOCK3</br>
+hub.Image.CLOCK4</br>
+hub.Image.CLOCK5</br>
+hub.Image.CLOCK6</br>
+hub.Image.CLOCK7</br>
+hub.Image.CLOCK8 </br>
+hub.Image.CLOCK9</br>
+hub.Image.CONFUSED</br>
+hub.Image.COW</br>
+hub.Image.DIAMOND</br>
+hub.Image.DIAMOND_SMALL</br>
+hub.Image.DUCK</br>
+hub.Image.FABULOUS</br>
+hub.Image.GHOST</br>
+hub.Image.GIRAFFE</br>
+hub.Image.GO_DOWN</br>
+hub.Image.GO_LEFT</br>
+hub.Image.GO_RIGHT</br>
+hub.Image.GO_UP</br>
+hub.Image.HAPPY</br>
+hub.Image.HEART</br>
+hub.Image.HEART_SMALL</br>
+hub.Image.HOUSE</br>
+hub.Image.MEH</br>
+hub.Image.MUSIC_CROTCHET</br>
+hub.Image.MUSIC_QUAVER</br>
+hub.Image.MUSIC_QUAVERS</br>
+hub.Image.NO</br>
+hub.Image.PACMAN</br>
+hub.Image.PITCHFORK</br>
+hub.Image.RABBIT</br>
+hub.Image.ROLLERSKATE</br>
+hub.Image.SAD</br>
+hub.Image.SILLY</br>
+hub.Image.SKULL</br>
+hub.Image.SMILE</br>
+hub.Image.SNAKE</br>
+hub.Image.SQUARE</br>
+hub.Image.SQUARE_SMALL</br>
+hub.Image.STICKFIGURE</br>
+hub.Image.SURPRISED</br>
+hub.Image.SWORD</br>
+hub.Image.TARGET</br>
+hub.Image.TORTOISE</br>
+hub.Image.TRIANGLE</br>
+hub.Image.TRIANGLE_LEFT</br>
+hub.Image.TSHIRT</br>
+hub.Image.UMBRELLA</br>
+hub.Image.XMAS</br>
 hub.Image.YES
-```
+</span>
 
-## Sound
+### Sound
 
 Waveforms
-``` 
-hub.sound.SOUND_SIN=0       
-hub.sound.SOUND_SQUARE=1
-hub.sound.SOUND_TRIANGLE=2
-hub.sound.SOUND_SAWTOOTH=3
-```
+<span class='shell_output'>
+hub.sound.SOUND_SIN=0</br>
+hub.sound.SOUND_SQUARE=1</br>
+hub.sound.SOUND_TRIANGLE=2</br>
+hub.sound.SOUND_SAWTOOTH=3</br>
+</span>
 
-## Led
+### Led
 
-### led color:
+#### led color:
 
 |Number |Name                 |R   |G   |B  |
 |-------|---------------------|----|----|---|
@@ -190,67 +190,61 @@ hub.sound.SOUND_SAWTOOTH=3
 |10     |Bright white         |255 |70  |35 |
 |11     |White                |102 |28  |14 |
 
+### Motion
 
-## Motion
-
-### gesture
-possible gestures:
-
-```
-hub.motion.TAPPED=0
-hub.motion.DOUBLETAPPED=1
-hub.motion.SHAKE=2
+#### gesture
+<span class='shell_output'>
+hub.motion.TAPPED=0</br>
+hub.motion.DOUBLETAPPED=1</br>
+hub.motion.SHAKE=2</br>
 hub.motion.FREEFALL=3
-```
+</span>
 
-### Port
+#### Port
 
-```
-hub.port.ATTACED = 1
-hub.port.DETACHED = 0
-```
+<span class='shell_output'>
+hub.port.ATTACED = 1</br>
+hub.port.DETACHED = 0</br>
+</span>
 
-```
-hub.port.MODE_DEFAULT = 0
-hub.port.MODE_FULL_DUPLEX = 1
-hub.port.MODE_HALF_DUPLEX = 2
+<span class='shell_output'>
+hub.port.MODE_DEFAULT = 0</br>
+hub.port.MODE_FULL_DUPLEX = 1</br>
+hub.port.MODE_HALF_DUPLEX = 2</br>
 hub.port.MODE_GPIO = 3
-```
+</span>
 
 
 ### Motors
 
-```
-hub.port.A.motor.BUSY_MODE = 0
+<span class='shell_output'>
+hub.port.A.motor.BUSY_MODE = 0</br>
 hub.port.A.motor.BUSY_MOTOR = 1
-```
+</span>
 
-
-```
-hub.port.A.motor.EVENT_COMPLETED = 0
+<span class='shell_output'>
+hub.port.A.motor.EVENT_COMPLETED = 0</br>
 hub.port.A.motor.EVENT_INTERRUPTED = 1
-```
+</span>
 
-```
-hub.port.A.motor.FORMAT_RAW = 0
-hub.port.A.motor.FORMAT_PCT = 1
+<span class='shell_output'>
+hub.port.A.motor.FORMAT_RAW = 0</br>
+hub.port.A.motor.FORMAT_PCT = 1</br>
 hub.port.A.motor.FORMAT_SI = 2
-```
+</span>
 
-```
-hub.port.A.motor.PID_POSITION = 0
+<span class='shell_output'>
+hub.port.A.motor.PID_POSITION = 0</br>
 hub.port.A.motor.PID_SPEED = 1
-```
+</span>
 
-
-```
-hub.port.A.motor.STOP_FLOAT = 0
-hub.port.A.motor.STOP_BRAKE = 1
+<span class='shell_output'>
+hub.port.A.motor.STOP_FLOAT = 0</br>
+hub.port.A.motor.STOP_BRAKE = 1</br>
 hub.port.A.motor.STOP_HOLD = 2
-```
+</span>
 
-
-## Sensors
+### Sensors
 
 
 

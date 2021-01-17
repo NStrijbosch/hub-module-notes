@@ -30,9 +30,10 @@ import hub
 print(hub.info())
 ```
 
-```
->>> {'usb_vid': 1684, 'device_uuid': '03970000-3900-5000-1851-383332353732', '1ms_tick_on_time': 99.8596, 'usb_pid': 9, '1ms_tick_min': 58000.0, '1ms_tick_miss': 1022, 'hardware_version': 'Version_E', '1ms_tick_max': 2.6265e+07, 'product_variant': 0, '1ms_tick_total': 728280}
-```
+<span class='shell_output'>
+\> {'usb_vid': 1684, 'device_uuid': '03970000-3900-5000-1851-383332353732', '1ms_tick_on_time': 99.8596, 'usb_pid': 9, '1ms_tick_min': 58000.0, '1ms_tick_miss': 1022, 'hardware_version': 'Version_E', '1ms_tick_max': 2.6265e+07, 'product_variant': 0, '1ms_tick_total': 728280}
+</span>
+
 
 ## status()
 
@@ -50,15 +51,17 @@ __Returns:__
    position
    display
 
+__Sample code:__
+
 ``` python
 import hub
 
 print(hub.status())
 ```
 
-```
->>> {'gyroscope': (0, 0, 0), 'port': {'C': [], 'D': [], 'B': [], 'E': [], 'A': [0, 0, -2, 0], 'F': []}, 'accelerometer': (-78, -305, 966), 'yaw_pitch_roll': (-27, -17, 4), 'position': (-27, -17, 4), 'display': '00000:00000:00000:00000:00000'}
-```
+<span class='shell_output'>
+\> {'gyroscope': (0, 0, 0), 'port': {'C': [], 'D': [], 'B': [], 'E': [], 'A': [0, 0, -2, 0], 'F': []}, 'accelerometer': (-78, -305, 966), 'yaw_pitch_roll': (-27, -17, 4), 'position': (-27, -17, 4), 'display': '00000:00000:00000:00000:00000'}
+</span>
 
 ## temperature()
 
@@ -78,9 +81,9 @@ import hub
 print('Temperature: ' + str(hub.temperature()))
 ```
 
-```
->>> Temperature: 24.0
-```
+<span class='shell_output'>
+\> Temperature: 24.0
+</span>
 
 # Hub actions
 
@@ -107,15 +110,15 @@ hub.powerdown_timeout(40000)
 
 print('Time until automatic powerdown: '+str(hub.powerdown_timeout())+ ' ms')
 ```
-```
->>> Time until automatic powerdown: 40000 ms
-``` 
+<span class='shell_output'>
+\> Time until automatic powerdown: 40000 ms
+</span>
 
 ## reset()
 
-`hub.reset()`
+`reset()`
 
-Roboot the hub.
+Reboot the hub.
 
 __Sample code:__
 

@@ -6,10 +6,10 @@ The port class controls everything that is connected to the PU connectors on the
 
 `port.A.mode(mode)`
 
-> The modes can be devided in three categories:  
-> *  Default: for PU sensors and PU motors use [device](sensors.md) to use sensors and [motor](motors.md)
-> *  Duplex (both full and half): communicate via UART protocol. For details see [mode Duplex](#port-mode-duplex).
-> *  GPIO: set pin 5 and 6 to high/low. For details see [mode GPIO](#port-mode-GPIO).
+> The modes can be devided in three categories:   
+>  -  Default: for PU sensors and PU motors use [device](sensors.md) to use sensors and [motor](motors.md) to control motors.
+>  -  Duplex (both full and half): communicate via UART protocol. For details see [mode Duplex](#port-mode-duplex).  
+>  -  GPIO: set pin 5 and 6 to high/low. For details see [mode GPIO](#port-mode-GPIO).
 
 __Parameters:__
 
@@ -63,7 +63,7 @@ read a number of bytes from the UART buffer.
 
 __Parameters:__
 
-*  nchars [int](data_types.md#int): number of bytes to read
+*  nbytes [int](data_types.md#int): number of bytes to read
 
 __Returns:__
 
@@ -87,13 +87,15 @@ data=portA.read(4)
 print('data received: ' + str(data.decode('UTF-8')))
 ```
 
-```
-data received: test
-```
+<span class='shell_output'>
+\> data received: test
+</span>
 
 ## write
 
 `write(data)`
+
+Send data over UART
 
 __Parameters:__
 
@@ -156,7 +158,7 @@ __Parameters:__
 
 __Returns:__
 
-*   [int](data_types.md#int): : 1 (High) or 0(Low) if direction is read (0)
+*   [int](data_types.md#int): 1 (High) or 0(Low) if direction is read (0)
 
 __Sample code:__
 
@@ -179,9 +181,9 @@ p5.value(1)# set pin 5 to high
 print("Signal on pin 6: " + str(p6.value()))
 ```
 
-```
->>> Signal on pin 6: 1
-```
+<span class='shell_output'>
+\> Signal on pin 6: 1
+</span>
 
 
 

@@ -36,9 +36,9 @@ MotorA.default(max_power = 50, stop = 2) #set max power to 50 and stop action to
 print("default settings: " + str(MotorA.default()))
 ```
 
-``` python
->>> default settings: {'pid': (0, 0, 0), 'max_power': 50, 'speed': 0, 'stall': True, 'deceleration': 150, 'stop': 2, 'callback': None, 'acceleration': 100}
-```
+<span class='shell_output'>
+\> default settings: {'pid': (0, 0, 0), 'max_power': 50, 'speed': 0, 'stall': True, 'deceleration': 150, 'stop': 2, 'callback': None, 'acceleration': 100}
+</span>
   
 ---
 
@@ -75,11 +75,9 @@ MotorA.mode([(3,0),(2,2)])  # Set motor mode to absolute position in RAW units
 print("Mode motor port A: " + str(MotorA.mode()))
 ``` 
 
-``` python
->>> Mode motor port A: [(3,0),(2,2)]
-```
-
----
+<span class='shell_output'>
+\> Mode motor port A: [(3,0),(2,2)]
+</span>
 
 ## preset()
 
@@ -100,8 +98,6 @@ MotorA = port.A.motor
 
 MotorA.preset(100)
 ```
-
----
 
 ## pid()
 
@@ -155,10 +151,10 @@ measurements = MotorA.get()
 print("Speed : " + str(measurements[0]) + " Relative position: " + str(measurements[1]))
 ```
 
-``` python
->>> Absolute position: -2
->>> Speed : 0 Relative position: 100
-```
+<span class='shell_output'>
+\> Absolute position: -2
+\> Speed : 0 Relative position: 100
+</span>
 
 # Actions
 
@@ -404,7 +400,7 @@ Pair two motors. Both motors can now be controlled via motorA (even with differe
 
 __Parameters:__
 
-*  motor to pair, e.g. port.B.motor()
+*  motor to pair, e.g., port.B.motor()
 
 __Sample code:__
 
@@ -417,7 +413,7 @@ MotorB = port.B.motor
 Pair=MotorA.pair(MotorB)
 
 Pair.run_for_degrees(270, 100, 50) # Motor A turns 360 and Motor B turns 180
-                                    # Combined distance = 2*270
+                                   # Combined distance = 2*270
 ```
 
 # Motor Modes
@@ -430,11 +426,11 @@ All motors with rotation sensor have the following modes
 |0   |POWER (pwm)|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |1      |0       |
 |1   |SPEED (rotation rate)|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |4      |0       |
 |2   |POS  (relative rotation)|-360|360   |-100|100   |-360|360   |DEG   |\x10\x00\x00\x00\x01\x04|1       |2   |4      |0       |
-|3   |APOS (absolute rotation)|-180|179   |-200|200   |-180|-179  |DEG   |\x10\x00\x00\x00\x01\x04|1       |1   |3      |0       |
+|3   |APOS (absolute rotation)|-180|179   |-200|200   |-180|179  |DEG   |\x10\x00\x00\x00\x01\x04|1       |1   |3      |0       |
 |4   |LOAD (load) |0   |127   |0   |100   |0   |127   |PCT   |\x10\x00\x00\x00\x01\x04|1       |1   |1      |0       |
 
 The default mode of the Large/Medium Angular motor is: (see [mode](#mode) for more details)
 
-```
->>> [(1, 0), (2, 2), (3, 1), (0, 0)]
-```
+<span class='shell_output'>
+\> Default mode: [(1, 0), (2, 2), (3, 1), (0, 0)]
+</span>
