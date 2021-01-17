@@ -52,44 +52,44 @@ The following constants are obtained from the hub library
 
 ## hub
 
-``` python
+<span class='shell_output'>
 hub.TOP = 0
 hub.FRONT = 1
 hub.RIGHT = 2
 hub.BOTTOM = 3
 hub.BACK = 4
 hub.LEFT = 5
-```
+</span>
 
 ## Battery
 
-``` python
+<span class='shell_output'>
 hub.battery.BATTERY_VOLTAGE_TOO_LOW=-5  
 hub.battery.BATTERY_BAD_BATTERY=-4
 hub.battery.BATTERY_TEMPERATURE_SENSOR_FAIL=-3
 hub.battery.BATTERY_TEMPERATURE_OUT_OF_RANGE=-2
 hub.battery.BATTERY_HUB_TEMPERATURE_CRITICAL_OUT_OF_RANGE=-2
 hub.battery.BATTERY_NO_ERROR=0
-```
+</span>
 
-``` python
+<span class='shell_output'>
 hub.battery.CHARGER_STATE_FAIL=-1  
 hub.battery.CHARGER_STATE_DISCHARGING=0
 hub.battery.CHARGER_STATE_CHARGING_ONGOING=1  
 hub.battery.CHARGER_STATE_CHARGING_COMPLETED=2
-```
+</span>
 
-``` python
+<span class='shell_output'>
 hub.battery.USB_CH_PORT_NONE=0
 hub.battery.USB_CH_PORT_SDP=1
 hub.battery.USB_CH_PORT_CDP=2
 hub.battery.USB_CH_PORT_DCP=3               
-```
+</span>
 
 ## Image
 
 build in images:
-```
+<span class='shell_output'>
 hub.Image.ALL_ARROWS
 hub.Image.ALL_CLOCKS      
 hub.Image.ANGRY           
@@ -159,17 +159,17 @@ hub.Image.TSHIRT
 hub.Image.UMBRELLA        
 hub.Image.XMAS            
 hub.Image.YES
-```
+</span>
 
 ## Sound
 
 Waveforms
-``` 
+<span class='shell_output'>
 hub.sound.SOUND_SIN=0       
 hub.sound.SOUND_SQUARE=1
 hub.sound.SOUND_TRIANGLE=2
 hub.sound.SOUND_SAWTOOTH=3
-```
+</span>
 
 ## Led
 
@@ -196,58 +196,58 @@ hub.sound.SOUND_SAWTOOTH=3
 ### gesture
 possible gestures:
 
-```
+<span class='shell_output'>
 hub.motion.TAPPED=0
 hub.motion.DOUBLETAPPED=1
 hub.motion.SHAKE=2
 hub.motion.FREEFALL=3
-```
+</span>
 
 ### Port
 
-```
+<span class='shell_output'>
 hub.port.ATTACED = 1
 hub.port.DETACHED = 0
-```
+</span>
 
-```
+<span class='shell_output'>
 hub.port.MODE_DEFAULT = 0
 hub.port.MODE_FULL_DUPLEX = 1
 hub.port.MODE_HALF_DUPLEX = 2
 hub.port.MODE_GPIO = 3
-```
+</span>
 
 
 ### Motors
 
-```
+<span class='shell_output'>
 hub.port.A.motor.BUSY_MODE = 0
 hub.port.A.motor.BUSY_MOTOR = 1
-```
+</span>
 
 
-```
+<span class='shell_output'>
 hub.port.A.motor.EVENT_COMPLETED = 0
 hub.port.A.motor.EVENT_INTERRUPTED = 1
-```
+</span>
 
-```
+<span class='shell_output'>
 hub.port.A.motor.FORMAT_RAW = 0
 hub.port.A.motor.FORMAT_PCT = 1
 hub.port.A.motor.FORMAT_SI = 2
-```
+</span>
 
-```
+<span class='shell_output'>
 hub.port.A.motor.PID_POSITION = 0
 hub.port.A.motor.PID_SPEED = 1
-```
+</span>
 
 
-```
+<span class='shell_output'>
 hub.port.A.motor.STOP_FLOAT = 0
 hub.port.A.motor.STOP_BRAKE = 1
 hub.port.A.motor.STOP_HOLD = 2
-```
+</span>
 
 
 ## Sensors
