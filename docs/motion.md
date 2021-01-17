@@ -77,11 +77,11 @@ print("yaw: " + str(rotations[0]) + " pitch: " + str(rotations[1]) + " roll: " +
 
 <span class='shell_output'>
 \> yaw: 12 pitch: -19 roll: 6
-<\span>
+</span>
 
 # Gestures
 
-The hub can detect both the orientation or movement using the build in gyroscope and accelerometer
+The hub processess the IMU data to determine the orientation or if a gesture is applied.
 
 ## orientation()  
 
@@ -117,7 +117,7 @@ Returns gesture currently applied.
 
 __Returns:__
 
-* gesture ([int](data_types.md#int))
+* gesture ([int](data_types.md#int)):  
     TAPPED=0  
     DOUBLETAPPED=1  
     SHAKE=2  
@@ -133,7 +133,7 @@ print("Gesture: " + str(motion.gesture()))
 ```
 
 <span class='shell_output'>
-/> Gesture: 2
+\> Gesture: 2
 </span>
 
 ## (was_gesture())
