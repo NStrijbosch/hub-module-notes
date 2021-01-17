@@ -38,6 +38,8 @@ __Returns:__
 
 *  [int](data_types.md#int) value between 0 and 100, in increments of 20
 
+__Sample code:__
+
 ``` python
 from hub import battery
 
@@ -57,6 +59,8 @@ Measure the (charge?) current of the battery.
 __Returns:__
 
 *  [int](data_types.md#int) with unknown unit
+
+__Sample code:__
 
 ``` python
 from hub import battery
@@ -99,6 +103,8 @@ Measure the temperature of the battery.
 __Returns:__
 
 *  Temperature ([float](data_types.md#float)) in Celcius
+
+__Sample code:__
 
 ``` python
 from hub import battery
