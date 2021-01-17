@@ -1,7 +1,6 @@
 
 The display class controls all functions linked to the display. It can be used via `hub.display`. For more details see the examples below.
 
-
 ## show()
 
 `hub.display.show(image)`
@@ -22,9 +21,7 @@ display.show(Image.HAPPY)
 
 ## clear()
 
-```
-display.clear()
-```
+`display.clear()`
 
 Set the light intensity of all pixels to 0. 
 
@@ -41,9 +38,7 @@ display.clear()
 
 ## pixel()
 
-```
-display.pixel(x, y, brightness)
-```
+`display.pixel(x, y, brightness)`
 
 __Parameters:__
 
