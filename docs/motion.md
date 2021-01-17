@@ -59,7 +59,7 @@ print("r_x: " + str(rates[0]) + " r_y: " + str(rates[1]) + " r_z: " + str(rates[
 
 Measure rotation compared to fixed world. 
 
-> In previews firmware versions this was `motion.position()`
+> In previous firmware versions this was `motion.position()`
 
 __Returns:__
 
