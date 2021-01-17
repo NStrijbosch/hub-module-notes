@@ -426,7 +426,7 @@ All motors with rotation sensor have the following modes
 |0   |POWER (pwm)|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |1      |0       |
 |1   |SPEED (rotation rate)|-100|100   |-100|100   |-100|100   |PCT   |\x10\x00\x00\x00\x01\x04|1       |0   |4      |0       |
 |2   |POS  (relative rotation)|-360|360   |-100|100   |-360|360   |DEG   |\x10\x00\x00\x00\x01\x04|1       |2   |4      |0       |
-|3   |APOS (absolute rotation)|-180|179   |-200|200   |-180|-179  |DEG   |\x10\x00\x00\x00\x01\x04|1       |1   |3      |0       |
+|3   |APOS (absolute rotation)|-180|179   |-200|200   |-180|179  |DEG   |\x10\x00\x00\x00\x01\x04|1       |1   |3      |0       |
 |4   |LOAD (load) |0   |127   |0   |100   |0   |127   |PCT   |\x10\x00\x00\x00\x01\x04|1       |1   |1      |0       |
 
 The default mode of the Large/Medium Angular motor is: (see [mode](#mode) for more details)
