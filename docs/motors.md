@@ -155,10 +155,10 @@ measurements = MotorA.get()
 print("Speed : " + str(measurements[0]) + " Relative position: " + str(measurements[1]))
 ```
 
-``` python
->>> Absolute position: -2
->>> Speed : 0 Relative position: 100
-```
+<span class='shell_output'>
+\> Absolute position: -2
+\> Speed : 0 Relative position: 100
+</span>
 
 # Actions
 
@@ -404,7 +404,7 @@ Pair two motors. Both motors can now be controlled via motorA (even with differe
 
 __Parameters:__
 
-*  motor to pair, e.g. port.B.motor()
+*  motor to pair, e.g., port.B.motor()
 
 __Sample code:__
 
@@ -417,7 +417,7 @@ MotorB = port.B.motor
 Pair=MotorA.pair(MotorB)
 
 Pair.run_for_degrees(270, 100, 50) # Motor A turns 360 and Motor B turns 180
-                                    # Combined distance = 2*270
+                                   # Combined distance = 2*270
 ```
 
 # Motor Modes
@@ -435,6 +435,6 @@ All motors with rotation sensor have the following modes
 
 The default mode of the Large/Medium Angular motor is: (see [mode](#mode) for more details)
 
-```
->>> [(1, 0), (2, 2), (3, 1), (0, 0)]
-```
+<span class='shell_output'>
+/> [(1, 0), (2, 2), (3, 1), (0, 0)]
+</span>
