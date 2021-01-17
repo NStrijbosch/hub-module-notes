@@ -153,7 +153,7 @@ Get width of [image](data_types.md#image).
 
 __Returns:__
 
-*  [integer](data_types.md#integer) width.
+*  [int](data_types.md#int) width.
 
 __Sample code:__
 
@@ -175,7 +175,7 @@ Get height of [image](data_types.md#image).
 
 __Returns:__
 
-*  [integer](data_types.md#integer) height.
+*  [int](data_types.md#int) height.
 
 __Sample code:__
 
