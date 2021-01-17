@@ -50,7 +50,7 @@ __dictionary:__
 
 The following constants are obtained from the hub library
 
-## hub
+### hub
 
 <span class='shell_output'>
 hub.TOP = 0 </br>
@@ -61,7 +61,7 @@ hub.BACK = 4</br>
 hub.LEFT = 5
 </span>
 
-## Battery
+### Battery
 
 <span class='shell_output'>
 hub.battery.BATTERY_VOLTAGE_TOO_LOW=-5  </br>
@@ -86,7 +86,7 @@ hub.battery.USB_CH_PORT_CDP=2</br>
 hub.battery.USB_CH_PORT_DCP=3               
 </span>
 
-## Image
+### Image
 
 build in images:
 <span class='shell_output'>
@@ -161,7 +161,7 @@ hub.Image.XMAS</br>
 hub.Image.YES
 </span>
 
-## Sound
+### Sound
 
 Waveforms
 <span class='shell_output'>
@@ -171,9 +171,9 @@ hub.sound.SOUND_TRIANGLE=2</br>
 hub.sound.SOUND_SAWTOOTH=3</br>
 </span>
 
-## Led
+### Led
 
-### led color:
+#### led color:
 
 |Number |Name                 |R   |G   |B  |
 |-------|---------------------|----|----|---|
@@ -190,12 +190,9 @@ hub.sound.SOUND_SAWTOOTH=3</br>
 |10     |Bright white         |255 |70  |35 |
 |11     |White                |102 |28  |14 |
 
+### Motion
 
-## Motion
-
-### gesture
-possible gestures:
-
+#### gesture
 <span class='shell_output'>
 hub.motion.TAPPED=0</br>
 hub.motion.DOUBLETAPPED=1</br>
@@ -203,7 +200,7 @@ hub.motion.SHAKE=2</br>
 hub.motion.FREEFALL=3
 </span>
 
-### Port
+#### Port
 
 <span class='shell_output'>
 hub.port.ATTACED = 1</br>
@@ -224,7 +221,6 @@ hub.port.MODE_GPIO = 3
 hub.port.A.motor.BUSY_MODE = 0</br>
 hub.port.A.motor.BUSY_MOTOR = 1
 </span>
-
 
 <span class='shell_output'>
 hub.port.A.motor.EVENT_COMPLETED = 0</br>
@@ -248,7 +244,7 @@ hub.port.A.motor.STOP_BRAKE = 1</br>
 hub.port.A.motor.STOP_HOLD = 2
 </span>
 
-## Sensors
+### Sensors
 
 
 
