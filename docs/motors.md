@@ -36,9 +36,9 @@ MotorA.default(max_power = 50, stop = 2) #set max power to 50 and stop action to
 print("default settings: " + str(MotorA.default()))
 ```
 
-``` python
->>> default settings: {'pid': (0, 0, 0), 'max_power': 50, 'speed': 0, 'stall': True, 'deceleration': 150, 'stop': 2, 'callback': None, 'acceleration': 100}
-```
+<span class='shell_output'>
+\> default settings: {'pid': (0, 0, 0), 'max_power': 50, 'speed': 0, 'stall': True, 'deceleration': 150, 'stop': 2, 'callback': None, 'acceleration': 100}
+</span>
   
 ---
 
