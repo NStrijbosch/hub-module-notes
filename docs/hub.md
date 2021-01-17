@@ -118,7 +118,7 @@ print('Time until automatic powerdown: '+str(hub.powerdown_timeout())+ ' ms')
 
 `hub.reset()`
 
-Roboot the hub.
+Reboot the hub.
 
 __Sample code:__
 
