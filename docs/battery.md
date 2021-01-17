@@ -24,9 +24,9 @@ from hub import battery
 print(battery.info())
 ```
 
-``` python
-> {'temperature': 20.2, 'charge_voltage': 8389, 'charge_current': 332, 'charge_voltage_filtered': 8359, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
-```
+<span class='shell_output'>
+\> {'temperature': 20.2, 'charge_voltage': 8389, 'charge_current': 332, 'charge_voltage_filtered': 8359, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
+</span>
 
 ## capacity_left()
 
@@ -44,9 +44,9 @@ from hub import battery
 print("Capacity left: " + str(battery.capacity_left()))
 ```
 
-``` python
-> Capacity left: 80
-```
+<span class='shell_output'>
+\> Capacity left: 80
+</span>
 
 ## current()
 
@@ -64,9 +64,9 @@ from hub import battery
 print("Current: " + str(battery.current()))
 ```
 
-``` python
-> Current: 75
-```
+<span class='shell_output'>
+\> Current: 75
+</span>
 
 ## voltage()
 
@@ -86,9 +86,9 @@ from hub import battery
 print("Voltage: " + str(battery.voltage()))
 ```
 
-``` python
+<span class='shell_output'>
 > Voltage: 8391
-```
+</span>
 
 ## temperature()
 
@@ -106,9 +106,9 @@ from hub import battery
 print("Temperature: " + str(battery.temperature()))
 ```
 
-``` python
-> Temperature: 21.0
-```
+<span class='shell_output'>
+\> Temperature: 21.0
+</span>
 
 ## charger_detect()
 
