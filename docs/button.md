@@ -1,11 +1,12 @@
 The button class controls all functions linked to the buttons, i.e., left, center, right, connect. It can be used via:
 
-```
+<span class='shell_output'>
 hub.button.left 
 hub.button.right
 hub.button.center
 hub.button.connect
-```
+</span>
+
 See the examples below for more details.
 
 ## is pressed()
@@ -27,11 +28,11 @@ while not button.left.is_pressed():
     print('press left button')
 ```
 
-```
->>> press left button
->>> press left button
->>> press left button  (after left button is pressed messages stop)
-```
+<span class='shell_output'>
+/> press left button
+/> press left button
+/> press left button  (after left button is pressed messages stop)
+</span>
 
 ## was_pressed()
 
@@ -56,11 +57,11 @@ while not button.left.was_pressed():
     sleep_ms(1000)
 ```
 
-```
+<span class='shell_output'>
 >>> press left button
 >>> press left button
 >>> press left button  (after this left button is pressed)
-```
+</span>
 
 ## presses()
 
@@ -81,11 +82,11 @@ for i in range(4):
     sleep_ms(2000)
 ```
 
-```
+<span class='shell_output'>
 number of presses: 0
 number of presses: 3
 number of presses: 1
-```
+</span>
 
 ## on_change() TODO
 
