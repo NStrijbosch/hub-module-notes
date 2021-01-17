@@ -25,7 +25,7 @@ print(battery.info())
 ```
 
 ``` python
->>> {'temperature': 20.2, 'charge_voltage': 8389, 'charge_current': 332, 'charge_voltage_filtered': 8359, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
+> {'temperature': 20.2, 'charge_voltage': 8389, 'charge_current': 332, 'charge_voltage_filtered': 8359, 'error_state': [0], 'charger_state': 1, 'battery_capacity_left': 100}
 ```
 
 ## capacity_left()
@@ -45,7 +45,7 @@ print("Capacity left: " + str(battery.capacity_left()))
 ```
 
 ``` python
->>> Capacity left: 80
+> Capacity left: 80
 ```
 
 ## current()
@@ -65,7 +65,7 @@ print("Current: " + str(battery.current()))
 ```
 
 ``` python
->>> Current: 75
+> Current: 75
 ```
 
 ## voltage()
@@ -87,7 +87,7 @@ print("Voltage: " + str(battery.voltage()))
 ```
 
 ``` python
->>> Voltage: 8391
+> Voltage: 8391
 ```
 
 ## temperature()
@@ -107,7 +107,7 @@ print("Temperature: " + str(battery.temperature()))
 ```
 
 ``` python
->>> Temperature: 21.0
+> Temperature: 21.0
 ```
 
 ## charger_detect()
@@ -133,6 +133,6 @@ else:
     print("hub is not charging")
 ```
 
-```
->>> hub is charging
-```
+<span class='shell_output'>
+\> hub is charging
+</span>
