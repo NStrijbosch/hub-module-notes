@@ -1,10 +1,10 @@
 The button class controls all functions linked to the buttons, i.e., left, center, right, connect. It can be used via:
 
 <span class='shell_output'>
-hub.button.left 
-hub.button.right
-hub.button.center
-hub.button.connect
+hub.button.left </br>
+hub.button.right  </br>
+hub.button.center  </br>
+hub.button.connect  
 </span>
 
 See the examples below for more details.
@@ -29,8 +29,8 @@ while not button.left.is_pressed():
 ```
 
 <span class='shell_output'>
-/> press left button
-/> press left button
+/> press left button </br>
+/> press left button</br>
 /> press left button  (after left button is pressed messages stop)
 </span>
 
@@ -58,9 +58,9 @@ while not button.left.was_pressed():
 ```
 
 <span class='shell_output'>
->>> press left button
->>> press left button
->>> press left button  (after this left button is pressed)
+\> press left button  
+\> press left button  
+\> press left button  (after this left button is pressed)  
 </span>
 
 ## presses()
@@ -83,9 +83,9 @@ for i in range(4):
 ```
 
 <span class='shell_output'>
-number of presses: 0
-number of presses: 3
-number of presses: 1
+\> number of presses: 0 </br>
+\> number of presses: 3 </br>
+\> number of presses: 1 </br> 
 </span>
 
 ## on_change() TODO
