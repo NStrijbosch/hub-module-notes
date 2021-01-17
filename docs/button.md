@@ -58,9 +58,9 @@ while not button.left.was_pressed():
 ```
 
 <span class='shell_output'>
-\> press left button  
-\> press left button  
-\> press left button  (after this left button is pressed)  
+/> press left button  
+/> press left button  
+/> press left button  (after this left button is pressed)  
 </span>
 
 ## presses()
@@ -83,9 +83,9 @@ for i in range(4):
 ```
 
 <span class='shell_output'>
-\> number of presses: 0 </br>
-\> number of presses: 3 </br>
-\> number of presses: 1 </br> 
+/> number of presses: 0 </br>
+/> number of presses: 3 </br>
+/> number of presses: 1 </br> 
 </span>
 
 ## on_change() TODO

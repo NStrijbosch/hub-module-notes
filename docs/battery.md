@@ -87,7 +87,7 @@ print("Voltage: " + str(battery.voltage()))
 ```
 
 <span class='shell_output'>
-> Voltage: 8391
+\> Voltage: 8391
 </span>
 
 ## temperature()
