@@ -51,15 +51,17 @@ __Returns:__
    position
    display
 
+__Sample code:__
+
 ``` python
 import hub
 
 print(hub.status())
 ```
 
-```
->>> {'gyroscope': (0, 0, 0), 'port': {'C': [], 'D': [], 'B': [], 'E': [], 'A': [0, 0, -2, 0], 'F': []}, 'accelerometer': (-78, -305, 966), 'yaw_pitch_roll': (-27, -17, 4), 'position': (-27, -17, 4), 'display': '00000:00000:00000:00000:00000'}
-```
+<span class='shell_output'>
+\> {'gyroscope': (0, 0, 0), 'port': {'C': [], 'D': [], 'B': [], 'E': [], 'A': [0, 0, -2, 0], 'F': []}, 'accelerometer': (-78, -305, 966), 'yaw_pitch_roll': (-27, -17, 4), 'position': (-27, -17, 4), 'display': '00000:00000:00000:00000:00000'}
+</span>
 
 ## temperature()
 
@@ -79,9 +81,9 @@ import hub
 print('Temperature: ' + str(hub.temperature()))
 ```
 
-```
+<span class='shell_output'>
 >>> Temperature: 24.0
-```
+</span>
 
 # Hub actions
 
@@ -108,9 +110,9 @@ hub.powerdown_timeout(40000)
 
 print('Time until automatic powerdown: '+str(hub.powerdown_timeout())+ ' ms')
 ```
-```
+<span class='shell_output'>
 >>> Time until automatic powerdown: 40000 ms
-``` 
+</span>
 
 ## reset()
 
