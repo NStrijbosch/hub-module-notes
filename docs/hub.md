@@ -82,7 +82,7 @@ print('Temperature: ' + str(hub.temperature()))
 ```
 
 <span class='shell_output'>
->>> Temperature: 24.0
+\> Temperature: 24.0
 </span>
 
 # Hub actions
@@ -111,7 +111,7 @@ hub.powerdown_timeout(40000)
 print('Time until automatic powerdown: '+str(hub.powerdown_timeout())+ ' ms')
 ```
 <span class='shell_output'>
->>> Time until automatic powerdown: 40000 ms
+\> Time until automatic powerdown: 40000 ms
 </span>
 
 ## reset()
