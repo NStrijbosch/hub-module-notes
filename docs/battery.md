@@ -124,7 +124,7 @@ Check if a charger is plugged into the hub.
 
 __Returns:__
 
-*  [bool](data_types.md#bool): 'True' if charger detected, 'False' if charger not detected.
+*  [bool](data_types.md#bool): `True` if charger detected, `False` if charger not detected.
 
 __Sample code:__
 

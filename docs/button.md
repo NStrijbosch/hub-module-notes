@@ -17,7 +17,7 @@ Check if button is pressed.
 
 __Returns:__
 
-*  [boolean](data_types.md#bool): `True` if the button is pressed, otherwise `False`. 
+*  [bool](data_types.md#bool): `True` if the button is pressed, otherwise `False`. 
 
 __Sample code:__
 
@@ -42,7 +42,7 @@ Check if button was pressed since last call.
 
 __Returns:__
 
-*  [boolean](data_types.md#bool) `True` if the button was pressed since last call, otherwise `False`
+*  [bool](data_types.md#bool) `True` if the button was pressed since last call, otherwise `False`
 
 __Sample code:__
 
