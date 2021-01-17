@@ -432,5 +432,5 @@ All motors with rotation sensor have the following modes
 The default mode of the Large/Medium Angular motor is: (see [mode](#mode) for more details)
 
 <span class='shell_output'>
-/> [(1, 0), (2, 2), (3, 1), (0, 0)]
+\> Default mode: [(1, 0), (2, 2), (3, 1), (0, 0)]
 </span>
