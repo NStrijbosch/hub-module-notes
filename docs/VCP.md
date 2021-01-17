@@ -54,9 +54,9 @@ message.decode('UTF-8')
 print('Received message: ' + message)
 ```
 
-```
-Received message: test
-```
+<span class='shell_output'>
+\> Received message: test
+</span>
 
 ## readline()
 
@@ -102,12 +102,12 @@ message.decode('UTF-8')
 print('Received message: ' + message)
 ```
 
-```
-Received message: test
-test
-test
-test
-```
+<span class='shell_output'>
+\> Received message: test</br>
+\> test</br>
+\> test<br/>
+\> test
+</span>
 
 ## write()
 
