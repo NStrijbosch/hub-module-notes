@@ -11,10 +11,10 @@ __Parameters:__
 *  freq [float](data_types.md#float): frequency in Hz
 *  time [int](data_types.md#int): time in milliseconds
 *  waveform [int](data_types.md#int):  
-    SOUND_SIN=0       
-    SOUND_SQUARE=1
-    SOUND_TRIANGLE=2
-    SOUND_SAWTOOTH=3
+    SOUND_SIN=0  
+    SOUND_SQUARE=1  
+    SOUND_TRIANGLE=2  
+    SOUND_SAWTOOTH=3  
 
 __Sample code:__
 
@@ -43,7 +43,7 @@ from utime import sleep_ms
 sound.volume(10)
 sound.beep(20,1000,0)
 
-sleep_ms(1000) #wait for previous beep to end
+sleep_ms(1000) # wait for previous beep to end
 
 sound.volume(3)
 sound.beep(20,1000,0)
