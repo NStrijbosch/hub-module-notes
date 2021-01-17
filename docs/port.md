@@ -63,7 +63,7 @@ read a number of bytes from the UART buffer.
 
 __Parameters:__
 
-*  nchars [int](data_types.md#int): number of bytes to read
+*  nbytes [int](data_types.md#int): number of bytes to read
 
 __Returns:__
 
