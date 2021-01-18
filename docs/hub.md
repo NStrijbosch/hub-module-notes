@@ -12,10 +12,10 @@ Get hub information.
 __Returns:__
 
 * [dictionary](data_types.md#dictionary) including:  
-  usb_vid(?)  
-  device_uuid  
+  usb_vid (USB vendor ID)
+  device_uuid  (unique device ID)
   1ms_tick_on_time(?)  
-  usb_pid(?)  
+  usb_pid (USB   
   1ms_tick_min(?)  
   1ms_tick_miss(?)  
   hardware_version  
@@ -43,12 +43,12 @@ Get hub status of hub including all sensors and motors
 
 __Returns:__ 
 
-*  [dictionary](data_types.md#dictionary) including:  
-   gyroscope
-   port
-   accelerometer
-   yaw_pitch_roll
-   position
+*  [dictionary](data_types.md#dictionary) including:   
+   gyroscope  
+   port  
+   accelerometer  
+   yaw_pitch_roll  
+   position  
    display
 
 __Sample code:__
