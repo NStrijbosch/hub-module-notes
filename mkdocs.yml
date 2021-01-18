@@ -25,10 +25,6 @@ theme:
 extra_css: ['custom.css']
 copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
-extra:
-  social:
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
 markdown_extensions:
     - admonition
     - toc:
