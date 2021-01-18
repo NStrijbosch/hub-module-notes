@@ -50,12 +50,9 @@ sound.beep(20,1000,0)
 ```
 
 
-## play() TODO
+## play() 
 
 `sound.play()`
 
-probably play a music file (what format?)
-
-__Parameters:__
-
-*  music_file? which format?
+!!! todo
+    Not sufficiently tested. Check [nutki's spike-tools](https://github.com/nutki/spike-tools) for music file converter. 
