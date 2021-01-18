@@ -43,7 +43,8 @@ __Parameters:__
 *  g [int](data_types.md#int) green value between 0 and 255
 *  b [int](data_types.md#int) blue value between 0 and 255
 
-> keep in mind that the colors seem skewed towards blue
+!!! info
+      keep in mind that the colors seem skewed towards blue
 
 
 __Returns:__

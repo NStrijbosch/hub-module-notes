@@ -29,9 +29,9 @@ while not button.left.is_pressed():
 ```
 
 <span class='shell_output'>
-/> press left button </br>
-/> press left button</br>
-/> press left button  (after left button is pressed messages stop)
+\> press left button </br>
+\> press left button</br>
+\> press left button  (after left button is pressed messages stop)
 </span>
 
 ## was_pressed()
@@ -58,9 +58,9 @@ while not button.left.was_pressed():
 ```
 
 <span class='shell_output'>
-/> press left button  
-/> press left button  
-/> press left button  (after this left button is pressed)  
+\> press left button  
+\> press left button  
+\> press left button  (after this left button is pressed)  
 </span>
 
 ## presses()
@@ -83,18 +83,17 @@ for i in range(4):
 ```
 
 <span class='shell_output'>
-/> number of presses: 0 </br>
-/> number of presses: 3 </br>
-/> number of presses: 1 </br> 
+\> number of presses: 0 </br>
+\> number of presses: 3 </br>
+\> number of presses: 1 </br> 
 </span>
 
-## on_change() TODO
+## on_change()
 
 `button.left.on_change(lambda function)`
 
-__Parameters:__
-
-*  Lambda function? on todo, tested with print('hallo') did not work as expected
+!!! todo
+    Not suffiently tested. What is parameter: Lambda function?, tested with print('hallo') did not work as expected
 
 
 

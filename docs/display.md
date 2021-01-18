@@ -61,11 +61,13 @@ display.pixel(0,0,9)  #Top left corner
 
 Change the orientation of the display. 
 
-> Keep in mind this rotation is not reset at the start of each program. 
+!!! warning
+    Keep in mind this rotation is not reset at the start of each program. 
 
 
 
-> Not available in latest SPIKE 1.3.3 firmware?
+!!! danger
+    Not available in latest SPIKE 1.3.3 firmware?
 
 __Parameters:__
 
@@ -87,7 +89,8 @@ display.rotate(90)
 
 Set the orientation of display.
 
-> values of direction are not intuitive, there does not seem to be a relation between the direction and avilable [constants](data_types.md#constants).  
+!!! info
+     values of direction are not intuitive, there does not seem to be a relation between the direction and avilable [constants](data_types.md#constants).  
 
 __Parameters:__
 
@@ -97,7 +100,8 @@ __Parameters:__
    4: 180 degrees with respect to default  
    5: 90 degrees counter clockwise with respect to default
 
-> Difference between rotate() and align(): align() is absolute rotation, rotate() is relative rotation to current orientation of display. 
+!!! info
+    Difference between rotate() and align(): align() is absolute rotation, rotate() is relative rotation to current orientation of display. 
 
 __Sample code:__
 
@@ -129,8 +133,11 @@ display.show(Image.HAPPY)
 display.invert(True)
 ```
 
-## callback() TODO
+## callback()
 
-unknown behaviour
+`display.callback`
+
+!!! todo
+    not sufficiently tested
 
 
