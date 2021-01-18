@@ -92,9 +92,8 @@ for i in range(4):
 
 `button.left.on_change(lambda function)`
 
-__Parameters:__
-
-*  Lambda function? on todo, tested with print('hallo') did not work as expected
+!!! todo
+    Not suffiently tested. What is parameter: Lambda function?, tested with print('hallo') did not work as expected
 
 
 
