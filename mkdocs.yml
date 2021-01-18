@@ -20,7 +20,7 @@ nav:
 #   - Config: 'config.md'
 #   - supervision: 'supervision.md'
 theme: readthedocs
-    custom_dir: overrides/
+    custom_dir: 'overrides/'
 extra_css: ['custom.css']
 copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
