@@ -41,7 +41,7 @@ In the [image](data_types.md#image) set pixel (x,y) to given brightness
 
 !!! warning
         Only works for custom images
-
+        
 __Parameters:__
 
 *  x [int](data_types.md#int) x: in range [0,5]
@@ -110,7 +110,8 @@ display.show(imageHdown)
 
 Shift all pixels of the [image](data_types.md#image) left with shift pixels
 
-> Only works for custom images
+!!! warning
+    Only works for custom images
 
 __Parameters:__
 
@@ -131,7 +132,8 @@ display.show(imageHleft)
 
 Shift all pixels of the [image](data_types.md#image) right with shift pixels
 
-> Only works for custom images
+!!! warning
+    Only works for custom images
 
 __Parameters:__
 
