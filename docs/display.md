@@ -135,6 +135,8 @@ display.invert(True)
 
 ## callback()
 
+`display.callback`
+
 !!! todo
     not sufficiently tested
 
