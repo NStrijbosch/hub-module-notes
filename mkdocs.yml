@@ -27,9 +27,6 @@ copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
 markdown_extensions:
     extra: admonition
-    - toc:
-        permalink: True
-    - attr_list
 
 
 
