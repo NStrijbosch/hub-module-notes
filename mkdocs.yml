@@ -1,5 +1,5 @@
 site_name: Unofficial hub module documentation
-custom_dir: 'custom_theme/'
+
 nav:
     - Getting started: 'index.md'
     - Hub: 'hub.md'
@@ -20,6 +20,7 @@ nav:
 #   - Config: 'config.md'
 #   - supervision: 'supervision.md'
 theme: readthedocs
+    custom_dir: overrides/
 extra_css: ['custom.css']
 copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
