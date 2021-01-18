@@ -156,4 +156,4 @@ hub.power_off()
 `file_transfer()`
 
 !!! todo
-    Not tested
+    Not sufficiently tested
