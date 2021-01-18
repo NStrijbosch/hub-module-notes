@@ -57,7 +57,8 @@ SensorA.mode(5)  # first set the correct mode before sending data
 SensorA.mode(5,b''+chr(9)+chr(9)+chr(9)+chr(9))
 ```
 
-> See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
+
+!!! Note: See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
 
 ## get()
 

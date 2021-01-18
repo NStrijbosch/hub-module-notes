@@ -71,21 +71,6 @@ __Disadvantages:__
 I started this documentation for my personal use until official documentation is published. All commands are found by trial and error. This documentation is not complete and there are no guarantees on its correctness. I am highly interested if you have some additional insights into the hub module!
 
 --- 
-  
-!!! Danger  
-asdfasdf
 
-!!!
 
-!!! Warning  
-asdlfasf
-!!!
-
-<i class="fa fa-car"></i>
-<i class="fa fa-car" style="font-size:48px;"></i>
-<i class="fa fa-car" style="font-size:60px;color:red;"></i>
-
-© Nard Strijbosch 2020{{ date }}
-
-<sub>LEGO® is a trademarks of The LEGO Group of companies which does not sponsor, authorize or endorse this site.  The LEGO Group is not liable for any loss, injury or damage arising from the use or misuse of these codes.</sub>
 
