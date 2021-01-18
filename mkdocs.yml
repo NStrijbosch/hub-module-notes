@@ -19,7 +19,8 @@ nav:
 #   - Bluetooth: 'bluetooth.md'
 #   - Config: 'config.md'
 #   - supervision: 'supervision.md'
-theme: readthedocs
+theme:
+    name: readthedocs
     custom_dir: 'overrides/'
 extra_css: ['custom.css']
 copyright: © Copyright 2021 Nard Strijbosch
