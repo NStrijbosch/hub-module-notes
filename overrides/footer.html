@@ -18,30 +18,9 @@
         <div role="contentinfo">
           <!-- Copyright etc -->
           {% if config.copyright %}
-            <p>{{ config.copyright }}  :smile: </p>
+            <p>{{ config.copyright }}</p>
           {% endif %}
         </div>
-
-
-        {% if config.extra.social %}
-        <div class="md-footer-social">
-        {% for social in config.extra.social %}
-        {% set title = social.name %}
-        {% if not title and "//" in social.link %}
-                {% set _,url = social.link.split("//") %}
-                {% set title = url.split("/")[0] %}
-        {% endif %}
-        <a
-                href="{{ social.link }}"
-                target="_blank" rel="noopener"
-                title="{{ title | e }}"
-                class="md-footer-social__link"
-        >
-                {% include ".fonts/" ~ social.icon ~ ".svg" %}
-        </a>
-        {% endfor %}
-        </div>
-        {% endif %}
       
         Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
