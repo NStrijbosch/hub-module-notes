@@ -69,8 +69,7 @@ __Disadvantages:__
 ---
 
 I started this documentation for my personal use until official documentation is published. All commands are found by trial and error. This documentation is not complete and there are no guarantees on its correctness. I am highly interested if you have some additional insights into the hub module!
-
---- 
+ 
 
 
 
