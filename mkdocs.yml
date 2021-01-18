@@ -20,8 +20,11 @@ nav:
 #   - supervision: 'supervision.md'
 theme: readthedocs
 extra_css: ['custom.css']
-copyright: © 2021
+copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
 extra:
     date: 18th of Januari
+markdown_extensions:
+- toc:
+    permalink: True
 
