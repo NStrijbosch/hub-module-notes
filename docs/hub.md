@@ -128,11 +128,12 @@ import hub
 hub.reset()
 ```
 
-## power_off() TODO
+## power_off()
 
 `power_off()`
 
-> Not actual shutdown, display is cleared and led is turned off. Hub stays connected. 
+!!! Warning 
+    Not actual shutdown, display is cleared and led is turned off. Hub stays connected. 
 
 __Sample code:__
 ``` python
@@ -145,11 +146,14 @@ hub.power_off()
 
 `repl_restart()`
 
-Restart REPL, in running REPL nothing is observed, in SPIKE app: keyboard interrupt + error message. Not advised to use!
+!!! danger
+    This method results in keyboard interrupt + error message when using the SPIKE App. Not advised to use!  
+    In REPL nothing is observed.
 
 
 ## file_tansfer() TODO
 
 `file_transfer()`
 
-Usage unknown
+!!! todo
+    Not tested
