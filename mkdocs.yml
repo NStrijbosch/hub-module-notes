@@ -27,8 +27,8 @@ copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
 extra:
   social:
-    - type: 'twitter'
-      link: 'https://twitter.com/vsoch'
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/squidfunk
 markdown_extensions:
     - toc:
         permalink: True
