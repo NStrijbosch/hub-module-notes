@@ -30,7 +30,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/squidfunk
 markdown_extensions:
-    - fontawesome_markdown
+    - admonition
     - toc:
         permalink: True
     - attr_list

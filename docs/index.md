@@ -72,8 +72,9 @@ I started this documentation for my personal use until official documentation is
 
 --- 
 
+!!! Danger
 
-© Nard Strijbosch {{ date }}
+© Nard Strijbosch 2020{{ date }}
 
 <sub>LEGO® is a trademarks of The LEGO Group of companies which does not sponsor, authorize or endorse this site.  The LEGO Group is not liable for any loss, injury or damage arising from the use or misuse of these codes.</sub>
 
