@@ -88,7 +88,7 @@ for i in range(4):
 \> number of presses: 1 </br> 
 </span>
 
-## on_change() TODO
+## on_change()
 
 `button.left.on_change(lambda function)`
 
