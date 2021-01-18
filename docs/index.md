@@ -81,7 +81,7 @@ asdfasdf
 asdlfasf
 !!!
 
-fa:fa-search
+@icn-camera
 
 © Nard Strijbosch 2020{{ date }}
 
