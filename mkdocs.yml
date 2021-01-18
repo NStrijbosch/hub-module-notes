@@ -20,8 +20,7 @@ nav:
 #   - supervision: 'supervision.md'
 theme: readthedocs
 extra_css: ['custom.css']
-config:
-    copyright: test
+copyright: test
 extra:
     date: 18th of Januari
 
