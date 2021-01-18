@@ -37,7 +37,7 @@ print("Mode sensor port A: " + str(SensorA.mode()))
 \> Mode sensor port A: [(3,0),(2,2)]
 </span>
 
-Some PU sensor modes allow to affect send data to the sensor. This can be achieved using the following
+Some PU sensor modes allow to send data to the sensor, e.g, to turn on LEDs. This can be achieved using the following
 
 `device.mode(mode,data)`
 
@@ -57,7 +57,9 @@ SensorA.mode(5)  # first set the correct mode before sending data
 SensorA.mode(5,b''+chr(9)+chr(9)+chr(9)+chr(9))
 ```
 
-> See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
+
+!!! Note  
+    See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
 
 ## get()
 
