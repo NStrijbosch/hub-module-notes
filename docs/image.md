@@ -39,7 +39,8 @@ display.show(imageH)
 
 In the [image](data_types.md#image) set pixel (x,y) to given brightness
 
-> Only works for custom images
+!!! warning
+        Only works for custom images
 
 __Parameters:__
 
@@ -63,7 +64,8 @@ display.show(imageH)
 
 Shift all pixels of the [image](data_types.md#image) up with shift pixels
 
-> Only works for custom images
+!!! warning
+    Only works for custom images
 
 __Parameters:__
 
@@ -85,7 +87,8 @@ display.show(imageHup)
 
 Shift all pixels of the [image](data_types.md#image) down with shift pixels
 
-> Only works for custom images
+!!! warning
+    Only works for custom images
 
 __Parameters:__
 
@@ -164,9 +167,9 @@ imageH = Image("700079\n700079\n666669\n700079\n700079\n999999")
 print("Width: " + str(imageH.width()))
 ```
 
-```
->>> Width: 6
-```
+<span class='shell_output'>
+\> Width: 6
+</span>
 ## Height()
 
 `image.height()` 
@@ -186,9 +189,9 @@ imageH = Image("700079\n700079\n666669\n700079\n700079\n999999")
 print("Height: " + str(imageH.height()))
 ```
 
-```
->>> Height: 6
-```
+<span class='shell_output'>
+\> Height: 6
+</span>
 
 ## get_pixel()
 
@@ -214,6 +217,6 @@ imageH = Image("70007\n70007\n66666\n70007\n70007")
 print("Brightness pixel (2,2): " + str(imageH.get_pixel(2,2)))
 ```
 
-```
->>> Brightness pixel (2,2): 6
-```
+<span class='shell_output'>
+\> Brightness pixel (2,2): 6
+</span>
