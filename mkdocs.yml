@@ -27,4 +27,7 @@ extra:
 markdown_extensions:
 - toc:
     permalink: True
-
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto: n.strijbosch@gmail.com
