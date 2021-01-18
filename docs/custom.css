@@ -35,6 +35,7 @@ span.shell_output {
 code {    background: #e7f2fa;    color: #2980B9;  font-weight: bold;  border-top: solid 3px #6ab0de; margin: 6px 0; padding: 6px;}
 .note, .warning, .todo, .danger, .info {margin-left: 108px;}
 .todo, .note, .info {padding: 12px; line-height: 24px; margin-bottom: 24px; background: #e7f2fa;}
+.todo p{margin-bottom:0}
 h1 {font-size: 150%;}
 h2 {font-size: 10%; visibility:hidden;}
 h3 {font-size: 100%}
