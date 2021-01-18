@@ -62,7 +62,7 @@ display.pixel(0,0,9)  #Top left corner
 Change the orientation of the display. 
 
 !!! warning
-   Keep in mind this rotation is not reset at the start of each program. 
+    Keep in mind this rotation is not reset at the start of each program. 
 
 
 
