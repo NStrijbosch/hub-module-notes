@@ -142,7 +142,7 @@ import hub
 hub.power_off()
 ```
 
-## repl_restart() TODO
+## repl_restart()
 
 `repl_restart()`
 
@@ -151,7 +151,7 @@ hub.power_off()
     In REPL nothing is observed.
 
 
-## file_tansfer() TODO
+## file_tansfer()
 
 `file_transfer()`
 
