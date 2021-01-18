@@ -81,6 +81,8 @@ asdfasdf
 asdlfasf
 !!!
 
+:fa-coffee:
+
 @icn-camera
 
 © Nard Strijbosch 2020{{ date }}

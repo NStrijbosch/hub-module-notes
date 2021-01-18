@@ -22,7 +22,7 @@ nav:
 theme:
     name: readthedocs
     custom_dir: 'overrides/'
-extra_css: ['custom.css']
+extra_css: ['custom.css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css']
 copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
 markdown_extensions:
