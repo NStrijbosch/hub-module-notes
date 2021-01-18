@@ -59,7 +59,7 @@ SensorA.mode(5,b''+chr(9)+chr(9)+chr(9)+chr(9))
 
 
 !!! Note  
-  See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
+    See [Sensors](#sensors) for the specific modes where sending data is usefull for each sensor
 
 ## get()
 
