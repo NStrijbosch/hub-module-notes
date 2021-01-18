@@ -23,7 +23,7 @@ theme:
     name: readthedocs
     custom_dir: 'overrides/'
 extra_css: ['custom.css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
-copyright: © Copyright 2021 Nard Strijbosch <i class="fa fa-envelope-open" aria-hidden="true"></i>
+copyright: © Copyright 2021 Nard Strijbosch <a class="fa fa-envelope-open" aria-hidden="true" href="n.strijbosch@gmail.com"></i>
 site_author: Nard Strijbosch
 markdown_extensions:
     - admonition
