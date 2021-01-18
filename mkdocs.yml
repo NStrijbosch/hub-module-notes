@@ -26,7 +26,7 @@ extra_css: ['custom.css']
 copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
 markdown_extensions:
-    - admonition
+    extra: admonition
     - toc:
         permalink: True
     - attr_list
