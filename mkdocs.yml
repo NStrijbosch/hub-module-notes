@@ -23,13 +23,11 @@ extra_css: ['custom.css']
 copyright: © Copyright 2021 Nard Strijbosch
 site_author: Nard Strijbosch
 extra:
-    date: 18th of Januari
-markdown_extensions:
-- toc:
-    permalink: True
-
-extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/squidfunk
       name: squidfunk on Twitter
+markdown_extensions:
+- toc:
+    permalink: True
+
