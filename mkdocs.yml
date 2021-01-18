@@ -30,8 +30,9 @@ extra:
     - type: 'twitter'
       link: 'https://twitter.com/vsoch'
 markdown_extensions:
-- toc:
-    permalink: True
+    - toc:
+        permalink: True
+    - attr_list
 
 
 
