@@ -1,4 +1,5 @@
 site_name: Unofficial hub module documentation
+custom_dir: overrides
 nav:
     - Getting started: 'index.md'
     - Hub: 'hub.md'
@@ -29,4 +30,6 @@ extra:
 markdown_extensions:
 - toc:
     permalink: True
+
+
 
