@@ -61,11 +61,13 @@ display.pixel(0,0,9)  #Top left corner
 
 Change the orientation of the display. 
 
-> Keep in mind this rotation is not reset at the start of each program. 
+!!! warning
+   Keep in mind this rotation is not reset at the start of each program. 
 
 
 
-> Not available in latest SPIKE 1.3.3 firmware?
+!!! danger
+    Not available in latest SPIKE 1.3.3 firmware?
 
 __Parameters:__
 
