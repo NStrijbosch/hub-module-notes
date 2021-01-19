@@ -10,9 +10,9 @@ Set the mode of the PU port.
 
 !!! info
     The modes can be devided in three categories:   
-    -  Default: for PU sensors and PU motors use [device](sensors.md) to use sensors and [motor](motors.md) to control motors.
-    -  Duplex (both full and half): communicate via UART protocol. For details see [mode Duplex](#port-mode-duplex).  
-    -  GPIO: set pin 5 and 6 to high/low. For details see [mode GPIO](#port-mode-GPIO).
+    *  Default: for PU sensors and PU motors use [device](sensors.md) to use sensors and [motor](motors.md) to control motors.  
+    *  Duplex (both full and half): communicate via UART protocol. For details see [mode Duplex](#port-mode-duplex).  
+    *  GPIO: set pin 5 and 6 to high/low. For details see [mode GPIO](#port-mode-GPIO).
 
 __Parameters:__
 
