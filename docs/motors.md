@@ -105,7 +105,8 @@ MotorA.preset(100)
 
 set controller gains of the PID controller. 
 
-> The applied values of the actual controller do not seem to change.
+!!! warning
+    The applied values of the actual controller do not seem to change.
 
 __Parameters:__
 
@@ -270,7 +271,8 @@ MotorB.run_for_degrees(-400,speed=50)
 
 Turn motor to given relative position with given speed. 
 
-> The position is relative to the position of the motor since starting the hub/connecting the motor. Best practice is to preset the position at the the start of a program
+!!! warning
+    The position is relative to the position of the motor since starting the hub/connecting the motor. Best practice is to preset the position at the the start of a program
 
 __Parameters:__
 
