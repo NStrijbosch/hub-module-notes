@@ -11,7 +11,7 @@ Set the mode of the PU port.
 !!! info
     The modes can be devided in three categories:   
 
-    __Default:__ for PU sensors and PU motors use [device](sensors.md) to use sensors and [motor](motors.md) to control motors. 
+    __Default:__ for PU sensors and PU motors. Use [device](sensors.md) for sensors and [motor](motors.md) to control motors. 
    
     __Duplex:__ (both full and half): communicate via UART protocol. For details see [mode Duplex](#port-mode-duplex).
 
