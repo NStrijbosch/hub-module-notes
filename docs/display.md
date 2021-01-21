@@ -1,7 +1,7 @@
 
 The display class controls all functions linked to the display. It can be used via `hub.display`. For more details see the examples below.
 
-## show()
+## show() (Image)
 
 `hub.display.show(image)`
 
@@ -17,6 +17,33 @@ __Sample code:__
 from hub import display, Image
 
 display.show(Image.HAPPY)
+```
+
+## show() (Animation)
+
+`hub.display.show(animation,delay=100, wait=Flase, loop=False, clear=False))`
+
+__Parameters:__
+
+*  animation [list](data_types.md#list). List of [images](data_types.md#image), see, [images](data_types.md#image) for all build in images and the [Image](image.md) class on how to create a custom image.
+*  delay ([int](data_types.md#int)). Delay between images in milliseconds
+*  wait ([bool](data_types.md#bool)). `True`: Let the rest of the program wait untill animation stops; `False`: animation is played in the background
+*  loop ([bool](data_types.md#bool)). `True`: after all images are display start with first image again; `False`: show all images only one time. 
+*  clear ([bool](data_types.md#bool)). `True`: clear screen after animation; `False`: leave last image visible on screen.
+
+__Sample code:__
+
+``` python
+from hub import Image, display
+
+image1 = Image("99900:90900:99900:00000:00000")
+image2 = image1.shift_right(1)
+image3 = image1.shift_right(2)
+image4 = image2
+
+animation = [image1,image2,image3,image4]
+
+display.show(animation, delay=100, wait=True, loop=True, clear=True)
 ```
 
 ## clear()

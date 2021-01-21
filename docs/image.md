@@ -30,7 +30,12 @@ display.show(imageN)
 sleep_ms(1000)
  # or
 imageH = Image("70007\n70007\n66666\n70007\n70007")
-display.show(imageH)
+
+imageL = Image(2, 3, b'\x09\x00\x08\x00\x07\x07') # width = 2, height=3, brightness in bitarray corresponding to number of pixels
+Image(2, 3, bytearray([9,0,8,0,7,7]))
+
+display.show(imageL)
+
 ```
 
 ## set_pixel()
@@ -57,6 +62,8 @@ imageH = Image("70007\n70007\n66666\n70007\n70007")
 imageH.set_pixel(2,2,0)
 display.show(imageH)
 ```
+
+# Image operations
 
 ## shift_up()
 
@@ -222,3 +229,9 @@ print("Brightness pixel (2,2): " + str(imageH.get_pixel(2,2)))
 <span class='shell_output'>
 \> Brightness pixel (2,2): 6
 </span>
+
+
+
+
+
+
