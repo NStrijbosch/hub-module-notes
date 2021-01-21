@@ -1,4 +1,4 @@
-site_name: Unofficial LEGO MINDSTORMS and SPIKE Prime hub module documentation
+site_name: Unofficial LEGO MINDSTORMS and SPIKE Prime low-level hub module documentation
 
 nav:
     - Getting started: 'index.md'
