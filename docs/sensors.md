@@ -183,7 +183,7 @@ COLORSensor.mode(3,b''+chr(led1)+chr(led2)+chr(led3))
 |2   |COUNT|0  |100   |0  |100   |0  |100   |CNT   |\x00\x00\x00\x00\x00\x02|1       |2   |4      |0       |
 |3   |REFLT|0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x00\x00\x03|1       |0   |3      |0       |
 |4   |AMBI |0  |100   |0  |100   |0  |100   |PCT   |\x00\x00\x00\x00\x00\x04|1       |0   |3      |0       |
-|5   |COL O|0  |10    |0  |100   |0  |10    |IDX   |\x00\x00\x00\x00\x00\x05|1       |0   |3      |0       |
+|5   |COL O (color output)|0  |10    |0  |100   |0  |10    |IDX   |\x00\x00\x00\x00\x00\x05|1       |0   |3      |0       |
 |6   |RGB I|0  |1023  |0  |100   |0  |1023  |RAW   |\x00\x00\x00\x00\x00\x06|3       |1   |5      |0       |
 |7   |IR Tx|0  |65535 |0  |100   |0  |65535 |N/A   |\x00\x00\x00\x00\x00\x07|1       |1   |5      |0       |
 |8   |SPEC 1|0  |255   |0  |100   |0  |255   |N/A   |\x00\x00\x00\x00\x00\x08|4       |0   |3      |0       |
@@ -203,7 +203,7 @@ from utime import sleep_ms
 
 BoostSensor=port.A.device
 
-BoostSensor.mode(5)         # Set mode to RGB I
+BoostSensor.mode(5)         # Set mode to COL O
 
 colors = [3, 5, 9, 10]      #3: Blue; 5: Green; 9: Red; 10: White
 
