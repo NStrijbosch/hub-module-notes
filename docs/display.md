@@ -17,6 +17,8 @@ __Sample code:__
 from hub import display, Image
 
 display.show(Image.HAPPY)
+
+asd
 ```
 
 ## show() (Animation)
