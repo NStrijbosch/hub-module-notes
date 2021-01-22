@@ -18,19 +18,18 @@ from hub import display, Image
 
 display.show(Image.HAPPY)
 
-asd
 ```
 
 ## show() (Animation)
 
-`hub.display.show(animation,delay=100, wait=Flase, loop=False, clear=False))`
+`hub.display.show(animation,delay=100, wait=False, loop=False, clear=False))`
 
 __Parameters:__
 
 *  animation [list](data_types.md#list). List of [images](data_types.md#image), see, [images](data_types.md#image) for all build in images and the [Image](image.md) class on how to create a custom image.
 *  delay ([int](data_types.md#int)). Delay between images in milliseconds
-*  wait ([bool](data_types.md#bool)). `True`: Let the rest of the program wait untill animation stops; `False`: animation is played in the background
-*  loop ([bool](data_types.md#bool)). `True`: after all images are display start with first image again; `False`: show all images only one time. 
+*  wait ([bool](data_types.md#bool)). `True`: Let the remainder of the program wait until animation stops; `False`: animation is played in the background
+*  loop ([bool](data_types.md#bool)). `True`: after all images are display start with from the beginning; `False`: show all images only one time. 
 *  clear ([bool](data_types.md#bool)). `True`: clear screen after animation; `False`: leave last image visible on screen.
 
 __Sample code:__
