@@ -72,7 +72,7 @@ __Parameters:__
 
 *  x ([int](data_types.md#int)): x coordinate: value between 0 and 4
 *  y ([int](data_types.md#int)): y coordinate: value between 0 and 4
-*  brightness ([int](data_types.md#int)): brightness: value between 0 and 4
+*  brightness ([int](data_types.md#int)): brightness: value between 0 and 9
 
 __Sample code:__
 
