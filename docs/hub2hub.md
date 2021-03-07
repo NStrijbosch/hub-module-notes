@@ -62,7 +62,7 @@ __Example of a tree network with two intermediate levels:__
 
 This network can be viewed as a family tree, where the oldest grandfather (root parent) can send requests to his complete offspring. Requests to a child not directly connected to the root parent will be routed to the child, via the parents in the intermediate levels. Similarly, the response off the child is routed via the same path. 
 
-In a tree network different levels can be distinguished
+In a tree network different levels can be distinguished:
 
 <ul class='index_list'>
  <li>Level 0: one root parent, this is the parent that can send request to all other child hubs. </li>
@@ -71,10 +71,13 @@ In a tree network different levels can be distinguished
 </ul>
 The addresses of the hubs follow the following rules:
 
+<ul class='index_list'>
 * Level 0: 000.., the number of zeros is the number of layers except the root layer
-* Level 1: 100..., 200..., or 300...
-* Level 2: the child hubs connected to one of the hubs from Level 1: copy the first digit of the parent hub, and add 1, 2, or 3 behind this one. For the hubs connected to the hub with address 100..., its child hub addressess are 110..., 120..., and 130.... 
-* Level 3: similarly to level 2 copy the first 2 digits of the parent and add 1, 2, or 3. 
+<li>Level 1: 100..., 200..., or 300...</li>
+<li>Level 2: the child hubs connected to one of the hubs from Level 1: copy the first digit of the parent hub, and add 1, 2, or 3 behind this one. For the hubs connected to the hub with address 100..., its child hub addressess are 110..., 120..., and 130.... </li>
+<li>Level 3: similarly to level 2 copy the first 2 digits of the parent and add 1, 2, or 3. 
+</li>
+</ul>
 
 # hub2hub 
 
