@@ -23,7 +23,7 @@ Set the SPIKE Prime execution mode in download mode, and select an unused projec
 
 ### Step 4:
 
-Run the project by pressing the play button and wait untill the hub is powered down. (if you use a USB cable to connect the hub the hub will probably restart automatically)
+Run the project by pressing the play button and wait untill the hub is powered down. (if you use a USB cable to connect the hub, the hub will probably restart automatically)
 
 ![play](../figures/run.PNG)
 
@@ -31,40 +31,44 @@ Run the project by pressing the play button and wait untill the hub is powered d
 
 Installation is successfull. The hub2hub library is now installed on your hub. You can now safely use the slot you used for this installation for a new project. 
 
+!!! warning
+    Firmware updates of the hub are likely to remove the library from the filesystem of the hub. Hence, this procedure should be repeated if a firmware update removed the library from the hub. 
+
 # BLE Networks and Routing
 
-Before introducing the commands from the hub2hub library first some background information on the communicaiton protocol used by the hub2hub library is required. 
+Before introducing the commands from the hub2hub library first some background information on the communication protocol used by the hub2hub library is required. 
 
 In a typical BLE network there exist one parent device and one or more child devices. This parent device can send request to all child devices in the network. An example of a request could be: __Set left motor speed to 50__. After sending this request the parent will wait on a response from the child device if the message was successfully received. The child device could respond with for example: __motor speed set to 50__. After this the parent can send a new request to the same hub or any other hub. This protocol ensures only one hub is sending messages, thereby not overloading the BLE network with messages. This protocol also allows for bidirectional communication, since the child hub can respond with any message to the root, with the only limitation that the root always has to send a request first. 
 
 The MINDSTORMS Robot Inventor and SPIKE Prime hubs are only able to connect to 3 child devices and 1 parent device. For different projects with different numbers of hubs this will lead to different BLE network structures. Below the start network topology is explained for connecting up to 4 hubs. An extension of this network is the Tree network which does not limit the number of hubs connected to the parent. (At the moment the Tree network structure is still in an experimental phase, the reliablity of connections in this type of networks is not at the desired level yet)
 
-## Star network
+### Star network
 
 In a star network there is one parent hub and at maximum three child hubs, with address as given in the Figure below. 
 
 ![Star Network](../figures/star_network.png)
 
-## Tree network
+### Tree network
 
 The tree network is an extension of the star network. In this network structure the child hubs can act as both a child and as a parent hub to three other child hubs. See the figures below for example networks. 
 
+__Example of a tree network with one intermediate level:__
+
 ![Tree Network](../figures/tree_network_01.png)
 
-__Example of a tree network with one intermediate level__
+__Example of a tree network with two intermediate levels:__
 
 ![Tree Network](../figures/tree_network_02.png)
-
-__Example of a tree network with two intermediate levels__
 
 This network can be viewed as a family tree, where the oldest grandfather (root parent) can send requests to his complete offspring. Requests to a child not directly connected to the root parent will be routed to the child, via the parents in the intermediate levels. Similarly, the response off the child is routed via the same path. 
 
 In a tree network different levels can be distinguished
 
-* Level 0: one root parent, this is the parent that can send request to all other child hubs. 
-* Level 1, ..., N-1 intermediate levels: the hubs are both a child and a parent or only a child
-* Level N: The highest level where the hubs are only a child
-
+<ul class='index_list'>
+ <li>Level 0: one root parent, this is the parent that can send request to all other child hubs. </li>
+<li>Level 1, ..., N-1 intermediate levels: the hubs are both a child and a parent or only a child</li>
+<li>Level N: The highest level where the hubs are only a child</li>
+</ul>
 The addresses of the hubs follow the following rules:
 
 * Level 0: 000.., the number of zeros is the number of layers except the root layer
