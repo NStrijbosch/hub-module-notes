@@ -9,8 +9,7 @@ Follow the following steps for each of the hubs which you will use in you BLE ne
 If you did not update your SPIKE Prime software yet, install the latest SPIKE Prime app (1.3.3) and connect your device. If the  app asks for a hub update, perform the hub update.
 
 !!! Warning
-
-This library does not work when using the MINDSTORMS Robot Inventor app. Due to a firmware difference the bluetooth module is not available when using the MINDSTORMS Robot Inventor App. Luckily you can just connect your MINDSTORMS hub to the SPIKE Prime app and update the SPIKE PRIME Firmware on the hub.
+    This library does not work when using the MINDSTORMS Robot Inventor app. Due to a firmware difference the bluetooth module is not available when using the MINDSTORMS Robot Inventor App. Luckily you can just connect your MINDSTORMS hub to the SPIKE Prime app and update the SPIKE PRIME Firmware on the hub.
 
 ### Step 2:
 
@@ -40,17 +39,17 @@ The MINDSTORMS Robot Inventor and SPIKE Prime hubs are only able to connect to 3
 
 In a star network there is one parent hub and at maximum three child hubs, with address as given in the Figure below. 
 
-![Star Network](figures/star_network.png)
+![Star Network](../figures/star_network.png)
 
 ## Tree network
 
 The tree network is an extension of the star network. In this network structure the child hubs can act as both a child and as a parent hub to three other child hubs. See the figures below for example networks. 
 
-![Tree Network](figures/tree_network_01.png)
+![Tree Network](../figures/tree_network_01.png)
 
 __Example of a tree network with one intermediate level__
 
-![Tree Network](figures/tree_network_02.png)
+![Tree Network](../figures/tree_network_02.png)
 
 __Example of a tree network with two intermediate levels__
 
