@@ -164,7 +164,7 @@ Next the methods that can be used by the root parent are introduced
 
 ### request_child
 
-`request_child(message,child)`
+`request_child(message,child,wait_for_response=True)`
 
 Send a request to a child in the network
 
@@ -172,6 +172,8 @@ __Parameters:__
 
 *  message: the message that is send along with the request. The value can be of any type. 
 *  child: the child to which the request is send
+*  wait_for_response: `True` if you expect a response message from the child, the parent cannot send new messages untill it received the response; `False` if the child will not respond with a message after receiving the request, the parent can send a new message directly.
+
 
 __Sample code:__
 
@@ -214,7 +216,7 @@ __Parameters:__
 *  callback function: this function will be executed if a request is received from the root. The parameters of this function are the message and state. The callback can return a message to the parent
 
 !!! note
-It is important to keep the execution time of the The response to the root parent will be send after completion of the callback. Hence, during the execution of this method no other messages can be send in the BLE network.
+    It is important to keep the execution time of the The response to the root parent will be send after completion of the callback. Hence, during the execution of this method no other messages can be send in the BLE network.
 
 
 __Sample code:__
