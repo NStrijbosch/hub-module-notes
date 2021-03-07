@@ -25,7 +25,7 @@ Set the SPIKE Prime execution mode in download mode, and select an unused projec
 
 Run the project by pressing the play button and wait untill the hub is powered down. (if you use a USB cable to connect the hub the hub will probably restart automatically)
 
-![play](../figures/play.PNG)
+![play](../figures/run.PNG)
 
 ### Step 5:
 
@@ -33,11 +33,11 @@ Installation is successfull. The hub2hub library is now installed on your hub. Y
 
 # BLE Networks and Routing
 
-Before introducing the commands from the hub2hub library first some background information on how messages are send using BLE is required. 
+Before introducing the commands from the hub2hub library first some background information on the communicaiton protocol used by the hub2hub library is required. 
 
-In a typical BLE network there exist one parent device and one or more child devices. This parent device can send request to all child devices in the network. An example of a request could be: __Set left motor speed to 50__. After sending this request the parent will wait on a response from the child device if the message was successfully received. The child device could respond with for example: __motor speed set to 50__. After this the root can send a new request to the same hub or any other hub. This protocol ensures only one hub is sending messages, thereby not overloading the BLE network with messages. This network also allows for bidirectional communication, since the child hub can respond with any message it prefers to the root, with the only limitation that the root always has to send a request first. 
+In a typical BLE network there exist one parent device and one or more child devices. This parent device can send request to all child devices in the network. An example of a request could be: __Set left motor speed to 50__. After sending this request the parent will wait on a response from the child device if the message was successfully received. The child device could respond with for example: __motor speed set to 50__. After this the parent can send a new request to the same hub or any other hub. This protocol ensures only one hub is sending messages, thereby not overloading the BLE network with messages. This protocol also allows for bidirectional communication, since the child hub can respond with any message to the root, with the only limitation that the root always has to send a request first. 
 
-The MINDSTORMS Robot Inventor and SPIKE Prime hubs are only able to connect to 3 child devices and 1 parent device. For different projects with different numbers of hubs this will lead to different BLE network structures. Below the start network topology is explained for connecting up to 4 hubs. An extension of this network is the Tree network which does not limit the number of hubs connected to the parent. 
+The MINDSTORMS Robot Inventor and SPIKE Prime hubs are only able to connect to 3 child devices and 1 parent device. For different projects with different numbers of hubs this will lead to different BLE network structures. Below the start network topology is explained for connecting up to 4 hubs. An extension of this network is the Tree network which does not limit the number of hubs connected to the parent. (At the moment the Tree network structure is still in an experimental phase, the reliablity of connections in this type of networks is not at the desired level yet)
 
 ## Star network
 
@@ -95,11 +95,10 @@ __Example code:__
 ``` python
 network = { 
 ## Name: Address 
-    'A': '00',  
-    'B': '10',  
-    'C': '11',  
-    'D': '12',  
-    'E': '13'  
+    'A': '0',  
+    'B': '1',  
+    'C': '2',  
+    'D': '3',  
 }
 ```
 
@@ -122,16 +121,13 @@ from hub2hub import BLEnetwork
 
 network = { 
 ## Name: Address 
-    'A': '00',  
-    'B': '10',  
-    'C': '11',  
-    'D': '12',  
-    'E': '13'  
+    'A': '0',  
+    'B': '1',  
+    'C': '2',  
+    'D': '3',  
 }
 
 ble = BLEnetwork('A', network, state={'speed_B':0})
-
-print('the speed of hub B is ' + str(ble.state['speed_B']))
 ```
 
 ### connect()
@@ -144,7 +140,6 @@ __Sample code:__
 
 ``` python
 ble.connect()
-
 ```
 
 ### is_connected()
@@ -160,6 +155,7 @@ __Example code:__
 ``` python
 while ble.is_connected():
     print('connected to the BLE network')
+    sleep_ms(100)
 ```
 
 ## Root methods
@@ -168,21 +164,21 @@ Next the methods that can be used by the root parent are introduced
 
 ### request_child
 
-`request_child(message,child,wait_for_response=True)`
+`request_child(child,message,wait_for_response=True)`
 
 Send a request to a child in the network
 
 __Parameters:__
 
 *  message: the message that is send along with the request. The value can be of any type. 
-*  child: the child to which the request is send
+*  child: name of the child to which the request is send
 *  wait_for_response: `True` if you expect a response message from the child, the parent cannot send new messages untill it received the response; `False` if the child will not respond with a message after receiving the request, the parent can send a new message directly.
 
 
 __Sample code:__
 
 ``` python
-ble.send_request({'speed_L':50, 'speed_R':-50},'B')
+ble.request_child('B', {'speed_L':50, 'speed_R':-50})
 ```
 
 ### set_on_response()
@@ -205,7 +201,7 @@ def on_response(message,child,state):
 ble.set_on_response(on_response)
 ```
 
-## Children methods
+## Child methods
 
 Next the methods that can be used by all children are introduced
 
@@ -237,5 +233,3 @@ def on_request(message,state):
 
 ble.set_on_request(on_request)
 ```
-
-
