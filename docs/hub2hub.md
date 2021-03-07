@@ -13,15 +13,19 @@ If you did not update your SPIKE Prime software yet, install the latest SPIKE Pr
 
 ### Step 2:
 
-Open the project: Install_hub2hub_v001.lspp. This will open a python project.
+Download and open the project: [Install_hub2hub_v002.lspp](https://github.com/NStrijbosch/hub2hub/raw/main/install/install_hub2hub_v002.llsp). This will open a python project.
 
 ### Step 3:
 
 Set the SPIKE Prime execution mode in download mode, and select an unused project slot. 
 
+![download](../figures/download.PNG)
+
 ### Step 4:
 
-Run the project and wait untill the hub reboots.
+Run the project by pressing the play button and wait untill the hub is powered down. (if you use a USB cable to connect the hub the hub will probably restart automatically)
+
+![play](../figures/play.PNG)
 
 ### Step 5:
 
@@ -216,7 +220,7 @@ __Parameters:__
 *  callback function: this function will be executed if a request is received from the root. The parameters of this function are the message and state. The callback can return a message to the parent
 
 !!! note
-    It is important to keep the execution time of the The response to the root parent will be send after completion of the callback. Hence, during the execution of this method no other messages can be send in the BLE network.
+    It is important to keep the execution time of the on_request function as short as possible. The response message to the root parent will be send after completion of the callback. Hence, during the execution of this method no other messages can be send in the BLE network.
 
 
 __Sample code:__
