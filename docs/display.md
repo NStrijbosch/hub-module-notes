@@ -22,7 +22,7 @@ display.show(Image.HAPPY)
 
 ## show() (Animation)
 
-`hub.display.show(animation,delay=100, wait=False, loop=False, clear=False))`
+`hub.display.show(animation,delay=100, wait=False, loop=False, clear=False, fade=0)`
 
 __Parameters:__
 
@@ -31,6 +31,7 @@ __Parameters:__
 *  wait ([bool](data_types.md#bool)). `True`: Let the remainder of the program wait until animation stops; `False`: animation is played in the background
 *  loop ([bool](data_types.md#bool)). `True`: after all images are display start with from the beginning; `False`: show all images only one time. 
 *  clear ([bool](data_types.md#bool)). `True`: clear screen after animation; `False`: leave last image visible on screen.
+*  fade ([int](data_types.md#int)). Transition effect between frames, value in range 0,...,6
 
 __Sample code:__
 
