@@ -14,6 +14,7 @@ nav:
     - Motor: 'motors.md'  
     - Virtual Com Port: 'VCP.md'  
     - Battery: 'battery.md'
+    - hub2hub: 'hub2hub.md'
     - Data types and constants: 'data_types.md'
 
 #   - Bluetooth: 'bluetooth.md'

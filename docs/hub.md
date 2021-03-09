@@ -118,7 +118,10 @@ print('Time until automatic powerdown: '+str(hub.powerdown_timeout())+ ' ms')
 
 `reset()`
 
-Reboot the hub.
+Power off the hub
+
+!!! note
+    If the hub is connected to a computer via the usb cable this will result in an automatic restart after powering down the hub. 
 
 __Sample code:__
 
