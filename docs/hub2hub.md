@@ -1,7 +1,7 @@
 # hub2hub
 The `hub2hub` library is not part of the original firmware of either the Robot Inventor hub or the SPIKE Prime hub. In the official SPIKE Prime firmware, a low-level `ubluetooth` library is available to be able to directly communicate between hubs. The documentation of this module can be found here: [ubluetooth documentation](https://docs.micropython.org/en/latest/library/ubluetooth.html). 
 
-The main goal of this library is to simplify the python code required to setup and maintain a BLE connection between hubs in contrast to the low-level `ubluetooth` library available in the official firmware. Installation of the library and writing programs that use it are both possible via the official LEGO Education SPIKE Prime app, as explained below.
+The main goal of the `hub2hub` library is to simplify the python code required to setup and maintain a BLE connection between hubs in contrast to the low-level `ubluetooth` library available in the official firmware. Installation of the library and writing programs that use it are both possible via the official LEGO Education SPIKE Prime app, as explained below.
 
 # Installation
 
