@@ -16,7 +16,7 @@ If you did not update your SPIKE Prime software yet, install the latest SPIKE Pr
 
 ### Step 2:
 
-Download and open the project: [Install_hub2hub_v002.lspp](https://github.com/NStrijbosch/hub2hub/raw/main/install/install_hub2hub_v002.llsp). This will open a python project.
+Download and open the project: [Install_hub2hub_v003.lspp](https://github.com/NStrijbosch/hub2hub/blob/main/install/Install_hub2hub_v003.llsp?raw=true). 
 
 ### Step 3:
 
@@ -36,6 +36,21 @@ Installation is successfull. The hub2hub library is now installed on your hub. Y
 
 !!! warning
     Firmware updates of the hub are likely to remove the library from the filesystem of the hub. Hence, this procedure should be repeated if a firmware update removed the library from the hub. 
+
+### Step 6: (optional)
+
+To test if the library is functioning properly try the example projects: [basic_parent.lspp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/parent_example.llsp?raw=true) and [basic_child.lspp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/child_example.llsp?raw=true) on two seperate hubs. 
+
+# Disclaimer
+
+This library is still actively developed. There are still some known issues:
+
+<ul class='index_list'>
+ <li>The hubs do not automatically disconnect when a program is stopped. To disconnect the hubs you need to restart the hubs. In other words: after each time you run the project restart the hubs before you run the program again</li>
+ <li>It might take a few tries to get a hub connected to a large BLE network.</li>
+</ul>
+
+If you run in any additional issues you can report them [here](https://github.com/NStrijbosch/hub2hub/issues).
 
 # BLE Networks and Routing
 
