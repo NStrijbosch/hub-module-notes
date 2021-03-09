@@ -1,8 +1,11 @@
-# Intro
+# hub2hub
+The `hub2hub` library is not part of the original firmware of either the Robot Inventor hub or the SPIKE Prime hub. In the official SPIKE Prime firmware a low-level `ubluetooth` library is available to be able to directly communicate between hubs. The documentation off this module can be found here: [ubluetooth documentation](https://docs.micropython.org/en/latest/library/ubluetooth.html). 
+
+The main goal of this library is to simplify the python code required to setup and maintain a BLE connection between hubs in contrast to the low-level `ubluetooth` library available in the official firmare. Installation of the library and writing programs that use it are both possible via the offical LEGO Education SPIKE Prime app, as explained below.
 
 # Installation
 
-Follow the following steps for each of the hubs which you will use in you BLE network. 
+The following steps you through the process to install the `hub2hub` library. These steps should be repeated for each of the hubs that will be used in the BLE network. 
 
 ### Step 1:
 
@@ -220,7 +223,19 @@ set the function that will be executed when a request from the root is received.
 
 __Parameters:__
 
-*  callback function: this function will be executed if a request is received from the root. The parameters of this function are the message and state. The callback can return a message to the parent
+*  callback function: this function will be executed if a request is received from the root. The parameters of this function are the message and state. The callback can return a message to the parent or `None` (Returning `None` is only adviced if the parent does not require a response).
+
+__Sample code:__
+
+``` python
+def on_request(message,state):
+    print(message)
+
+    response_message = 'message received'
+    return response_message
+
+ble.set_on_response(on_response)
+```
 
 !!! note
     It is important to keep the execution time of the on_request function as short as possible. The response message to the root parent will be send after completion of the callback. Hence, during the execution of this method no other messages can be send in the BLE network.
