@@ -16,7 +16,7 @@ If you did not update your SPIKE Prime software yet, install the latest SPIKE Pr
 
 ### Step 2:
 
-Download and open the project: [Install_hub2hub_v003.lspp](https://github.com/NStrijbosch/hub2hub/blob/main/install/Install_hub2hub_v003.llsp?raw=true). 
+Download and open the project: [Install_hub2hub_v003.llsp](https://github.com/NStrijbosch/hub2hub/blob/main/install/Install_hub2hub_v003.llsp?raw=true). 
 
 ### Step 3:
 
@@ -39,7 +39,7 @@ Installation is successful. The hub2hub library is now installed on your hub. Yo
 
 ### Step 6: (optional)
 
-To test if the library is functioning properly try the example projects: [basic_parent.lspp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/parent_example.llsp?raw=true) and [basic_child.lspp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/child_example.llsp?raw=true) on two seperate hubs. 
+To test if the library is functioning properly try the example projects: [basic_parent.llsp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/parent_example.llsp?raw=true) and [basic_child.llsp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/child_example.llsp?raw=true) on two seperate hubs. 
 
 # Disclaimer
 
