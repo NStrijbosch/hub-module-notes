@@ -129,7 +129,7 @@ network = {
 
 ### BLEnetwork()
 
-`BLEnetwork(name, network, state={'varx':0})`
+`BLEnetwork(name, network, state=initial_state)`
 
 Initiate the hub as part of the BLE network. 
 
@@ -152,7 +152,7 @@ network = {
     'D': '3',  
 }
 
-ble = BLEnetwork('A', network, state={'speed_B':0, 'speed_A':4})
+ble = BLEnetwork('A', network, state=0)
 ```
 
 ### connect()
@@ -203,7 +203,15 @@ __Parameters:__
 __Sample code:__
 
 ``` python
-ble.request_child('B', {'speed_L':50, 'speed_R':-50})
+# Create message based on button presses
+message = 0
+if buttonL.was_pressed():
+    message -=1
+if buttonR.was_pressed():
+    message +=1
+
+# Send request to child B
+ble.request_child('B', message, wait_for_response=True)
 ```
 
 ### set_on_response()
@@ -220,8 +228,14 @@ __Sample code:__
 
 ``` python
 def on_response(message,child):
-    if child == 'B':
-        print(message)
+    # if response is from child 'B'
+    if child is 'B':
+        # update BLE state
+        ble.state = (ble.state + message) % 12
+        # update Display
+        display.show(Image.ALL_CLOCKS[ble.state])
+
+    return
 
 ble.set_on_response(on_response)
 ```
@@ -234,7 +248,7 @@ Next the methods that can be used by all children are introduced
 
 `set_on_request()`
 
-set the function that will be executed when a request from the root is received. 
+set the function that will be executed when a request from the root is received by a child. 
 
 __Parameters:__
 
@@ -244,29 +258,25 @@ __Sample code:__
 
 ``` python
 def on_request(message):
-    print(message)
 
-    response_message = 'message received'
-    return response_message
+    # update BLE state
+    ble.state = (ble.state + message) % 12
 
-ble.set_on_response(on_response)
-```
+    # Update display
+    display.show(Image.ALL_CLOCKS[ble.state])
 
-!!! note
-    It is important to keep the execution time of the on_request function as short as possible. The response message to the root parent will be send after completion of the callback. Hence, during the execution of this method no other messages can be send in the BLE network.
+    # Define response message
+    response_message = 0
+    if buttonL.was_pressed():
+        response_message -=1
+    if buttonR.was_pressed():
+        response_message +=1
 
-
-__Sample code:__
-
-``` python
-def on_request(message):
-    if 'speed_L'in message.key():
-        hub.port.A.motor.run_at_speed(speed=message['speed_L'])
-    if 'speed_R'in message.key():
-        hub.port.B.motor.run_at_speed(speed=message['speed_R'])    
-
-    reponse_message = 'motor speeds updated'
+    # respond with response_message
     return response_message
 
 ble.set_on_request(on_request)
 ```
+
+!!! note
+    It is important to keep the execution time of the on_request function as short as possible. The response message to the root parent will be send after completion of the callback. Hence, during the execution of this method no other messages can be send in the BLE network.
