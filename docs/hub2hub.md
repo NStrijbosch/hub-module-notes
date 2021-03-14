@@ -203,6 +203,8 @@ __Parameters:__
 __Sample code:__
 
 ``` python
+### from the example project: parent.llsp (step 6 of installation instructions)
+
 # Create message based on button presses
 message = 0
 if buttonL.was_pressed():
@@ -227,6 +229,7 @@ __Parameters:__
 __Sample code:__
 
 ``` python
+### on_response from the example project: parent.llsp (step 6 of installation instructions)
 def on_response(message,child):
     # if response is from child 'B'
     if child is 'B':
@@ -257,6 +260,7 @@ __Parameters:__
 __Sample code:__
 
 ``` python
+### on_request from the example project: child.llsp (step 6 of installation instructions)
 def on_request(message):
 
     # update BLE state
