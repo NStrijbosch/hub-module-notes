@@ -137,7 +137,7 @@ __Parameters:__
 
 *  name (str): name of this hub in the BLE network
 *  network (dict): the BLE network this hub operates in
-*  state (optional): the state value can be of any type, and represents a variable that can be changed within any request and respond callback. 
+*  state (optional): the state value can be of any type, and represents a variable that can be changed anywhere, including the `on_request`and `on_response` methods, in the program using `ble.state`.  
 
 __Sample code:__
 
