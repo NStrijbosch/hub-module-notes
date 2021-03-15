@@ -39,7 +39,7 @@ Installation is successful. The hub2hub library is now installed on your hub. Yo
 
 ### Step 6: (optional)
 
-To test if the library is functioning properly try the example projects: [basic_parent.llsp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/parent_example.llsp?raw=true) and [basic_child.llsp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/child_example.llsp?raw=true) on two seperate hubs. 
+To test if the library is functioning properly try the example projects: [parent_example.llsp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/parent_example.llsp?raw=true) and [child_example.llsp](https://github.com/NStrijbosch/hub2hub/blob/main/examples/child_example.llsp?raw=true) on two seperate hubs. 
 
 # Disclaimer
 
