@@ -9,7 +9,7 @@ The following steps guide you through the process to install the `hub2hub` libra
 
 ### Step 1:
 
-If you did not update your SPIKE Prime software yet, install the latest SPIKE Prime app (1.3.3) and connect your device. If the app asks for a hub update, perform the hub update.
+If you did not update your SPIKE Prime software yet, install one of the latest versions of the SPIKE Prime app (1.3.4 or 1.3.3) and connect your device. If the app asks for a hub update, perform the hub update.
 
 !!! Warning
     This library does not work when using the MINDSTORMS Robot Inventor app. Due to a firmware difference, the Bluetooth module is not available when using the MINDSTORMS Robot Inventor App and corresponding firmware. Luckily you can just connect your MINDSTORMS hub to the SPIKE Prime app and update the SPIKE PRIME Firmware on the hub.
