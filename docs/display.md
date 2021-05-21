@@ -1,4 +1,8 @@
 
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 The display class controls all functions linked to the display. It can be used via `hub.display`. For more details see the examples below.
 
 ## show() (Image)

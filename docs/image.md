@@ -1,3 +1,7 @@
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 Using the Image class you can make images to be displayed on the screen of the hub. It can be used via `hub.Image`. See [display](display.md) for details on how to show images on the display.
 
 # Make an Image

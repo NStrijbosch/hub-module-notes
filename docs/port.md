@@ -1,3 +1,7 @@
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 The port class controls everything that is connected to the PU connectors on the hub. The main two sub classes are [device](sensors.md) to use sensors and [motor](motors.md) to control motors. 
 
 # Port modes

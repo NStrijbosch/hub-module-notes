@@ -1,3 +1,8 @@
+
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 The button class controls all functions linked to the buttons, i.e., left, center, right, connect. It can be used via:
 
 <span class='shell_output'>

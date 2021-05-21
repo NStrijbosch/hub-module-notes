@@ -1,3 +1,7 @@
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 The device class is a sub class of the [port](port.md) class which allows to control PU Sensor. It can be used via `sensor=hub.port.A.device`, see the examples below for more details. 
 
 

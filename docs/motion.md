@@ -1,4 +1,8 @@
 
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 The motion class controls all functions linked to the internal IMU of the hub. It can read accelerometer data, gyro rates, yaw pitch and roll and detect gestures applied to the hub. It can be used via `hub.motion`.
 
 # IMU Sensor Data

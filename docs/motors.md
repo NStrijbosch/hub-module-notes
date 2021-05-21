@@ -1,3 +1,7 @@
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 The motor class is a sub class of the [port](port.md) class which allows to control all PU motors. It can be used via `motor=hub.port.A.motor`, see the examples below for more details. 
 
 # Motor settings
