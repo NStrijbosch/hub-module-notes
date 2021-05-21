@@ -1,3 +1,7 @@
+!!! info
+     LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+
+
 In the hub module, two virtual com port (VCP) classes are available: `BT_VCP` and `USB_VCP`. Both work identically. This class will be useful when you want to communicate over USB or Bluetooth with a computer which is performing, computationally heavy calculations, and you only want the hub to perform motor/sensor actions. In the remainder all example use BT_VCP but everything will work similarly using USB_VCP. 
 
 !!! todo
