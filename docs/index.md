@@ -1,7 +1,7 @@
 This documentation covers all my findings on the hub module of the LEGO SPIKE Prime (45678)and LEGO MINDSTORMS Robot Inventor (51515) hubs. This module is a lower level module as the given documented modules provided in the official SPIKE Prime and MINDSTORMS Robot Inventor apps.
 
 !!! info 
-   LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
+        LEGO has published official docs on the hub-module: [https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/)
 
 ---
 
