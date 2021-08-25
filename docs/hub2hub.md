@@ -1,6 +1,8 @@
-!!! info The latest version of the MINDSTORMS App (10.2.0) includes a word block extension that allows for hub2hub communication. I recommend using this extension over this library. 
+!!! info
+     The latest version of the MINDSTORMS App (10.2.0) includes a word block extension that allows for hub2hub communication. I recommend using this extension over this library. 
 
-!!! info The latest version of the SPIKE app (2.0.0) includes a firmware update for the hub that breaks the current version of the `hub2hub` library. A fix to this issue is coming soon. 
+!!! info
+     The latest version of the SPIKE app (2.0.0) includes a firmware update for the hub that breaks the current version of the `hub2hub` library. A fix to this issue is coming soon. 
 
 
 # hub2hub
