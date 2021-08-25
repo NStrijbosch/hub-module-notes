@@ -1,3 +1,8 @@
+!!! info The latest version of the MINDSTORMS App (10.2.0) includes a word block extension that allows for hub2hub communication. I recommend using this extension over this library. 
+
+!!! info The latest version of the SPIKE app (2.0.0) includes a firmware update for the hub that breaks the current version of the `hub2hub` library. A fix to this issue is coming soon. 
+
+
 # hub2hub
 The `hub2hub` library is not part of the original firmware of either the Robot Inventor hub or the SPIKE Prime hub. In the official SPIKE Prime firmware, a low-level `ubluetooth` library is available to be able to directly communicate between hubs. The documentation of this module can be found here: [ubluetooth documentation](https://docs.micropython.org/en/latest/library/ubluetooth.html). 
 
